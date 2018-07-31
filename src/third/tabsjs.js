@@ -1,24 +1,8 @@
-import {
-  init
-} from '../initfunction.js';
-import {
-  initialChart
-} from '../initialchart.js'
-import {
-  updateChart
-} from '../updatechart.js';
-import {
-  updateSelect
-} from '../updateselect.js';
-
-import {vendor, peerGroupInit} from '../index.js';
 
 import { initAnaly } from '../chart.js';
+var triggerOnce = 0;
 
 
-
-
-let triggerHelp = 2, triggerHelp2 = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
   if (document.querySelectorAll('.tabContainer').length && document.querySelectorAll('.sectionsContainer').length) {
@@ -124,33 +108,8 @@ var app = {
       var triggerId = this.id;
 
 
-      var triggerOff = this.getAttribute("data-trigger");
-
-      if (triggerHelp == 0 & triggerId == "trigger" ) {
-
-        d3.select("#buttonKPI1").selectAll("button").classed("active-button", false);
-        d3.select("#buttonKPI1").select("button").classed("active-button", true)
-
-
-        setTimeout(function(){
-
-          initialChart(vendor)
-
-        },600);
-        init();
-        updateSelect(peerGroupInit);
-
-        var stepSelect = document.querySelector(".is-active");
-        stepSelect.classList.remove("is-active");
-        var stepSelectNew = document.querySelector(".step");
-        stepSelectNew.classList.add('is-active');
-
-        triggerHelp = 1;
-        triggerHelp2 = 0;
-      };
-
       if ( triggerId == "nonproduct" ) {
-
+        triggerOnce = 0;
         setTimeout(function(){
 
           initAnaly()
@@ -160,19 +119,14 @@ var app = {
       };
 
       if ( triggerId !== "nonproduct" ) {
+        if (triggerOnce == 0) {
 
-        document.getElementById("analyID").remove();
-
-      };
-
-      if (triggerOff == "triggeroff" & triggerHelp2 == 0) {
-        document.getElementById("scrollsvg").remove();
-
-        triggerHelp = 0;
-        triggerHelp2 = 1;
-
+          document.getElementById("analyID").remove();
+          triggerOnce =1;
+        }
 
       };
+
 
 
     },

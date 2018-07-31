@@ -6,26 +6,16 @@ if (!window.Promise) {
 }
 
 
-
-
 import 'bootstrap';
 import * as d3 from 'd3';
 import './styles.scss';
-import enterView from './third/enter-view.js';
-import Stickyfill from 'stickyfilljs';
-import { init } from './initfunction.js';
-import { initialChart } from './initialchart.js';
+
 import { initAnaly } from './chart.js';
-let vendor = "Product A";
-let peerGroupInit="Americas-focused vendors";
+require('./chart2.js');
 
-var KPIInit = "Business benefits";
   import ScrollOut from "scroll-out";
-export {vendor, peerGroupInit, KPIInit};
 
-import {
-  updateSelect
-} from './updateselect.js';
+
 
 require('./third/TweenMax.min.js');
 require('./third/tabsjs');
@@ -56,15 +46,6 @@ require('./styles.css');
 
 $(document).ready(function() {
 
-
-
-
-
-
-  initialChart(vendor);
-  init();
-  updateSelect(peerGroupInit);
-
   $('[data-toggle="tooltip"]').tooltip()
 
   $(window).scroll(function () {
@@ -86,5 +67,7 @@ $(document).ready(function() {
 
 
            ScrollOut({ cssProps: true, threshhold: 0.5});
+
+           initAnaly();
 
 });
