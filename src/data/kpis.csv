@@ -1,0 +1,515 @@
+Peer,vendor,KPI,value,place
+Large international BI vendors,Product AB,Business benefits,4.4279974,Top-ranked
+Large international BI vendors,Peer Group Average,Business benefits,5.8,Top-ranked
+Large international BI vendors,Product Z,Business benefits,5.937371212,Top-ranked
+Large international BI vendors,Product Y,Business benefits,8.429486966,Top-ranked
+Large international BI vendors,Product X,Business benefits,9.319997464,Top-ranked
+Large international BI vendors,Product TR,Business benefits,5.290496721,Top-ranked
+Large international BI vendors,Product A,Business benefits,10,Top-ranked
+Large international BI vendors,Product JK,Business benefits,5.275402527,Top-ranked
+Large international BI vendors,Product DF,Business benefits,9.870820835,Top-ranked
+Large international BI vendors,Product V,Business benefits,8.479267056,Top-ranked
+Large international BI vendors,Product H,Business benefits,9.543962532,Top-ranked
+Large international BI vendors,Product G,Business benefits,9.294466809,Top-ranked
+Large international BI vendors,Product F,Business benefits,1,Top-ranked
+Large international BI vendors,Product OS,Business benefits,2.878518894,Top-ranked
+Americas-focused vendors,Product PM,Business benefits,6.748351509,Leader
+Americas-focused vendors,Product PM,Project success,6.371399439,Leader
+Americas-focused vendors,Product PM,Price-to-value,7.545858171,Leader
+Americas-focused vendors,Product PM,Recommendation,6.89860835,Leader
+Americas-focused vendors,Product PM,Vendor support,7.344789821,Leader
+Americas-focused vendors,Product PM,Implementer support,7.768465174,Leader
+Americas-focused vendors,Product PM,Customer satisfaction,6.942036565,Leader
+Americas-focused vendors,Product PM,Ease of use,6.745032043,Leader
+Americas-focused vendors,Product PM,Sales experience,6.231740307,Leader
+Americas-focused vendors,Product PM,Cloud BI,2.559843035,Leader
+Americas-focused vendors,Product PM,Mobile BI,2.58002736,Leader
+Americas-focused vendors,Product PM,Operational BI,5.656662665,Leader
+Americas-focused vendors,Product PM,Embedded BI,1.894886364,Leader
+Americas-focused vendors,Product HG,Business benefits,7.95166583,Leader
+Americas-focused vendors,Product HG,Project success,5.645070672,Leader
+Americas-focused vendors,Product HG,Price-to-value,9.535200411,Leader
+Americas-focused vendors,Product HG,Recommendation,7.151783178,Leader
+Americas-focused vendors,Product HG,Vendor support,8.394524078,Leader
+Americas-focused vendors,Product HG,Implementer support,8.684438482,Leader
+Americas-focused vendors,Product HG,Customer satisfaction,8.357878706,Leader
+Americas-focused vendors,Product HG,Ease of use,5.936537914,Leader
+Americas-focused vendors,Product HG,Sales experience,8.076645627,Leader
+Americas-focused vendors,Product HG,Cloud BI,9.585611511,Leader
+Americas-focused vendors,Product HG,Mobile BI,6.446131941,Leader
+Americas-focused vendors,Product HG,Operational BI,7.857729138,Leader
+Americas-focused vendors,Product HG,Embedded BI,7.369485294,Leader
+Americas-focused vendors,Product WE,Business benefits,7.785664469,Leader
+Americas-focused vendors,Product WE,Project success,5.407086413,Leader
+Americas-focused vendors,Product WE,Price-to-value,8.620594768,Leader
+Americas-focused vendors,Product WE,Recommendation,6.874378728,Leader
+Americas-focused vendors,Product WE,Vendor support,7.589914933,Leader
+Americas-focused vendors,Product WE,Implementer support,7.156763196,Leader
+Americas-focused vendors,Product WE,Customer satisfaction,6.655008747,Leader
+Americas-focused vendors,Product WE,Ease of use,6.691202726,Leader
+Americas-focused vendors,Product WE,Sales experience,8.125338142,Leader
+Americas-focused vendors,Product WE,Cloud BI,9.378417266,Leader
+Americas-focused vendors,Product WE,Mobile BI,5.964221825,Leader
+Americas-focused vendors,Product WE,Operational BI,9.092436975,Leader
+Americas-focused vendors,Product WE,Embedded BI,6.537109375,Leader
+Americas-focused vendors,Product AB,Business benefits,4.4279974,Leader
+Americas-focused vendors,Product AB,Project success,6.99149248,Leader
+Americas-focused vendors,Product AB,Price-to-value,8.620594768,Leader
+Americas-focused vendors,Product AB,Recommendation,6.132952286,Leader
+Americas-focused vendors,Product AB,Vendor support,8.492689272,Leader
+Americas-focused vendors,Product AB,Implementer support,7.161583683,Leader
+Americas-focused vendors,Product AB,Customer satisfaction,7.475781943,Leader
+Americas-focused vendors,Product AB,Ease of use,7.166239132,Leader
+Americas-focused vendors,Product AB,Sales experience,8.344454463,Leader
+Americas-focused vendors,Product AB,Cloud BI,1.390721905,Leader
+Americas-focused vendors,Product AB,Mobile BI,2.812251843,Leader
+Americas-focused vendors,Product AB,Operational BI,8.626391097,Leader
+Americas-focused vendors,Product AB,Embedded BI,3.4609375,Leader
+Americas-focused vendors,Product Y,Business benefits,8.429486966,Leader
+Americas-focused vendors,Product Y,Project success,7.221648309,Leader
+Americas-focused vendors,Product Y,Price-to-value,9.17368962,Leader
+Americas-focused vendors,Product Y,Recommendation,9.020613163,Leader
+Americas-focused vendors,Product Y,Vendor support,9.287382309,Leader
+Americas-focused vendors,Product Y,Implementer support,9.118701507,Leader
+Americas-focused vendors,Product Y,Customer satisfaction,9.047822945,Leader
+Americas-focused vendors,Product Y,Ease of use,5.253681372,Leader
+Americas-focused vendors,Product Y,Sales experience,9.483859333,Leader
+Americas-focused vendors,Product Y,Cloud BI,3.349733117,Leader
+Americas-focused vendors,Product Y,Mobile BI,3.919216646,Leader
+Americas-focused vendors,Product Y,Operational BI,5.323529412,Leader
+Americas-focused vendors,Product Y,Embedded BI,2.514423077,Leader
+Americas-focused vendors,Product X,Business benefits,9.319997464,Leader
+Americas-focused vendors,Product X,Project success,5.914096355,Leader
+Americas-focused vendors,Product X,Price-to-value,8.672001175,Leader
+Americas-focused vendors,Product X,Recommendation,8.463149673,Leader
+Americas-focused vendors,Product X,Vendor support,7.928212106,Leader
+Americas-focused vendors,Product X,Implementer support,6.621689111,Leader
+Americas-focused vendors,Product X,Customer satisfaction,7.19606359,Leader
+Americas-focused vendors,Product X,Ease of use,8.112322929,Leader
+Americas-focused vendors,Product X,Sales experience,9.383228133,Leader
+Americas-focused vendors,Product X,Cloud BI,10,Leader
+Americas-focused vendors,Product X,Mobile BI,9.497674419,Leader
+Americas-focused vendors,Product X,Operational BI,10,Leader
+Americas-focused vendors,Product X,Embedded BI,4.15,Leader
+Americas-focused vendors,Product TR,Business benefits,5.290496721,Leader
+Americas-focused vendors,Product TR,Project success,7.145406212,Leader
+Americas-focused vendors,Product TR,Price-to-value,8.380698206,Leader
+Americas-focused vendors,Product TR,Recommendation,5.497443908,Leader
+Americas-focused vendors,Product TR,Vendor support,7.925231116,Leader
+Americas-focused vendors,Product TR,Implementer support,8.286364042,Leader
+Americas-focused vendors,Product TR,Customer satisfaction,7.753434304,Leader
+Americas-focused vendors,Product TR,Ease of use,6.47012226,Leader
+Americas-focused vendors,Product TR,Sales experience,8.874661858,Leader
+Americas-focused vendors,Product TR,Cloud BI,3.187704382,Leader
+Americas-focused vendors,Product TR,Mobile BI,3.302325581,Leader
+Americas-focused vendors,Product TR,Operational BI,7.731092437,Leader
+Americas-focused vendors,Product TR,Embedded BI,8.734375,Leader
+Americas-focused vendors,Product W,Business benefits,5.152583802,Leader
+Americas-focused vendors,Product W,Project success,6.246275282,Leader
+Americas-focused vendors,Product W,Price-to-value,9.56486847,Leader
+Americas-focused vendors,Product W,Recommendation,7.343096593,Leader
+Americas-focused vendors,Product W,Vendor support,8.061223521,Leader
+Americas-focused vendors,Product W,Implementer support,6.444596033,Leader
+Americas-focused vendors,Product W,Customer satisfaction,7.310322036,Leader
+Americas-focused vendors,Product W,Ease of use,8.45376318,Leader
+Americas-focused vendors,Product W,Sales experience,9.967538323,Leader
+Americas-focused vendors,Product W,Cloud BI,2.312003029,Leader
+Americas-focused vendors,Product W,Mobile BI,1.974338412,Leader
+Americas-focused vendors,Product W,Operational BI,9.841176471,Leader
+Americas-focused vendors,Product W,Embedded BI,10,Leader
+Americas-focused vendors,Product WN,Business benefits,5.365937262,Leader
+Americas-focused vendors,Product WN,Project success,6.896428116,Leader
+Americas-focused vendors,Product WN,Price-to-value,9.203200705,Leader
+Americas-focused vendors,Product WN,Recommendation,8.419017147,Leader
+Americas-focused vendors,Product WN,Vendor support,9.255580609,Leader
+Americas-focused vendors,Product WN,Implementer support,8.573376961,Leader
+Americas-focused vendors,Product WN,Customer satisfaction,8.991228746,Leader
+Americas-focused vendors,Product WN,Ease of use,5.670420454,Leader
+Americas-focused vendors,Product WN,Sales experience,10,Leader
+Americas-focused vendors,Product WN,Cloud BI,8.645268401,Leader
+Americas-focused vendors,Product WN,Mobile BI,4.139534884,Leader
+Americas-focused vendors,Product WN,Operational BI,6.352941176,Leader
+Americas-focused vendors,Product WN,Embedded BI,8.5,Leader
+Americas-focused vendors,Product A,Business benefits,10,Top-ranked
+Americas-focused vendors,Product A,Project success,10,Leader
+Americas-focused vendors,Product A,Price-to-value,9.940025859,Leader
+Americas-focused vendors,Product A,Recommendation,10,Leader
+Americas-focused vendors,Product A,Vendor support,9.42367531,Leader
+Americas-focused vendors,Product A,Implementer support,9.285169,Leader
+Americas-focused vendors,Product A,Customer satisfaction,9.676822826,Leader
+Americas-focused vendors,Product A,Ease of use,7.702096964,Leader
+Americas-focused vendors,Product A,Sales experience,9.548487581,Leader
+Americas-focused vendors,Product A,Cloud BI,5.35483871,Leader
+Americas-focused vendors,Product A,Mobile BI,9.162790698,Leader
+Americas-focused vendors,Product A,Operational BI,4.802139037,Leader
+Americas-focused vendors,Product A,Embedded BI,6.90625,Leader
+Americas-focused vendors,Product V,Business benefits,8.479267056,Leader
+Americas-focused vendors,Product V,Project success,8.885737956,Leader
+Americas-focused vendors,Product V,Price-to-value,9.793422405,Leader
+Americas-focused vendors,Product V,Recommendation,7.286282306,Leader
+Americas-focused vendors,Product V,Vendor support,8.919391206,Leader
+Americas-focused vendors,Product V,Implementer support,8.090519932,Leader
+Americas-focused vendors,Product V,Customer satisfaction,8.207053691,Leader
+Americas-focused vendors,Product V,Ease of use,7.02245281,Leader
+Americas-focused vendors,Product V,Sales experience,9.707844905,Leader
+Americas-focused vendors,Product V,Cloud BI,3.044193217,Leader
+Americas-focused vendors,Product V,Mobile BI,5.534883721,Leader
+Americas-focused vendors,Product V,Operational BI,6.369747899,Leader
+Americas-focused vendors,Product V,Embedded BI,9.352272727,Leader
+Americas-focused vendors,Product UI,Business benefits,7.815532523,Leader
+Americas-focused vendors,Product UI,Project success,7.221648309,Leader
+Americas-focused vendors,Product UI,Price-to-value,7.609602114,Leader
+Americas-focused vendors,Product UI,Recommendation,6.419116878,Leader
+Americas-focused vendors,Product UI,Vendor support,8.796727505,Leader
+Americas-focused vendors,Product UI,Implementer support,6.621689111,Leader
+Americas-focused vendors,Product UI,Customer satisfaction,6.745965522,Leader
+Americas-focused vendors,Product UI,Ease of use,7.485731191,Leader
+Americas-focused vendors,Product UI,Sales experience,8.590034108,Leader
+Americas-focused vendors,Product UI,Cloud BI,7.188078109,Leader
+Americas-focused vendors,Product UI,Mobile BI,4.359853121,Leader
+Americas-focused vendors,Product UI,Operational BI,6.647058824,Leader
+Americas-focused vendors,Product UI,Embedded BI,8.3125,Leader
+Americas-focused vendors,Product S,Business benefits,8.017244038,Leader
+Americas-focused vendors,Product S,Project success,9.709819429,Leader
+Americas-focused vendors,Product S,Price-to-value,9.690133607,Leader
+Americas-focused vendors,Product S,Recommendation,7.909703939,Leader
+Americas-focused vendors,Product S,Vendor support,8.551400104,Leader
+Americas-focused vendors,Product S,Implementer support,6.301559316,Leader
+Americas-focused vendors,Product S,Customer satisfaction,7.222408399,Leader
+Americas-focused vendors,Product S,Ease of use,8.367798398,Leader
+Americas-focused vendors,Product S,Sales experience,8.505351472,Leader
+Americas-focused vendors,Product S,Cloud BI,5.699149771,Leader
+Americas-focused vendors,Product S,Mobile BI,8.099308611,Leader
+Americas-focused vendors,Product S,Operational BI,9.523529412,Leader
+Americas-focused vendors,Product S,Embedded BI,7.5625,Leader
+Americas-focused vendors,Product R,Business benefits,7.484402739,Leader
+Americas-focused vendors,Product R,Project success,7.153453989,Leader
+Americas-focused vendors,Product R,Price-to-value,8.412879453,Leader
+Americas-focused vendors,Product R,Recommendation,7.211390746,Leader
+Americas-focused vendors,Product R,Vendor support,7.190417136,Leader
+Americas-focused vendors,Product R,Implementer support,5.529246187,Leader
+Americas-focused vendors,Product R,Customer satisfaction,7.036162798,Leader
+Americas-focused vendors,Product R,Ease of use,6.189311514,Leader
+Americas-focused vendors,Product R,Sales experience,6.359056401,Leader
+Americas-focused vendors,Product R,Cloud BI,8.516041221,Leader
+Americas-focused vendors,Product R,Mobile BI,3.629041407,Leader
+Americas-focused vendors,Product R,Operational BI,4.950226244,Leader
+Americas-focused vendors,Product R,Embedded BI,9.203125,Leader
+Americas-focused vendors,Peer Group Average,Business benefits,7.304901984,Leader
+Americas-focused vendors,Peer Group Average,Project success,7.200683069,Leader
+Americas-focused vendors,Peer Group Average,Price-to-value,8.911626409,Leader
+Americas-focused vendors,Peer Group Average,Recommendation,7.473395493,Leader
+Americas-focused vendors,Peer Group Average,Vendor support,8.368654216,Leader
+Americas-focused vendors,Peer Group Average,Implementer support,7.546011553,Leader
+Americas-focused vendors,Peer Group Average,Customer satisfaction,7.758427915,Leader
+Americas-focused vendors,Peer Group Average,Ease of use,6.947622349,Leader
+Americas-focused vendors,Peer Group Average,Sales experience,8.65701719,Leader
+Americas-focused vendors,Peer Group Average,Cloud BI,5.729400262,Leader
+Americas-focused vendors,Peer Group Average,Mobile BI,5.101542891,Leader
+Americas-focused vendors,Peer Group Average,Operational BI,7.341047199,Leader
+Americas-focused vendors,Peer Group Average,Embedded BI,6.749847453,Leader
+Self-service reporting-focused products,Product PM,Business benefits,10,Leader
+Self-service reporting-focused products,Product HG,Business benefits,4.4279974,Top-ranked
+Self-service reporting-focused products,Product WE,Business benefits,7.785664469,Leader
+Self-service reporting-focused products,Product AB,Business benefits,4.4279974,Top-ranked
+Self-service reporting-focused products,Product Y,Business benefits,8.429486966,Leader
+Self-service reporting-focused products,Product X,Business benefits,9.319997464,Leader
+Self-service reporting-focused products,Product TR,Business benefits,5.290496721,Top-ranked
+Self-service reporting-focused products,Product W,Business benefits,4.4279974,Leader
+Self-service reporting-focused products,Product WN,Business benefits,5.365937262,Top-ranked
+Self-service reporting-focused products,Product A,Business benefits,9.5,Leader
+Self-service reporting-focused products,Product V,Business benefits,8.017244038,Leader
+Self-service reporting-focused products,Product UI,Business benefits,1,Leader
+Self-service reporting-focused products,Product S,Business benefits,8.017244038,Leader
+Self-service reporting-focused products,Peer Group Average,Business benefits,6.748351509,Top-ranked
+Large international BI vendors,Product PM,Mobile BI,2.01431127,Top-ranked
+Large international BI vendors,Product HG,Mobile BI,2.415868673,Top-ranked
+Large international BI vendors,Product WE,Mobile BI,7.340629275,Top-ranked
+Large international BI vendors,Product AB,Mobile BI,2.376988984,Top-ranked
+Large international BI vendors,Product Y,Mobile BI,2.279069767,Top-ranked
+Large international BI vendors,Product X,Mobile BI,4.359853121,Top-ranked
+Large international BI vendors,Product TR,Mobile BI,4.418604651,Top-ranked
+Large international BI vendors,Product W,Mobile BI,6.803382664,Top-ranked
+Large international BI vendors,Product WN,Mobile BI,3.972093023,Top-ranked
+Large international BI vendors,Product A,Mobile BI,8.099308611,Top-ranked
+Large international BI vendors,Product V,Mobile BI,3.629041407,Top-ranked
+Large international BI vendors,Product UI,Mobile BI,4.420734844,Top-ranked
+Large international BI vendors,Product S,Mobile BI,6.446131941,Top-ranked
+Large international BI vendors,Product R,Mobile BI,5.964221825,Top-ranked
+Large international BI vendors,Peer Group Average,Mobile BI,2.812251843,Top-ranked
+Self-service reporting-focused products,Product HA,Mobile BI,2.908344733,Leader
+Self-service reporting-focused products,Product LO,Mobile BI,4.941118258,Leader
+Self-service reporting-focused products,Product M,Mobile BI,2.997885835,Top-ranked
+Self-service reporting-focused products,Product L,Mobile BI,8.70962236,Leader
+Self-service reporting-focused products,Product K,Mobile BI,2.877076412,Leader
+Self-service reporting-focused products,Product J,Mobile BI,7.115158308,Top-ranked
+Self-service reporting-focused products,Product I,Mobile BI,1.867109635,Leader
+Self-service reporting-focused products,Product A,Mobile BI,9.162790698,Top-ranked
+Self-service reporting-focused products,Product JK,Mobile BI,1.867109635,Leader
+Self-service reporting-focused products,Product DF,Mobile BI,1.685645549,Top-ranked
+Self-service reporting-focused products,Product V,Mobile BI,5.534883721,Leader
+Self-service reporting-focused products,Product H,Mobile BI,7.364849409,Top-ranked
+Self-service reporting-focused products,Peer Group Average,Mobile BI,2.812251843,Leader
+Large international BI vendors,Product PM,Sales experience,2.01431127,Top-ranked
+Large international BI vendors,Product HG,Sales experience,2.415868673,Top-ranked
+Large international BI vendors,Product WE,Sales experience,7.340629275,Top-ranked
+Large international BI vendors,Product AB,Sales experience,2.376988984,Top-ranked
+Large international BI vendors,Product Y,Sales experience,2.279069767,Top-ranked
+Large international BI vendors,Product X,Sales experience,4.359853121,Top-ranked
+Large international BI vendors,Product TR,Sales experience,4.418604651,Top-ranked
+Large international BI vendors,Product W,Sales experience,6.803382664,Top-ranked
+Large international BI vendors,Product WN,Sales experience,3.972093023,Top-ranked
+Large international BI vendors,Product A,Sales experience,8.099308611,Top-ranked
+Large international BI vendors,Product UI,Sales experience,4.420734844,Top-ranked
+Large international BI vendors,Product S,Sales experience,6.446131941,Top-ranked
+Large international BI vendors,Product R,Sales experience,5.964221825,Top-ranked
+Large international BI vendors,Peer Group Average,Sales experience,2.812251843,Top-ranked
+Self-service reporting-focused products,Product HA,Sales experience,4.941118258,Top-ranked
+Self-service reporting-focused products,Product LO,Sales experience,2.997885835,Leader
+Self-service reporting-focused products,Product A,Sales experience,8.70962236,Leader
+Self-service reporting-focused products,Product L,Sales experience,2.877076412,Top-ranked
+Self-service reporting-focused products,Product K,Sales experience,7.115158308,Leader
+Self-service reporting-focused products,Product J,Sales experience,1.867109635,Leader
+Self-service reporting-focused products,Product I,Sales experience,9.162790698,Leader
+Self-service reporting-focused products,Product M,Sales experience,1.867109635,Leader
+Self-service reporting-focused products,Product DF,Sales experience,1.685645549,Leader
+Self-service reporting-focused products,Product V,Sales experience,5.534883721,Top-ranked
+Self-service reporting-focused products,Product H,Sales experience,7.364849409,Leader
+Self-service reporting-focused products,Peer Group Average,Sales experience,2.812251843,Leader
+Self-service reporting-focused products,Product JU,Cloud BI,2.559843035,Leader
+Self-service reporting-focused products,Product A,Cloud BI,9.378417266,Leader
+Self-service reporting-focused products,Product BD,Cloud BI,2.618705036,Leader
+Self-service reporting-focused products,Product AB,Cloud BI,1.390721905,Leader
+Self-service reporting-focused products,Product Z,Cloud BI,4.992805755,Leader
+Self-service reporting-focused products,Product Y,Cloud BI,3.349733117,Leader
+Self-service reporting-focused products,Product X,Cloud BI,10,Top-ranked
+Self-service reporting-focused products,Product W,Cloud BI,2.312003029,Leader
+Self-service reporting-focused products,Product L,Cloud BI,9.182127982,Leader
+Self-service reporting-focused products,Product V,Cloud BI,3.044193217,Leader
+Self-service reporting-focused products,Product H,Cloud BI,4.9765169,Leader
+Self-service reporting-focused products,Product U,Cloud BI,2.402877698,Leader
+Self-service reporting-focused products,Product T,Cloud BI,2.857251041,Leader
+Self-service reporting-focused products,Product S,Cloud BI,5.699149771,Leader
+Self-service reporting-focused products,Product R,Cloud BI,8.516041221,Leader
+Self-service reporting-focused products,Peer Group Average,Cloud BI,4.914701605,Leader
+Self-service reporting-focused products,Product JU,Project success,8.26203525,Leader
+Self-service reporting-focused products,Product JU,Self-service,7.633209746,Leader
+Self-service reporting-focused products,Product JU,Ease of use,5.554158971,Leader
+Self-service reporting-focused products,Product JU,Customer experience,6.08800036,Leader
+Self-service reporting-focused products,Product WE,Project success,5.407086413,Leader
+Self-service reporting-focused products,Product WE,Self-service,9.284957627,Leader
+Self-service reporting-focused products,Product WE,Ease of use,6.691202726,Leader
+Self-service reporting-focused products,Product WE,Customer experience,5.958898735,Leader
+Self-service reporting-focused products,Product BD,Project success,9.167410145,Leader
+Self-service reporting-focused products,Product BD,Self-service,7.896934197,Leader
+Self-service reporting-focused products,Product BD,Ease of use,6.342335039,Leader
+Self-service reporting-focused products,Product BD,Customer experience,7.607388504,Leader
+Self-service reporting-focused products,Product AB,Project success,6.99149248,Leader
+Self-service reporting-focused products,Product AB,Self-service,5.374697337,Leader
+Self-service reporting-focused products,Product AB,Ease of use,7.166239132,Leader
+Self-service reporting-focused products,Product AB,Customer experience,5.980378856,Leader
+Self-service reporting-focused products,Product Z,Project success,7.767851453,Leader
+Self-service reporting-focused products,Product Z,Self-service,2.048728814,Leader
+Self-service reporting-focused products,Product Z,Ease of use,7.564901201,Leader
+Self-service reporting-focused products,Product Z,Customer experience,5.381646793,Leader
+Self-service reporting-focused products,Product Y,Project success,7.221648309,Leader
+Self-service reporting-focused products,Product Y,Self-service,5.120887338,Leader
+Self-service reporting-focused products,Product Y,Ease of use,5.253681372,Leader
+Self-service reporting-focused products,Product Y,Customer experience,6.303382304,Leader
+Self-service reporting-focused products,Product X,Project success,5.914096355,Leader
+Self-service reporting-focused products,Product X,Self-service,8.19589309,Leader
+Self-service reporting-focused products,Product X,Ease of use,8.112322929,Leader
+Self-service reporting-focused products,Product X,Customer experience,7.556211787,Leader
+Self-service reporting-focused products,Product W,Project success,6.246275282,Leader
+Self-service reporting-focused products,Product W,Self-service,9.713983051,Leader
+Self-service reporting-focused products,Product W,Ease of use,8.45376318,Leader
+Self-service reporting-focused products,Product W,Customer experience,6.509133114,Leader
+Self-service reporting-focused products,Product L,Project success,5.74664353,Leader
+Self-service reporting-focused products,Product L,Self-service,6.380785528,Leader
+Self-service reporting-focused products,Product L,Ease of use,6.001259824,Leader
+Self-service reporting-focused products,Product L,Customer experience,5.654295631,Leader
+Self-service reporting-focused products,Product A,Project success,10,Top-ranked
+Self-service reporting-focused products,Product A,Self-service,9.284957627,Leader
+Self-service reporting-focused products,Product A,Ease of use,7.702096964,Leader
+Self-service reporting-focused products,Product A,Customer experience,7.167869253,Leader
+Self-service reporting-focused products,Product V,Project success,8.885737956,Leader
+Self-service reporting-focused products,Product V,Self-service,8.76059322,Leader
+Self-service reporting-focused products,Product V,Ease of use,7.02245281,Leader
+Self-service reporting-focused products,Product V,Customer experience,7.568107853,Leader
+Self-service reporting-focused products,Product H,Project success,7.37694471,Leader
+Self-service reporting-focused products,Product H,Self-service,8.145821157,Leader
+Self-service reporting-focused products,Product H,Ease of use,5.790214979,Leader
+Self-service reporting-focused products,Product H,Customer experience,7.004771264,Leader
+Self-service reporting-focused products,Product U,Project success,1.884701558,Leader
+Self-service reporting-focused products,Product U,Self-service,7.449682203,Leader
+Self-service reporting-focused products,Product U,Ease of use,5.242691493,Leader
+Self-service reporting-focused products,Product U,Customer experience,4.054981222,Leader
+Self-service reporting-focused products,Product T,Project success,7.803860682,Leader
+Self-service reporting-focused products,Product T,Self-service,7.85819866,Leader
+Self-service reporting-focused products,Product T,Ease of use,6.483753663,Leader
+Self-service reporting-focused products,Product T,Customer experience,6.649890489,Leader
+Self-service reporting-focused products,Product S,Project success,9.709819429,Leader
+Self-service reporting-focused products,Product S,Self-service,10,Top-ranked
+Self-service reporting-focused products,Product S,Ease of use,8.367798398,Leader
+Self-service reporting-focused products,Product S,Customer experience,6.092124694,Leader
+Self-service reporting-focused products,Product R,Project success,7.153453989,Leader
+Self-service reporting-focused products,Product R,Self-service,3.075379126,Leader
+Self-service reporting-focused products,Product R,Ease of use,6.189311514,Leader
+Self-service reporting-focused products,Product R,Customer experience,5.291927308,Leader
+Self-service reporting-focused products,Peer Group Average,Project success,7.221191096,Leader
+Self-service reporting-focused products,Peer Group Average,Self-service,7.264044295,Leader
+Self-service reporting-focused products,Peer Group Average,Ease of use,6.746136512,Leader
+Self-service reporting-focused products,Peer Group Average,Customer experience,6.30431301,Leader
+Large international BI vendors ,Product Q,Project length,1.793495935,Leader
+Large international BI vendors ,Product Q,Price-to-value,3.532906112,Leader
+Large international BI vendors ,Product Q,Recommendation,3.353267492,Leader
+Large international BI vendors ,Product Q,Vendor support,3.204171364,Leader
+Large international BI vendors ,Product Q,Implementer support,3.625274235,Leader
+Large international BI vendors ,Product Q,Ease of use,3.026973148,Leader
+Large international BI vendors ,Product Q,Customer experience,3.958224095,Leader
+Large international BI vendors ,Product Q,Cloud BI,1.895048667,Leader
+Large international BI vendors ,Product Q,Innovation,4.317671365,Leader
+Large international BI vendors ,Product P,Project length,4.220512821,Leader
+Large international BI vendors ,Product P,Price-to-value,6.016003524,Leader
+Large international BI vendors ,Product P,Recommendation,6.25652336,Leader
+Large international BI vendors ,Product P,Vendor support,5.632849979,Leader
+Large international BI vendors ,Product P,Implementer support,7.287559083,Leader
+Large international BI vendors ,Product P,Ease of use,4.434834393,Leader
+Large international BI vendors ,Product P,Customer experience,6.07290411,Leader
+Large international BI vendors ,Product P,Cloud BI,2.748201439,Leader
+Large international BI vendors ,Product P,Innovation,2.939804321,Leader
+Large international BI vendors ,Product O,Project length,2.430894309,Leader
+Large international BI vendors ,Product O,Price-to-value,6.736073998,Leader
+Large international BI vendors ,Product O,Recommendation,2.013916501,Leader
+Large international BI vendors ,Product O,Vendor support,5.7091924,Leader
+Large international BI vendors ,Product O,Implementer support,6.756662754,Leader
+Large international BI vendors ,Product O,Ease of use,4.789089947,Leader
+Large international BI vendors ,Product O,Customer experience,5.258512223,Leader
+Large international BI vendors ,Product O,Cloud BI,1.181610809,Leader
+Large international BI vendors ,Product O,Innovation,2.714775691,Leader
+Large international BI vendors ,Product N,Project length,2.619753086,Leader
+Large international BI vendors ,Product N,Price-to-value,6.901336074,Leader
+Large international BI vendors ,Product N,Recommendation,5.788451112,Leader
+Large international BI vendors ,Product N,Vendor support,7.620477606,Leader
+Large international BI vendors ,Product A,Implementer support,7.104981833,Leader
+Large international BI vendors ,Product N,Ease of use,4.542592307,Leader
+Large international BI vendors ,Product N,Customer experience,6.859841335,Leader
+Large international BI vendors ,Product N,Cloud BI,2.057553957,Leader
+Large international BI vendors ,Product N,Innovation,5.453695607,Leader
+Large international BI vendors ,Product M,Project length,7.183908046,Leader
+Large international BI vendors ,Product A,Price-to-value,9.007495615,Leader
+Large international BI vendors ,Product M,Recommendation,5.43553746,Leader
+Large international BI vendors ,Product M,Vendor support,4.448072153,Leader
+Large international BI vendors ,Product M,Implementer support,3.492100241,Leader
+Large international BI vendors ,Product M,Ease of use,5.6597703,Leader
+Large international BI vendors ,Product M,Customer experience,5.161479475,Leader
+Large international BI vendors ,Product M,Cloud BI,3.784172662,Leader
+Large international BI vendors ,Product M,Innovation,4.758688105,Leader
+Large international BI vendors ,Product L,Project length,7.738461538,Leader
+Large international BI vendors ,Product L,Price-to-value,9.821230927,Leader
+Large international BI vendors ,Product A,Recommendation,6.953736298,Leader
+Large international BI vendors ,Product L,Vendor support,6.177708665,Leader
+Large international BI vendors ,Product L,Implementer support,7.156763196,Leader
+Large international BI vendors ,Product L,Ease of use,6.001259824,Leader
+Large international BI vendors ,Product L,Customer experience,5.654295631,Leader
+Large international BI vendors ,Product A,Cloud BI,9.182127982,Leader
+Large international BI vendors ,Product A,Innovation,6.677082506,Leader
+Large international BI vendors ,Product K,Project length,4.797530864,Leader
+Large international BI vendors ,Product K,Price-to-value,8.998893193,Leader
+Large international BI vendors ,Product K,Recommendation,6.030957114,Leader
+Large international BI vendors ,Product K,Vendor support,5.990664296,Leader
+Large international BI vendors ,Product K,Implementer support,5.156775172,Leader
+Large international BI vendors ,Product K,Ease of use,4.749727419,Leader
+Large international BI vendors ,Product K,Customer experience,4.304023613,Leader
+Large international BI vendors ,Product K,Cloud BI,2.012996055,Leader
+Large international BI vendors ,Product K,Innovation,4.323389058,Leader
+Large international BI vendors ,Product J,Project length,3.215384615,Leader
+Large international BI vendors ,Product J,Price-to-value,5.802343268,Leader
+Large international BI vendors ,Product J,Recommendation,6.319418816,Leader
+Large international BI vendors ,Product J,Vendor support,5.933905562,Leader
+Large international BI vendors ,Product J,Implementer support,5.146943535,Leader
+Large international BI vendors ,Product J,Ease of use,4.346793647,Leader
+Large international BI vendors ,Product J,Customer experience,6.216359305,Leader
+Large international BI vendors ,Product J,Cloud BI,2.849625195,Leader
+Large international BI vendors ,Product J,Innovation,6.07769692,Leader
+Large international BI vendors ,Product I,Project length,1.886021505,Leader
+Large international BI vendors ,Product I,Price-to-value,4.190005139,Leader
+Large international BI vendors ,Product I,Recommendation,2.390514059,Leader
+Large international BI vendors ,Product I,Vendor support,3.075628357,Leader
+Large international BI vendors ,Product I,Implementer support,3.732988495,Leader
+Large international BI vendors ,Product I,Ease of use,4.242759707,Leader
+Large international BI vendors ,Product I,Customer experience,5.876438769,Leader
+Large international BI vendors ,Product I,Cloud BI,2.681364586,Leader
+Large international BI vendors ,Product I,Innovation,3.740591807,Leader
+Large international BI vendors ,Product H,Project length,6.733333333,Leader
+Large international BI vendors ,Product H,Price-to-value,8.074401703,Leader
+Large international BI vendors ,Product H,Recommendation,8.150604569,Leader
+Large international BI vendors ,Product H,Vendor support,6.867476577,Leader
+Large international BI vendors ,Product H,Implementer support,6.464644306,Leader
+Large international BI vendors ,Product H,Ease of use,5.790214979,Leader
+Large international BI vendors ,Product H,Customer experience,7.004771264,Leader
+Large international BI vendors ,Product H,Cloud BI,4.9765169,Leader
+Large international BI vendors ,Product H,Innovation,6.436239344,Leader
+Large international BI vendors ,Product A,Project length,7.017391304,Leader
+Large international BI vendors ,Product G,Price-to-value,7.333186069,Leader
+Large international BI vendors ,Product G,Recommendation,7.146653974,Leader
+Large international BI vendors ,Product A,Vendor support,6.93524534,Leader
+Large international BI vendors ,Product G,Implementer support,6.296681148,Leader
+Large international BI vendors ,Product G,Ease of use,5.994831681,Leader
+Large international BI vendors ,Product G,Customer experience,6.495704558,Leader
+Large international BI vendors ,Product G,Cloud BI,3.4051588,Leader
+Large international BI vendors ,Product G,Innovation,5.921365445,Leader
+Large international BI vendors ,Product F,Project length,1,Leader
+Large international BI vendors ,Product F,Price-to-value,3.295618051,Leader
+Large international BI vendors ,Product F,Recommendation,1,Leader
+Large international BI vendors ,Product F,Vendor support,4.659059985,Leader
+Large international BI vendors ,Product F,Implementer support,4.206278427,Leader
+Large international BI vendors ,Product F,Ease of use,1,Leader
+Large international BI vendors ,Product F,Customer experience,2.918098378,Leader
+Large international BI vendors ,Product F,Cloud BI,2.080965736,Leader
+Large international BI vendors ,Product F,Innovation,2.807115709,Leader
+Large international BI vendors ,Product E,Project length,3.782795699,Leader
+Large international BI vendors ,Product E,Price-to-value,3.567924881,Leader
+Large international BI vendors ,Product E,Recommendation,3.006764607,Leader
+Large international BI vendors ,Product E,Vendor support,2.785722853,Leader
+Large international BI vendors ,Product E,Implementer support,3.630687812,Leader
+Large international BI vendors ,Product E,Ease of use,4.887824648,Leader
+Large international BI vendors ,Product E,Customer experience,4.518981876,Leader
+Large international BI vendors ,Product E,Cloud BI,2.676755148,Leader
+Large international BI vendors ,Product E,Innovation,3.878891443,Leader
+Large international BI vendors ,Product D,Project length,2.263157895,Leader
+Large international BI vendors ,Product D,Price-to-value,3.182939363,Leader
+Large international BI vendors ,Product D,Recommendation,4.540258449,Leader
+Large international BI vendors ,Product D,Vendor support,6.887846674,Leader
+Large international BI vendors ,Product D,Implementer support,4.592866539,Leader
+Large international BI vendors ,Product D,Ease of use,2.335086071,Leader
+Large international BI vendors ,Product D,Customer experience,5.854974813,Leader
+Large international BI vendors ,Product D,Cloud BI,2.681364586,Leader
+Large international BI vendors ,Product D,Innovation,3.827740531,Leader
+Large international BI vendors ,Product C,Project length,7.694117647,Leader
+Large international BI vendors ,Product C,Price-to-value,6.564909705,Leader
+Large international BI vendors ,Product C,Recommendation,6.36361829,Leader
+Large international BI vendors ,Product C,Vendor support,6.758173619,Leader
+Large international BI vendors ,Product C,Implementer support,5.932858105,Leader
+Large international BI vendors ,Product A,Ease of use,7.142098841,Leader
+Large international BI vendors ,Product C,Customer experience,5.340093261,Leader
+Large international BI vendors ,Product C,Cloud BI,3.768710405,Leader
+Large international BI vendors ,Product C,Innovation,5.626535455,Leader
+Large international BI vendors ,Product B,Project length,5.177777778,Leader
+Large international BI vendors ,Product B,Price-to-value,3.554779034,Leader
+Large international BI vendors ,Product B,Recommendation,5.821736249,Leader
+Large international BI vendors ,Product B,Vendor support,5.833172492,Leader
+Large international BI vendors ,Product B,Implementer support,4.124676715,Leader
+Large international BI vendors ,Product B,Ease of use,5.794852163,Leader
+Large international BI vendors ,Product A,Customer experience,7.80725827,Leader
+Large international BI vendors ,Product B,Cloud BI,5.385219097,Leader
+Large international BI vendors ,Product B,Innovation,5.594339056,Leader
+Large international BI vendors ,Peer Group Average,Project length,4.347158524,Leader
+Large international BI vendors ,Peer Group Average,Price-to-value,6.036252916,Leader
+Large international BI vendors ,Peer Group Average,Recommendation,5.035747397,Leader
+Large international BI vendors ,Peer Group Average,Vendor support,5.532460495,Leader
+Large international BI vendors ,Peer Group Average,Implementer support,5.29429635,Leader
+Large international BI vendors ,Peer Group Average,Ease of use,4.671169317,Leader
+Large international BI vendors ,Peer Group Average,Customer experience,5.581372561,Leader
+Large international BI vendors ,Peer Group Average,Cloud BI,3.335462001,Leader
+Large international BI vendors ,Peer Group Average,Innovation,4.693476398,Leader
