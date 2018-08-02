@@ -12,6 +12,8 @@ import './styles.scss';
 
 import { initAnaly } from './chart.js';
 require('./chart2.js');
+require('./chart4.js');
+require('./chart3.js');
 
   import ScrollOut from "scroll-out";
 

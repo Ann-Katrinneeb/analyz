@@ -434,9 +434,9 @@ export function initAnaly() {
           .attr("class", "valueLabel")
           .attr("x", function(d) {
             if (widthHelper > 450) {
-              return xScale(d.answerVal) + 8;
+              return xScale(0) + 8;
             } else {
-              return xScale(d.answerVal) + 4;
+              return xScale(0) + 4;
             }
           })
           .attr("y", function(d, i) {

@@ -2,8 +2,30 @@
   font-size: 0.9rem;
 }
 
-#chart {
+.KPItext {
+  font-size: 1.1rem;
+  fill: #647f99;
+  font-weight: 400;
+}
+
+#chart, #chart2 {
   max-width: 700px;
+}
+
+#chart2, #chart5 {
+  max-width: 700px;
+  flex-grow: 1;
+  margin-top: 20px;
+  min-width: 0;
+}
+
+#chart5 {
+  margin-bottom: 30px;
+}
+
+.centerChart {
+  display: flex;
+  justify-content: center;
 }
 
 .table td, .table th {
@@ -36,6 +58,10 @@
 
 .margintop {
   margin-top: 25px;
+}
+
+.margintop3 {
+  margin-top: 45px;
 }
 
 .marginbottom {
@@ -144,12 +170,6 @@ h1, h2, h3, h4, h5 {
   color: #647f99;
 }
 
-#chart2, #chart3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .scrollable-menu {
   height: auto;
   max-height: 300px;
@@ -201,6 +221,8 @@ h1, h2, h3, h4, h5 {
   flex-direction: column;
   align-items: center;
   font-style: italic;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 a.btn {
@@ -915,6 +937,10 @@ select.bs-select-hidden, select.selectpicker {
   border-color: #ff9800;
 }
 
+.btn-custom a {
+  color: white;
+}
+
 .btn-custom:hover, .btn-custom:active, .btn-custom.active, .open .dropdown-toggle.btn-custom {
   color: white;
   background-color: #ffc107;
@@ -1128,21 +1154,19 @@ footer a:hover {
 
 @-webkit-keyframes heartbeat {
   0% {
-    box-shadow: 0 0 0 0px rgba(255,152,0, 0.5);
+    box-shadow: 0 0 0 0px rgba(255, 152, 0, 0.5);
   }
-
   100% {
-    box-shadow: 0 0 0 30px rgba(255,152,0, 0);
+    box-shadow: 0 0 0 30px rgba(255, 152, 0, 0);
   }
 }
 
 @keyframes heartbeat {
-    0% {
-    box-shadow: 0 0 0 0px rgba(255,152,0, 0.5);
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 152, 0, 0.5);
   }
-
   100% {
-    box-shadow: 0 0 0 30px rgba(255,152,0, 0);
+    box-shadow: 0 0 0 30px rgba(255, 152, 0, 0);
   }
 }
 
@@ -1271,7 +1295,7 @@ h1 {
   }
 }
 
-#analyzer {
+#analyzer, #kpidash, #Compdash, #CompInd {
   background-color: #dce8f4;
   max-width: 80rem;
   margin: 0px auto;
@@ -1281,7 +1305,7 @@ h1 {
   margin-bottom: 7rem;
 }
 
-#filleranalyz {
+#filleranalyz, #fillerKPIDash, #fillerKPIComp {
   margin-bottom: 5rem;
 }
 
@@ -4254,11 +4278,22 @@ h1 {
   text-decoration: none;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1250px) {
   h1 {
     font-size: 2rem;
     line-height: 2rem;
   }
+
+  .tabContainer .tabs .tab .text {
+    font-size:15px;
+  }
+
+  .tabContainer .tabs .tab {
+    padding: 20px 5px;
+  }
+
+
+
 }
 
 @media screen and (max-width: 899px) {
@@ -4276,13 +4311,20 @@ h1 {
     font-size: 0.7rem;
     white-space: normal;
   }
-
 }
 
 @media screen and (max-width:729px) {
-  .legend{
-    font-size:0.7rem;
+  .legend {
+    font-size: 0.7rem;
   }
+}
+
+@media screen and (max-width: 400px) {
+
+.KPItext {
+  font-size: 0.9rem;
+}
+
 }
 
 @media screen and (max-width: 599px) {
@@ -4303,6 +4345,9 @@ h1 {
   }
   .navbar {
     padding: 1rem;
+  }
+  #kpidash, #Compdash, #CompInd {
+    padding: 0.5rem;
   }
   #analyzer {
     padding: 0.5rem;
@@ -4328,7 +4373,7 @@ h1 {
   #questionlong {
     line-height: 1.5rem;
   }
-  #filleranalyz {
+  #filleranalyz, #fillerKPIDash, #fillerKPIComp {
     margin-left: 1rem;
     margin-top: 1.5rem;
     margin-right: 1rem;
@@ -4401,54 +4446,45 @@ h1 {
   .sectionsContainer .sections .section .closer p.extramargin {
     margin-top: 35px;
   }
-
   #scrolly-side .scrolly figure.sticky {
-
     margin: 0 0px 0 0px;
   }
-
-
   #scrolly-side .scrolly article .step p {
-      padding: 0.5rem;
-      font-size:0.8rem;
-      line-height: 1.4 !important;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.4 !important;
+  }
+  #scrolly-side .scrolly article .step h3 {
+    font-size: 1.25rem;
+    padding-left: 0.5rem;
+  }
+  #scrolly-side .scrolly article .step h3.specialh3 {
+    font-size: 1.25rem;
+  }
+  #peerGroupID {
+    line-height: 1rem !important;
+    font-size: 0.75rem;
+    margin-bottom: 3px;
+  }
+  #chartTitle {
+    font-size: 0.95rem;
+  }
+  #scrolly-side .scrolly article {
+    padding-right: 0.5rem;
+  }
+  .specialh4 {
+    font-size: 1.1rem;
+  }
+  .filter2 .btn {
+    font-size: 0.85rem;
+  }
+  .filter2 .dropdown-menu {
+    font-size: 0.85rem;
   }
 
-  #scrolly-side .scrolly article .step h3 {
-    font-size:1.25rem;
-    padding-left: 0.5rem;
-
-}
-
-#scrolly-side .scrolly article .step h3.specialh3 {
-  font-size:1.25rem;
-}
-
-#peerGroupID {
-  line-height:1rem !important;
-  font-size:0.75rem;
-  margin-bottom:3px;
-}
-
-
-#chartTitle {
-  font-size:0.95rem;
-}
-
-#scrolly-side .scrolly article  {
-  padding-right:0.5rem;
-}
-
-.specialh4 {
-  font-size:1.1rem;
-}
-
-.filter2 .btn {
-  font-size:0.85rem;
-}
-.filter2 .dropdown-menu {
-  font-size:0.85rem;
-}
+  .tabContainer {
+      padding: 0 30px;
+    }
 
 }
 
@@ -4503,4 +4539,22 @@ h1 {
 
 .col-md {
   min-width: 0;
+}
+
+.centerDiv {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 700px;
+  flex-grow: 1;
+  padding: 30px 10px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+  border: none;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
 }

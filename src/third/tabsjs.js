@@ -1,6 +1,8 @@
 
 import { initAnaly } from '../chart.js';
-var triggerOnce = 0;
+import { initKPIDash } from '../chart2.js';
+import { initProdComp } from '../chart4.js';
+var triggerOnce = 0, triggerKPIDash=1, triggerProdComp=1;
 
 
 
@@ -107,7 +109,6 @@ var app = {
 
       var triggerId = this.id;
 
-
       if ( triggerId == "nonproduct" ) {
         triggerOnce = 0;
         setTimeout(function(){
@@ -123,6 +124,45 @@ var app = {
 
           document.getElementById("analyID").remove();
           triggerOnce =1;
+        }
+
+      };
+
+      if ( triggerId == "KPIDash2" ) {
+        triggerKPIDash = 0;
+        setTimeout(function(){
+
+          initKPIDash()
+
+        },100);
+
+      };
+
+      if ( triggerId !== "KPIDash2" ) {
+        if (triggerKPIDash == 0) {
+
+          document.getElementById("KPIDashID").remove();
+          triggerKPIDash =1;
+        }
+
+      };
+
+
+      if ( triggerId == "prodComp" ) {
+        triggerProdComp = 0;
+        setTimeout(function(){
+
+          initProdComp()
+
+        },100);
+
+      };
+
+      if ( triggerId !== "prodComp" ) {
+        if (triggerProdComp == 0) {
+
+          document.getElementById("proddiv").remove();
+          triggerProdComp =1;
         }
 
       };

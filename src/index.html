@@ -48,19 +48,19 @@
       <div class="tabs" data-max-width="1024">
         <span class="tab active triggerTest" id="nonproduct" data-tab="a">
           <span class="icon fa fa-bar-chart"></span>
-          <span class="text">Survey Overview</span>
+        <span class="text">Survey results</span>
         </span>
-        <span class="tab triggerTest"   data-tab="b">
+        <span class="tab triggerTest" id="KPIDash2" data-tab="b">
           <span class="icon fa fa-tachometer"></span>
-          <span class="text">KPI Dashboard</span>
+        <span class="text">KPI Dashboard</span>
         </span>
-        <span class="tab triggerTest"  data-tab="c">
+        <span class="tab triggerTest" data-tab="c">
           <span class="icon fa fa-sliders"></span>
-          <span class="text">Product Dashboard</span>
+        <span class="text">Product Dashboard</span>
         </span>
-        <span class="tab triggerTest" data-tab="d">
+        <span class="tab triggerTest" id="prodComp" data-tab="d">
           <span class="icon fa fa-balance-scale"></span>
-          <span class="text">Product Comparison</span>
+        <span class="text">Product Comparison</span>
         </span>
         <span class="tab triggerTest" data-tab="e">
 	      <span class="icon fa fa-info"></span>
@@ -77,7 +77,7 @@
 
           <section class='filler' id="filleranalyz">
             <h2>Survey Overview</h2>
-            <p class="fillerp">The Survey overview enables you to analyze the results for each question in The BI Survey and filter results by region, industry, company size etc..</p>
+            <p class="fillerp">This screen shows the responses to a single question in The Survey. You can choose the question in the drop down box at the top of the report. The filters and the view picklist to the left of the screen can be used to modify the chart.</p>
 
           </section>
           <div class="containeranal">
@@ -301,18 +301,22 @@
 
         <div class="section" data-section="b">
 
-          <section class='filler' id="filleranalyz">
+          <section class='filler' id="fillerKPIDash">
             <h2>KPI Dashboard</h2>
-            <p class="fillerp">The KPI Dashboard enables you to analyze the results for each KPI in The BI Survey by products.</p>
+            <p class="fillerp">The KPI Dashboard allows you to compare product results by criteria (KPIs). For each KPI, values are shown for all the products in the peer group selected in the peer group filter. The peer group average is displayed as a light blue bar. All
+              products displayed above the grey bar are above average in the peer group, and those below the grey bar are below average. At the top of the screen, you can choose which KPI and peer group to analyze.</p>
 
           </section>
           <div class="containeranal">
-          <div class="row margintop justify-content-md-center">
-            <div class="col-sm filter ">
+            <div id="kpidash">
+              <div class="filters ">
+                <div class=" centerDiv">
 
-                <h4 id="questionKPI">KPI filter<h4>
+                  <div class=" filter ">
 
-						<select id="KPIfilter" name="KPIfilter" class="selectpicker">
+                    <h4 id="questionKPI">KPI filter</h4>
+
+                    <select id="KPIfilter" name="KPIfilter" class="selectpicker">
 							<option id="button6" value="10">Business benefits</option>
 							<option id="button7" value="101">Project success</option>
 							<option id="button8" value="24">Project length</option>
@@ -342,36 +346,43 @@
 							<option id="button32" value="102">Competitive win rate</option>
 							<option id="button33" value="102">Competitiveness</option>
 						</select>
-					</div>
-					<div class="col-sm filter">
-						<div>
-							<h4 id="questionPG">Peer group filter<h4>
+                  </div>
+                  <div class="filter">
+                    <div>
+                      <h4 id="questionPG">Peer group filter<h4>
 						</div>
-						<select id="PGfilter" name="PGfilter" class="selectpicker">
-							<option id="button34" value="10">All products</option>
-							<option id="button35" value="101">Americas-focused vendors</option>
-						</select>
-					</div>
-					</div>
+        						<select id="PGfilter" name="PGfilter" class="selectpicker">
+        							<option id="button34" value="10">All products</option>
+        							<option id="button35" value="101">Americas-focused vendors</option>
+        						</select>
+        					</div>
 
-
+                </div>
+              </div>
+            <div class="centerChart">
 					  <div id="chart2"></div>
           </div>
-
+          </div>
+        </div>
 				</div>
 
         <div class="section" data-section="c">
-          <section class='filler' id="filleranalyz">
-            <h2>KPI Dashboard</h2>
-            <p class="fillerp">The KPI Dashboard enables you to analyze the results for each KPI in The BI Survey by products.</p>
+          <section class='filler' >
+            <h2>Product Dashboard</h2>
+            <p class="fillerp">This report shows a summary of the KPI results for a single product. The dashboard displays the results for aggregated KPIs in bold and the root KPIs in regular. Simply select a peer group and product in the filters at the top of the screen. The product filter will only display the products in the selected peer group.</p>
 
           </section>
 
-          <div class="row margintop justify-content-md-center">
-            <div class="col-sm filter">
-              <div class="marginbottom">
+          <div class="containeranal">
+            <div id="Compdash">
+              <div class="filters ">
+                <div class=" centerDiv">
+
+                  <div class=" filter">
+
+
                 <h4 id="productKPIFil">Product filter<h4>
-            </div>
+
             <div id="drop1">
                <div class="dropdown drophelp">
                  <button class="btn dropdown-toggle  dropdownMenuButton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MIK (prevero)</button>
@@ -379,12 +390,11 @@
                   </div>
               </div>
               </div>
-
-          </div>
-          <div class="col-sm filter" id="selectHelp">
-            <div class="marginbottom">
-              <h4 id="questionPG">Peer group filter<h4>
             </div>
+
+          <div class=" filter">
+              <h4 id="questionPG">Peer group filter<h4>
+
             <div id="drop2">
                <div class="dropdown drophelp">
                  <button class="btn dropdown-toggle dropdownMenuButton" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All products</button>
@@ -392,31 +402,45 @@
                   </div>
               </div>
               </div>
-
+            </div>
           </div>
           </div>
 
+
+              <div class="centerChart">
             <div id="chart3" class="margintop"></div>
+          </div>
 
 
         </div>
+      </div>
+    </div>
         <div class="section" data-section="d">
 
-          <div class="row margintop justify-content-md-center">
-            <div class="col-sm filter">
-              <div>
+          <section class='filler' id="fillerKPIComp">
+            <h2>Product Comparison</h2>
+            <p class="fillerp">This screen allows users to make their own short list of products and compare them directly against each other based on multiple criteria. First select a peer group that you want as the basis for the product comparison in the filter. Then select the criteria (KPIs)you whish to compare. Multiple KPIs can be selected in this filter. Finally select the products you wish to compare.</p>
+
+          </section>
+
+          <div class="containeranal">
+            <div id="CompInd">
+              <div class="filters ">
+                <div class=" centerDiv">
+
+                  <div class=" filter">
                 <h4 id="questionKPI">Peer group<h4>
-            </div>
-                <select id="peergroupID" class="selectpicker">
+
+                <select id="peergroupID" class="selectpicker" title="Selecet a peer group">
+                  <option data-hidden="true" value="5"></option>
                   <option id="button434" value="10">All products</option>
                   <option id="button435" value="101">Americas-focused vendors</option>
                 </select>
               </div>
-              <div class="col-sm filter">
-                <div>
+                <div class=" filter">
                   <h4 id="questionPG">KPI<h4>
-                </div>
-                <select id="KPIID" name="KPIID" class="selectpicker" multiple title="Select KPIs" >
+
+                <select id="KPIID" name="KPIID" class="selectpicker" multiple title="Select KPIs" disabled>
                   <option id="button206" value="Business benefits">Business benefits</option>
                   <option id="button207" value="Project success">Project success</option>
                   <option id="button208" value="Project length">Project length</option>
@@ -447,11 +471,11 @@
                   <option id="button233" value="Competitiveness">Competitiveness</option>
               </select>
               </div>
-              <div class="col-sm filter">
-                <div>
+                <div class=" filter">
+
                 <h4>Product</h4>
-              </div>
-              <select id="ProductID" class="selectpicker" title="Select products" multiple>
+
+                    <select id="ProductID" class="selectpicker" title="Select products" multiple disabled>
                   <option>Bissantz</option>
                   <option>BOARD</option>
                   <option>CALUMO</option>
@@ -495,954 +519,962 @@
                   <option>Yellowfin</option>
                   <option>Zoho Reports</option>
               </select>
+                  </div>
+                </div>
+              </div>
+                      <div id="chartHelpText"></div>
+                <div class="centerChart margintop">
+
+                  <div id="chart5"></div>
+                </div>
+
+              </div>
             </div>
           </div>
-          <div class="row margintop justify-content-md-center" id="chart5Container">
-            <div id="chartHelpText"></div>
-            <div id="chart5"></div>
-          </div>
-
-        </div>
 
 
-        <div class="section" data-section="e">
-          <section class='filler' id="filleranalyz">
-            <h2>About The BI Survey Highlights Analyzer</h2>
-            <p class="fillerp">The BI Survey Highlights Analyzer web app for Product A is an interactive tool that enables you to perform your own custom analysis of the Highlights of Product A as well as the non-product related BI Survey 18 data. The app contains results
-              from all the questions asked in The BI Survey 18. For more information on The BI Survey methodology see <a href="https://bi-survey.com/bi-survey-about">The BI Survey about page</a> and the following table.</p>
+              <div class="section" data-section="e">
+                <section class='filler' >
+                  <h2>About The BI Survey Analyzer</h2>
+                  <p class="fillerp">The BI Survey Analyzer web app is an interactive tool that enables you to perform your own custom analysis of The BI Survey 18 data. The app contains results from all the questions asked in The BI Survey 18. Product-related results based on
+                    a series of important criteria (known here as KPIs – Key Performance Indicators) are also available to view.</p>
+                    <div class="row justify-content-md-center margintop3">
+                    <button type="button" class="btn btn-custom"> <a href="https://bi-survey.com/wp-content/uploads/2017/09/Helpfile-BI-Survey-Analyzer-17.pdf" role="button"><span class="icon fa fa-file-pdf-o"></span>Download PDF</a></button>
 
-          </section>
+                    </div>
 
-          <div class="containerHelp">
-            <div class="helpWidth">
-              <div class="accordion" id="accordion">
-                <div class="card">
-                  <div class="card-header" role="tab" id="headingOne">
-                    <h5 class="mb-0">
+                </section>
+
+                <div class="containerHelp">
+                  <div class="helpWidth">
+                    <div class="accordion" id="accordion">
+                      <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                          <h5 class="mb-0">
 		 <a class="collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 			Question Overview
 		</a>
 	</h5>
-                  </div>
+                        </div>
 
-                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
-                      <table class="table table-striped">
-                        <thead class="thead-light">
-                          <tr>
-                            <th>Abbreviation</th>
-                            <th>Question</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Benefits: Accurate reporting</td>
-                            <td>Do you benefit from more accurate reporting, analysis or planning?</td>
-                          </tr>
-                          <tr>
-                            <td>Benefits: Better decisions</td>
-                            <td>Are you able to make better business decisions through better analysis?</td>
-                          </tr>
-                          <tr>
-                            <td>Benefits: Competitve advantage</td>
-                            <td>Did your competitive advantage increase?</td>
-                          </tr>
-                          <tr>
-                            <td>Benefits: Costs</td>
-                            <td>Have you reduced costs? (IT or non-IT)</td>
-                          </tr>
-                          <tr>
-                            <td>Benefits: Customer satisfaction</td>
-                            <td>Do you benefit from improved customer satisfaction?</td>
-                          </tr>
-                          <tr>
-                            <td>Benefits: Data quality</td>
-                            <td>Do you benefit from improved data quality?</td>
-                          </tr>
-                          <tr>
-                            <td>Benefits: Employee satisfaction</td>
-                            <td>Do you benefit from improved employee satisfaction?</td>
-                          </tr>
-                          <tr>
-                            <td>Benefits: Faster reporting</td>
-                            <td>Do you benefit from faster reporting, analysis or planning?</td>
-                          </tr>
-                          <tr>
-                            <td>Benefits: Headcount</td>
-                            <td>Have you saved on headcount in business departments or IT?</td>
-                          </tr>
-                          <tr>
-                            <td>Benefits: Operational efficency</td>
-                            <td>Do you benefit from improved operational efficency?</td>
-                          </tr>
-                          <tr>
-                            <td>Demography: Country</td>
-                            <td>Country</td>
-                          </tr>
-                          <tr>
-                            <td>Demography: Department</td>
-                            <td>Which department do you work in?</td>
-                          </tr>
-                          <tr>
-                            <td>Demography: Department IT-Business</td>
-                            <td>Which department do you work in?</td>
-                          </tr>
-                          <tr>
-                            <td>Demography: Departments using BI</td>
-                            <td>Which departments use BI applications?</td>
-                          </tr>
-                          <tr>
-                            <td>Demography: European regions</td>
-                            <td>European regions</td>
-                          </tr>
-                          <tr>
-                            <td>Demography: Industry</td>
-                            <td>Industry sector</td>
-                          </tr>
-                          <tr>
-                            <td>Demography: Industry</td>
-                            <td>Industry sector</td>
-                          </tr>
-                          <tr>
-                            <td>Demography: Number of BI product users</td>
-                            <td>Number of BI product users</td>
-                          </tr>
-                          <tr>
-                            <td>Demography: Number of BI users</td>
-                            <td>Number of BI users</td>
-                          </tr>
-                          <tr>
-                            <td>Demography: Number of employees</td>
-                            <td>Number of employees</td>
-                          </tr>
-                          <tr>
-                            <td>Implementation: Admin satisfaction &#8211; technical</td>
-                            <td>Rate the level of administrator satisfaction with the implementation of technical aspects of your project</td>
-                          </tr>
-                          <tr>
-                            <td>Implementation: Project length</td>
-                            <td>How long did it take to implement the BI software?</td>
-                          </tr>
-                          <tr>
-                            <td>Implementation: Project on-budget</td>
-                            <td>Was your project completed within the budget originally specified?</td>
-                          </tr>
-                          <tr>
-                            <td>Implementation: Project on-time</td>
-                            <td>Was your project completed within the timeframe originally specified?</td>
-                          </tr>
-                          <tr>
-                            <td>Implementation: User satisfaction &#8211; business</td>
-                            <td>Rate the level of user satisfaction with the implementation of business aspects of your project</td>
-                          </tr>
-                          <tr>
-                            <td>Implementation: User satisfaction &#8211; technical</td>
-                            <td>Rate the level of user satisfaction with the implementation of technical aspects of your project</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Application age</td>
-                            <td>When did your company start using the product?</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Classification</td>
-                            <td>Do you use/plan to use classification in your company?</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Clustering/Segmentation</td>
-                            <td>Do you use/plan to use clustering/segmentation in your company?</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Concurrent users</td>
-                            <td>What is the average number of concurrent users using the BI product?</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Data volume</td>
-                            <td>What is the amount of data in the databases used with the BI product?</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Discovery of correlations</td>
-                            <td>Do you use/plan to use discovery of correlations in your company?</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Front-end product IBM Cognos TM1</td>
-                            <td>Please indicate the front-end products you use with IBM Cognos TM1?</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Front-end product Microsoft (SSAS)</td>
-                            <td>Please indicate the front-end products you use with Microsoft (SSAS)?</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Front-end product Oracle Essbase</td>
-                            <td>Please indicate the front-end products you use with Oracle Essbase?</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Front-end product SAP BW</td>
-                            <td>Please indicate the front-end products you use with SAP BW?</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Implementation problems</td>
-                            <td>What are the most serious problems you have encountered during the implementation?</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Importance of predictive analytics features</td>
-                            <td>How important is it that your company&#8217;s BI tool includes predictive analytics features?</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Price-to-value</td>
-                            <td>How would you rate the price-to-value of your BI product?</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Query response time</td>
-                            <td>What is the typical query response time that end users see?</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Recommendation of product</td>
-                            <td>Would you recommend others to buy your BI product?</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Standardization choice</td>
-                            <td>Is your product one of the products your company is working to standardize on?</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Tasks carried out by business users</td>
-                            <td>Which tasks are carried out by business users in your company with your BI tool?</td>
-                          </tr>
-                          <tr>
-                            <td>Product: Trend analysis/Automated forecasting</td>
-                            <td>Do you use/plan to use trend analysis or automated forecasting in your company?</td>
-                          </tr>
-                          <tr>
-                            <td>Sales experience: General behavior</td>
-                            <td>How would you rate the vendor&#8217;s general conduct during the purchasing process?</td>
-                          </tr>
-                          <tr>
-                            <td>Sales experience: Industry knowledge</td>
-                            <td>How would you rate the vendor&#8217;s understanding of your industry-specific requirements during the purchasing process?</td>
-                          </tr>
-                          <tr>
-                            <td>Sales experience: Pricing / contract flexibility</td>
-                            <td>How flexible was the vendor in terms of pricing and contract?</td>
-                          </tr>
-                          <tr>
-                            <td>Sales experience: Product evaluation / contract negotiation</td>
-                            <td>How would you rate your experience with the vendor when evaluating the product and during contract negotiation?</td>
-                          </tr>
-                          <tr>
-                            <td>Sales experience: Understanding of needs</td>
-                            <td>How would you rate the vendor&#8217;s ability to understand your organization&#8217;s needs?</td>
-                          </tr>
-                          <tr>
-                            <td>Sales experience: Vendor responsiveness</td>
-                            <td>How timely and thorough were the vendor&#8217;s responses to product-related and technical questions you had?</td>
-                          </tr>
-                          <tr>
-                            <td>Selection: Acquired products</td>
-                            <td>Which products has your organization acquired?</td>
-                          </tr>
-                          <tr>
-                            <td>Selection: Chosen product</td>
-                            <td>With which product are you most familiar?</td>
-                          </tr>
-                          <tr>
-                            <td>Selection: Evaluated products</td>
-                            <td>Which products has your organization evaluated?</td>
-                          </tr>
-                          <tr>
-                            <td>Selection: Reasons for replacing/abolishing BI system(s)</td>
-                            <td>Reasons for replacing/abolishing BI system(s)?</td>
-                          </tr>
-                          <tr>
-                            <td>Selection: Reasons to buy</td>
-                            <td>Why was the product chosen?</td>
-                          </tr>
-                          <tr>
-                            <td>Selection: Replaced BI systems</td>
-                            <td>Did your organization replace/abolish BI systems in the last 12 months?</td>
-                          </tr>
-                          <tr>
-                            <td>Selection: Resources importance</td>
-                            <td>Which resources had the biggest influence in deciding which product your company selected?</td>
-                          </tr>
-                          <tr>
-                            <td>Selection: Resources used</td>
-                            <td>Which resources did you use to find out about BI products during the selection process?</td>
-                          </tr>
-                          <tr>
-                            <td>Selection: Selection type</td>
-                            <td>Did your organization conduct a formal product selection?</td>
-                          </tr>
-                          <tr>
-                            <td>Support: Implementer support</td>
-                            <td>How do you rate the support provided by the implementer?</td>
-                          </tr>
-                          <tr>
-                            <td>Support: Vendor support</td>
-                            <td>How do you rate the support provided by the vendor?</td>
-                          </tr>
-                          <tr>
-                            <td>Tasks: Ad hoc querying</td>
-                            <td>Do you use or plan to use the application for ad hoc querying?</td>
-                          </tr>
-                          <tr>
-                            <td>Tasks: Advanced analysis</td>
-                            <td>Do you use or plan to use the application for advanced analysis?</td>
-                          </tr>
-                          <tr>
-                            <td>Tasks: Basic data analysis</td>
-                            <td>Do you use or plan to use the application for basic data analysis?</td>
-                          </tr>
-                          <tr>
-                            <td>Tasks: Budgeting/Planning</td>
-                            <td>Do you use or plan to use the application for budgeting and planning?</td>
-                          </tr>
-                          <tr>
-                            <td>Tasks: Dashboards/Scorecards</td>
-                            <td>Do you use or plan to use the application for dashboards/scorecards?</td>
-                          </tr>
-                          <tr>
-                            <td>Tasks: Financial consolidation</td>
-                            <td>Do you use or plan to use the application for financial consolidation?</td>
-                          </tr>
-                          <tr>
-                            <td>Tasks: Reporting</td>
-                            <td>Do you use or plan to use the application for reporting?</td>
-                          </tr>
-                          <tr>
-                            <td>Trends: BI with real-time data</td>
-                            <td>Does your company use your BI tool with real-time data?</td>
-                          </tr>
-                          <tr>
-                            <td>Trends: BIaaS</td>
-                            <td>Does your company use BIaaS with your BI tool?</td>
-                          </tr>
-                          <tr>
-                            <td>Trends: Collaboration</td>
-                            <td>Does your company use your BI tool for collaboration?</td>
-                          </tr>
-                          <tr>
-                            <td>Trends: Data preparation</td>
-                            <td>Does your company use your BI tool for data preparation?</td>
-                          </tr>
-                          <tr>
-                            <td>Trends: Embedded BI</td>
-                            <td>Does your company use your BI tool for embedded BI?</td>
-                          </tr>
-                          <tr>
-                            <td>Trends: Mobile BI</td>
-                            <td>Does your company use a mobile BI product?</td>
-                          </tr>
-                          <tr>
-                            <td>Trends: Self-service</td>
-                            <td>Does your company use self-service BI with your BI tool?</td>
-                          </tr>
-                          <tr>
-                            <td>Trends: Sensor data analysis</td>
-                            <td>Does your company use your BI tool for sensor data analysis?</td>
-                          </tr>
-                          <tr>
-                            <td>Trends: Spatial/Location analysis</td>
-                            <td>Does your company use your BI tool for spatial/location analysis?</td>
-                          </tr>
-                          <tr>
-                            <td>Trends: Text data analysis</td>
-                            <td>Does your company use your BI tool for text data analysis?</td>
-                          </tr>
-                          <tr>
-                            <td>Trends: Visual analysis</td>
-                            <td>Does your company use your BI tool for visual analysis?</td>
-                          </tr>
-                          <tr>
-                            <td>Trends: Visual design standards</td>
-                            <td>Does your company use visual design standards with your BI tool?</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card">
-                  <div class="card-header" id="headingTwo">
-                    <h5 class="mb-0">
-									<a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-						 			Peer Groups
-						 		</a>
-								 </h5>
-                  </div>
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                    <div class="card-body">
-                      <div class="d-flex flex-row mt-2">
-                        <ul class="nav nav-tabs nav-tabs--vertical nav-tabs--left" role="navigation">
-                          <li class="nav-item">
-                            <a href="#lorem" class="nav-link active" data-toggle="tab" role="tab" aria-controls="lorem">Solution-focused planning products</a>
-                          </li>
-                          <li class="nav-item">
-                            <a href="#ipsum" class="nav-link" data-toggle="tab" role="tab" aria-controls="ipsum">BI-focused products</a>
-                          </li>
-                          <li class="nav-item">
-                            <a href="#dolor" class="nav-link" data-toggle="tab" role="tab" aria-controls="dolor">Enterprise software vendors</a>
-                          </li>
-                          <li class="nav-item">
-                            <a href="#sit-amet" class="nav-link" data-toggle="tab" role="tab" aria-controls="sit-amet">Flexible planning platforms</a>
-                          </li>
-                        </ul>
-                        <div class="tab-content">
-                          <div class="tab-pane fade show active" id="lorem" role="tabpanel">
-                            <h5>Solution-focused planning products</h5>
-
-                            <p>Solution-focused planning products are usually based on, or supplemented by, predefined planning solutions designed for particular applications (e.g., integrated financial planning, HR) or industries (e.g., energy, manufacturing).</p>
-                            <ul>
-                              <li><a href="https://bi-survey.com/product/pyramid-analytics">BI Office Suite</a></li>
-                              <li><a href="https://bi-survey.com/product/board">BOARD</a></li>
-                              <li><a href="https://bi-survey.com/product/calumo">CALUMO</a></li>
-                              <li><a href="https://bi-survey.com/product/carriots-analytics-envision">Carriots Analytics (Envision)</a></li>
-                              <li><a href="https://bi-survey.com/product/chartio">Chartio</a></li>
-                              <li><a href="https://bi-survey.com/product/cyberscience-cyberquery">Cyberquery</a></li>
-                              <li><a href="https://bi-survey.com/product/dimensional-insight">Diver Platform</a></li>
-                              <li><a href="https://bi-survey.com/product/domo">Domo</a></li>
-                              <li><a href="https://bi-survey.com/product/dundas">Dundas BI</a></li>
-                              <li><a href="https://bi-survey.com/product/entrinsik-informer">Entrinsik Informer</a></li>
-                              <li><a href="https://bi-survey.com/product/phocas">Phocas</a></li>
-                              <li><a href="https://bi-survey.com/product/sisense">Sisense</a></li>
-                              <li><a href="https://bi-survey.com/product/yellowfin">Yellowfin BI</a></li>
-                              <li><a href="https://bi-survey.com/product/zoho-reports">Zoho Reports</a></li>
-                            </ul>
-                          </div>
-                          <div class="tab-pane fade" id="ipsum" role="tabpanel">
-                            <h5>BI-focused products</h5>
-
-                            <p>Besides planning and performance management, BI-focused products target use cases such as standard reporting, ad hoc reporting, analysis, advanced analytics and dashboarding.</p>
-                            <ul>
-                              <li><a href="https://bi-survey.com/product/pyramid-analytics">BI Office Suite</a></li>
-                              <li><a href="https://bi-survey.com/product/board">BOARD</a></li>
-                              <li><a href="https://bi-survey.com/product/calumo">CALUMO</a></li>
-                              <li><a href="https://bi-survey.com/product/carriots-analytics-envision">Carriots Analytics (Envision)</a></li>
-                              <li><a href="https://bi-survey.com/product/chartio">Chartio</a></li>
-                              <li><a href="https://bi-survey.com/product/cyberscience-cyberquery">Cyberquery</a></li>
-                              <li><a href="https://bi-survey.com/product/dimensional-insight">Diver Platform</a></li>
-                              <li><a href="https://bi-survey.com/product/domo">Domo</a></li>
-                              <li><a href="https://bi-survey.com/product/dundas">Dundas BI</a></li>
-                              <li><a href="https://bi-survey.com/product/entrinsik-informer">Entrinsik Informer</a></li>
-                              <li><a href="https://bi-survey.com/product/phocas">Phocas</a></li>
-                              <li><a href="https://bi-survey.com/product/sisense">Sisense</a></li>
-                              <li><a href="https://bi-survey.com/product/yellowfin">Yellowfin BI</a></li>
-                              <li><a href="https://bi-survey.com/product/zoho-reports">Zoho Reports</a></li>
-                            </ul>
-                          </div>
-                          <div class="tab-pane fade" id="dolor" role="tabpanel">
-                            <h5>Enterprise software vendors</h5>
-
-                            <p>Enterprise software vendors have a broad portfolio including most (or all) types of business software.</p>
-                            <ul>
-                              <li><a href="https://bi-survey.com/product/pyramid-analytics">BI Office Suite</a></li>
-                              <li><a href="https://bi-survey.com/product/board">BOARD</a></li>
-                              <li><a href="https://bi-survey.com/product/calumo">CALUMO</a></li>
-                              <li><a href="https://bi-survey.com/product/carriots-analytics-envision">Carriots Analytics (Envision)</a></li>
-                              <li><a href="https://bi-survey.com/product/chartio">Chartio</a></li>
-                              <li><a href="https://bi-survey.com/product/cyberscience-cyberquery">Cyberquery</a></li>
-                              <li><a href="https://bi-survey.com/product/dimensional-insight">Diver Platform</a></li>
-                              <li><a href="https://bi-survey.com/product/domo">Domo</a></li>
-                              <li><a href="https://bi-survey.com/product/dundas">Dundas BI</a></li>
-                              <li><a href="https://bi-survey.com/product/entrinsik-informer">Entrinsik Informer</a></li>
-                              <li><a href="https://bi-survey.com/product/phocas">Phocas</a></li>
-                              <li><a href="https://bi-survey.com/product/sisense">Sisense</a></li>
-                              <li><a href="https://bi-survey.com/product/yellowfin">Yellowfin BI</a></li>
-                              <li><a href="https://bi-survey.com/product/zoho-reports">Zoho Reports</a></li>
-                            </ul>
-                          </div>
-                          <div class="tab-pane fade" id="sit-amet" role="tabpanel">
-                            <h5>Flexible planning platforms</h5>
-
-                            <p>Flexible planning platforms are most suitable for developing and implementing bespoke planning solutions to meet a unique set of requirements. They usually offer limited predefined content.</p>
-                            <ul>
-                              <li><a href="https://bi-survey.com/product/pyramid-analytics">BI Office Suite</a></li>
-                              <li><a href="https://bi-survey.com/product/board">BOARD</a></li>
-                              <li><a href="https://bi-survey.com/product/calumo">CALUMO</a></li>
-                              <li><a href="https://bi-survey.com/product/carriots-analytics-envision">Carriots Analytics (Envision)</a></li>
-                              <li><a href="https://bi-survey.com/product/chartio">Chartio</a></li>
-                              <li><a href="https://bi-survey.com/product/cyberscience-cyberquery">Cyberquery</a></li>
-                              <li><a href="https://bi-survey.com/product/dimensional-insight">Diver Platform</a></li>
-                              <li><a href="https://bi-survey.com/product/domo">Domo</a></li>
-                              <li><a href="https://bi-survey.com/product/dundas">Dundas BI</a></li>
-                              <li><a href="https://bi-survey.com/product/entrinsik-informer">Entrinsik Informer</a></li>
-                              <li><a href="https://bi-survey.com/product/phocas">Phocas</a></li>
-                              <li><a href="https://bi-survey.com/product/sisense">Sisense</a></li>
-                              <li><a href="https://bi-survey.com/product/yellowfin">Yellowfin BI</a></li>
-                              <li><a href="https://bi-survey.com/product/zoho-reports">Zoho Reports</a></li>
-                            </ul>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                          <div class="card-body">
+                            <table class="table table-striped">
+                              <thead class="thead-light">
+                                <tr>
+                                  <th>Abbreviation</th>
+                                  <th>Question</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Benefits: Accurate reporting</td>
+                                  <td>Do you benefit from more accurate reporting, analysis or planning?</td>
+                                </tr>
+                                <tr>
+                                  <td>Benefits: Better decisions</td>
+                                  <td>Are you able to make better business decisions through better analysis?</td>
+                                </tr>
+                                <tr>
+                                  <td>Benefits: Competitve advantage</td>
+                                  <td>Did your competitive advantage increase?</td>
+                                </tr>
+                                <tr>
+                                  <td>Benefits: Costs</td>
+                                  <td>Have you reduced costs? (IT or non-IT)</td>
+                                </tr>
+                                <tr>
+                                  <td>Benefits: Customer satisfaction</td>
+                                  <td>Do you benefit from improved customer satisfaction?</td>
+                                </tr>
+                                <tr>
+                                  <td>Benefits: Data quality</td>
+                                  <td>Do you benefit from improved data quality?</td>
+                                </tr>
+                                <tr>
+                                  <td>Benefits: Employee satisfaction</td>
+                                  <td>Do you benefit from improved employee satisfaction?</td>
+                                </tr>
+                                <tr>
+                                  <td>Benefits: Faster reporting</td>
+                                  <td>Do you benefit from faster reporting, analysis or planning?</td>
+                                </tr>
+                                <tr>
+                                  <td>Benefits: Headcount</td>
+                                  <td>Have you saved on headcount in business departments or IT?</td>
+                                </tr>
+                                <tr>
+                                  <td>Benefits: Operational efficency</td>
+                                  <td>Do you benefit from improved operational efficency?</td>
+                                </tr>
+                                <tr>
+                                  <td>Demography: Country</td>
+                                  <td>Country</td>
+                                </tr>
+                                <tr>
+                                  <td>Demography: Department</td>
+                                  <td>Which department do you work in?</td>
+                                </tr>
+                                <tr>
+                                  <td>Demography: Department IT-Business</td>
+                                  <td>Which department do you work in?</td>
+                                </tr>
+                                <tr>
+                                  <td>Demography: Departments using BI</td>
+                                  <td>Which departments use BI applications?</td>
+                                </tr>
+                                <tr>
+                                  <td>Demography: European regions</td>
+                                  <td>European regions</td>
+                                </tr>
+                                <tr>
+                                  <td>Demography: Industry</td>
+                                  <td>Industry sector</td>
+                                </tr>
+                                <tr>
+                                  <td>Demography: Industry</td>
+                                  <td>Industry sector</td>
+                                </tr>
+                                <tr>
+                                  <td>Demography: Number of BI product users</td>
+                                  <td>Number of BI product users</td>
+                                </tr>
+                                <tr>
+                                  <td>Demography: Number of BI users</td>
+                                  <td>Number of BI users</td>
+                                </tr>
+                                <tr>
+                                  <td>Demography: Number of employees</td>
+                                  <td>Number of employees</td>
+                                </tr>
+                                <tr>
+                                  <td>Implementation: Admin satisfaction &#8211; technical</td>
+                                  <td>Rate the level of administrator satisfaction with the implementation of technical aspects of your project</td>
+                                </tr>
+                                <tr>
+                                  <td>Implementation: Project length</td>
+                                  <td>How long did it take to implement the BI software?</td>
+                                </tr>
+                                <tr>
+                                  <td>Implementation: Project on-budget</td>
+                                  <td>Was your project completed within the budget originally specified?</td>
+                                </tr>
+                                <tr>
+                                  <td>Implementation: Project on-time</td>
+                                  <td>Was your project completed within the timeframe originally specified?</td>
+                                </tr>
+                                <tr>
+                                  <td>Implementation: User satisfaction &#8211; business</td>
+                                  <td>Rate the level of user satisfaction with the implementation of business aspects of your project</td>
+                                </tr>
+                                <tr>
+                                  <td>Implementation: User satisfaction &#8211; technical</td>
+                                  <td>Rate the level of user satisfaction with the implementation of technical aspects of your project</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Application age</td>
+                                  <td>When did your company start using the product?</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Classification</td>
+                                  <td>Do you use/plan to use classification in your company?</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Clustering/Segmentation</td>
+                                  <td>Do you use/plan to use clustering/segmentation in your company?</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Concurrent users</td>
+                                  <td>What is the average number of concurrent users using the BI product?</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Data volume</td>
+                                  <td>What is the amount of data in the databases used with the BI product?</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Discovery of correlations</td>
+                                  <td>Do you use/plan to use discovery of correlations in your company?</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Front-end product IBM Cognos TM1</td>
+                                  <td>Please indicate the front-end products you use with IBM Cognos TM1?</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Front-end product Microsoft (SSAS)</td>
+                                  <td>Please indicate the front-end products you use with Microsoft (SSAS)?</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Front-end product Oracle Essbase</td>
+                                  <td>Please indicate the front-end products you use with Oracle Essbase?</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Front-end product SAP BW</td>
+                                  <td>Please indicate the front-end products you use with SAP BW?</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Implementation problems</td>
+                                  <td>What are the most serious problems you have encountered during the implementation?</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Importance of predictive analytics features</td>
+                                  <td>How important is it that your company&#8217;s BI tool includes predictive analytics features?</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Price-to-value</td>
+                                  <td>How would you rate the price-to-value of your BI product?</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Query response time</td>
+                                  <td>What is the typical query response time that end users see?</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Recommendation of product</td>
+                                  <td>Would you recommend others to buy your BI product?</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Standardization choice</td>
+                                  <td>Is your product one of the products your company is working to standardize on?</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Tasks carried out by business users</td>
+                                  <td>Which tasks are carried out by business users in your company with your BI tool?</td>
+                                </tr>
+                                <tr>
+                                  <td>Product: Trend analysis/Automated forecasting</td>
+                                  <td>Do you use/plan to use trend analysis or automated forecasting in your company?</td>
+                                </tr>
+                                <tr>
+                                  <td>Sales experience: General behavior</td>
+                                  <td>How would you rate the vendor&#8217;s general conduct during the purchasing process?</td>
+                                </tr>
+                                <tr>
+                                  <td>Sales experience: Industry knowledge</td>
+                                  <td>How would you rate the vendor&#8217;s understanding of your industry-specific requirements during the purchasing process?</td>
+                                </tr>
+                                <tr>
+                                  <td>Sales experience: Pricing / contract flexibility</td>
+                                  <td>How flexible was the vendor in terms of pricing and contract?</td>
+                                </tr>
+                                <tr>
+                                  <td>Sales experience: Product evaluation / contract negotiation</td>
+                                  <td>How would you rate your experience with the vendor when evaluating the product and during contract negotiation?</td>
+                                </tr>
+                                <tr>
+                                  <td>Sales experience: Understanding of needs</td>
+                                  <td>How would you rate the vendor&#8217;s ability to understand your organization&#8217;s needs?</td>
+                                </tr>
+                                <tr>
+                                  <td>Sales experience: Vendor responsiveness</td>
+                                  <td>How timely and thorough were the vendor&#8217;s responses to product-related and technical questions you had?</td>
+                                </tr>
+                                <tr>
+                                  <td>Selection: Acquired products</td>
+                                  <td>Which products has your organization acquired?</td>
+                                </tr>
+                                <tr>
+                                  <td>Selection: Chosen product</td>
+                                  <td>With which product are you most familiar?</td>
+                                </tr>
+                                <tr>
+                                  <td>Selection: Evaluated products</td>
+                                  <td>Which products has your organization evaluated?</td>
+                                </tr>
+                                <tr>
+                                  <td>Selection: Reasons for replacing/abolishing BI system(s)</td>
+                                  <td>Reasons for replacing/abolishing BI system(s)?</td>
+                                </tr>
+                                <tr>
+                                  <td>Selection: Reasons to buy</td>
+                                  <td>Why was the product chosen?</td>
+                                </tr>
+                                <tr>
+                                  <td>Selection: Replaced BI systems</td>
+                                  <td>Did your organization replace/abolish BI systems in the last 12 months?</td>
+                                </tr>
+                                <tr>
+                                  <td>Selection: Resources importance</td>
+                                  <td>Which resources had the biggest influence in deciding which product your company selected?</td>
+                                </tr>
+                                <tr>
+                                  <td>Selection: Resources used</td>
+                                  <td>Which resources did you use to find out about BI products during the selection process?</td>
+                                </tr>
+                                <tr>
+                                  <td>Selection: Selection type</td>
+                                  <td>Did your organization conduct a formal product selection?</td>
+                                </tr>
+                                <tr>
+                                  <td>Support: Implementer support</td>
+                                  <td>How do you rate the support provided by the implementer?</td>
+                                </tr>
+                                <tr>
+                                  <td>Support: Vendor support</td>
+                                  <td>How do you rate the support provided by the vendor?</td>
+                                </tr>
+                                <tr>
+                                  <td>Tasks: Ad hoc querying</td>
+                                  <td>Do you use or plan to use the application for ad hoc querying?</td>
+                                </tr>
+                                <tr>
+                                  <td>Tasks: Advanced analysis</td>
+                                  <td>Do you use or plan to use the application for advanced analysis?</td>
+                                </tr>
+                                <tr>
+                                  <td>Tasks: Basic data analysis</td>
+                                  <td>Do you use or plan to use the application for basic data analysis?</td>
+                                </tr>
+                                <tr>
+                                  <td>Tasks: Budgeting/Planning</td>
+                                  <td>Do you use or plan to use the application for budgeting and planning?</td>
+                                </tr>
+                                <tr>
+                                  <td>Tasks: Dashboards/Scorecards</td>
+                                  <td>Do you use or plan to use the application for dashboards/scorecards?</td>
+                                </tr>
+                                <tr>
+                                  <td>Tasks: Financial consolidation</td>
+                                  <td>Do you use or plan to use the application for financial consolidation?</td>
+                                </tr>
+                                <tr>
+                                  <td>Tasks: Reporting</td>
+                                  <td>Do you use or plan to use the application for reporting?</td>
+                                </tr>
+                                <tr>
+                                  <td>Trends: BI with real-time data</td>
+                                  <td>Does your company use your BI tool with real-time data?</td>
+                                </tr>
+                                <tr>
+                                  <td>Trends: BIaaS</td>
+                                  <td>Does your company use BIaaS with your BI tool?</td>
+                                </tr>
+                                <tr>
+                                  <td>Trends: Collaboration</td>
+                                  <td>Does your company use your BI tool for collaboration?</td>
+                                </tr>
+                                <tr>
+                                  <td>Trends: Data preparation</td>
+                                  <td>Does your company use your BI tool for data preparation?</td>
+                                </tr>
+                                <tr>
+                                  <td>Trends: Embedded BI</td>
+                                  <td>Does your company use your BI tool for embedded BI?</td>
+                                </tr>
+                                <tr>
+                                  <td>Trends: Mobile BI</td>
+                                  <td>Does your company use a mobile BI product?</td>
+                                </tr>
+                                <tr>
+                                  <td>Trends: Self-service</td>
+                                  <td>Does your company use self-service BI with your BI tool?</td>
+                                </tr>
+                                <tr>
+                                  <td>Trends: Sensor data analysis</td>
+                                  <td>Does your company use your BI tool for sensor data analysis?</td>
+                                </tr>
+                                <tr>
+                                  <td>Trends: Spatial/Location analysis</td>
+                                  <td>Does your company use your BI tool for spatial/location analysis?</td>
+                                </tr>
+                                <tr>
+                                  <td>Trends: Text data analysis</td>
+                                  <td>Does your company use your BI tool for text data analysis?</td>
+                                </tr>
+                                <tr>
+                                  <td>Trends: Visual analysis</td>
+                                  <td>Does your company use your BI tool for visual analysis?</td>
+                                </tr>
+                                <tr>
+                                  <td>Trends: Visual design standards</td>
+                                  <td>Does your company use visual design standards with your BI tool?</td>
+                                </tr>
+                              </tbody>
+                            </table>
                           </div>
                         </div>
                       </div>
 
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header" id="headingThree">
-                    <h5 class="mb-0">
+                      <div class="card">
+                        <div class="card-header" id="headingTwo">
+                          <h5 class="mb-0">
+									<a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+						 			Peer Groups
+						 		</a>
+								 </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                          <div class="card-body">
+                            <div class="d-flex flex-row mt-2">
+                              <ul class="nav nav-tabs nav-tabs--vertical nav-tabs--left" role="navigation">
+                                <li class="nav-item">
+                                  <a href="#lorem" class="nav-link active" data-toggle="tab" role="tab" aria-controls="lorem">Solution-focused planning products</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a href="#ipsum" class="nav-link" data-toggle="tab" role="tab" aria-controls="ipsum">BI-focused products</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a href="#dolor" class="nav-link" data-toggle="tab" role="tab" aria-controls="dolor">Enterprise software vendors</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a href="#sit-amet" class="nav-link" data-toggle="tab" role="tab" aria-controls="sit-amet">Flexible planning platforms</a>
+                                </li>
+                              </ul>
+                              <div class="tab-content">
+                                <div class="tab-pane fade show active" id="lorem" role="tabpanel">
+                                  <h5>Solution-focused planning products</h5>
+
+                                  <p>Solution-focused planning products are usually based on, or supplemented by, predefined planning solutions designed for particular applications (e.g., integrated financial planning, HR) or industries (e.g., energy, manufacturing).</p>
+                                  <ul>
+                                    <li><a href="https://bi-survey.com/product/pyramid-analytics">BI Office Suite</a></li>
+                                    <li><a href="https://bi-survey.com/product/board">BOARD</a></li>
+                                    <li><a href="https://bi-survey.com/product/calumo">CALUMO</a></li>
+                                    <li><a href="https://bi-survey.com/product/carriots-analytics-envision">Carriots Analytics (Envision)</a></li>
+                                    <li><a href="https://bi-survey.com/product/chartio">Chartio</a></li>
+                                    <li><a href="https://bi-survey.com/product/cyberscience-cyberquery">Cyberquery</a></li>
+                                    <li><a href="https://bi-survey.com/product/dimensional-insight">Diver Platform</a></li>
+                                    <li><a href="https://bi-survey.com/product/domo">Domo</a></li>
+                                    <li><a href="https://bi-survey.com/product/dundas">Dundas BI</a></li>
+                                    <li><a href="https://bi-survey.com/product/entrinsik-informer">Entrinsik Informer</a></li>
+                                    <li><a href="https://bi-survey.com/product/phocas">Phocas</a></li>
+                                    <li><a href="https://bi-survey.com/product/sisense">Sisense</a></li>
+                                    <li><a href="https://bi-survey.com/product/yellowfin">Yellowfin BI</a></li>
+                                    <li><a href="https://bi-survey.com/product/zoho-reports">Zoho Reports</a></li>
+                                  </ul>
+                                </div>
+                                <div class="tab-pane fade" id="ipsum" role="tabpanel">
+                                  <h5>BI-focused products</h5>
+
+                                  <p>Besides planning and performance management, BI-focused products target use cases such as standard reporting, ad hoc reporting, analysis, advanced analytics and dashboarding.</p>
+                                  <ul>
+                                    <li><a href="https://bi-survey.com/product/pyramid-analytics">BI Office Suite</a></li>
+                                    <li><a href="https://bi-survey.com/product/board">BOARD</a></li>
+                                    <li><a href="https://bi-survey.com/product/calumo">CALUMO</a></li>
+                                    <li><a href="https://bi-survey.com/product/carriots-analytics-envision">Carriots Analytics (Envision)</a></li>
+                                    <li><a href="https://bi-survey.com/product/chartio">Chartio</a></li>
+                                    <li><a href="https://bi-survey.com/product/cyberscience-cyberquery">Cyberquery</a></li>
+                                    <li><a href="https://bi-survey.com/product/dimensional-insight">Diver Platform</a></li>
+                                    <li><a href="https://bi-survey.com/product/domo">Domo</a></li>
+                                    <li><a href="https://bi-survey.com/product/dundas">Dundas BI</a></li>
+                                    <li><a href="https://bi-survey.com/product/entrinsik-informer">Entrinsik Informer</a></li>
+                                    <li><a href="https://bi-survey.com/product/phocas">Phocas</a></li>
+                                    <li><a href="https://bi-survey.com/product/sisense">Sisense</a></li>
+                                    <li><a href="https://bi-survey.com/product/yellowfin">Yellowfin BI</a></li>
+                                    <li><a href="https://bi-survey.com/product/zoho-reports">Zoho Reports</a></li>
+                                  </ul>
+                                </div>
+                                <div class="tab-pane fade" id="dolor" role="tabpanel">
+                                  <h5>Enterprise software vendors</h5>
+
+                                  <p>Enterprise software vendors have a broad portfolio including most (or all) types of business software.</p>
+                                  <ul>
+                                    <li><a href="https://bi-survey.com/product/pyramid-analytics">BI Office Suite</a></li>
+                                    <li><a href="https://bi-survey.com/product/board">BOARD</a></li>
+                                    <li><a href="https://bi-survey.com/product/calumo">CALUMO</a></li>
+                                    <li><a href="https://bi-survey.com/product/carriots-analytics-envision">Carriots Analytics (Envision)</a></li>
+                                    <li><a href="https://bi-survey.com/product/chartio">Chartio</a></li>
+                                    <li><a href="https://bi-survey.com/product/cyberscience-cyberquery">Cyberquery</a></li>
+                                    <li><a href="https://bi-survey.com/product/dimensional-insight">Diver Platform</a></li>
+                                    <li><a href="https://bi-survey.com/product/domo">Domo</a></li>
+                                    <li><a href="https://bi-survey.com/product/dundas">Dundas BI</a></li>
+                                    <li><a href="https://bi-survey.com/product/entrinsik-informer">Entrinsik Informer</a></li>
+                                    <li><a href="https://bi-survey.com/product/phocas">Phocas</a></li>
+                                    <li><a href="https://bi-survey.com/product/sisense">Sisense</a></li>
+                                    <li><a href="https://bi-survey.com/product/yellowfin">Yellowfin BI</a></li>
+                                    <li><a href="https://bi-survey.com/product/zoho-reports">Zoho Reports</a></li>
+                                  </ul>
+                                </div>
+                                <div class="tab-pane fade" id="sit-amet" role="tabpanel">
+                                  <h5>Flexible planning platforms</h5>
+
+                                  <p>Flexible planning platforms are most suitable for developing and implementing bespoke planning solutions to meet a unique set of requirements. They usually offer limited predefined content.</p>
+                                  <ul>
+                                    <li><a href="https://bi-survey.com/product/pyramid-analytics">BI Office Suite</a></li>
+                                    <li><a href="https://bi-survey.com/product/board">BOARD</a></li>
+                                    <li><a href="https://bi-survey.com/product/calumo">CALUMO</a></li>
+                                    <li><a href="https://bi-survey.com/product/carriots-analytics-envision">Carriots Analytics (Envision)</a></li>
+                                    <li><a href="https://bi-survey.com/product/chartio">Chartio</a></li>
+                                    <li><a href="https://bi-survey.com/product/cyberscience-cyberquery">Cyberquery</a></li>
+                                    <li><a href="https://bi-survey.com/product/dimensional-insight">Diver Platform</a></li>
+                                    <li><a href="https://bi-survey.com/product/domo">Domo</a></li>
+                                    <li><a href="https://bi-survey.com/product/dundas">Dundas BI</a></li>
+                                    <li><a href="https://bi-survey.com/product/entrinsik-informer">Entrinsik Informer</a></li>
+                                    <li><a href="https://bi-survey.com/product/phocas">Phocas</a></li>
+                                    <li><a href="https://bi-survey.com/product/sisense">Sisense</a></li>
+                                    <li><a href="https://bi-survey.com/product/yellowfin">Yellowfin BI</a></li>
+                                    <li><a href="https://bi-survey.com/product/zoho-reports">Zoho Reports</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingThree">
+                          <h5 class="mb-0">
 		 <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
 				         Products in the Survey
 				        </a>
 				      </h5>
-                  </div>
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="card-body">
-                      <table class="table table-striped">
-                        <thead class="thead-light">
-                          <tr>
-                            <th>Product</th>
-                            <th>Number of answers</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Bissantz</td>
-                            <td>84</td>
-                          </tr>
-                          <tr>
-                            <td>BOARD</td>
-                            <td>51</td>
-                          </tr>
-                          <tr>
-                            <td>CALUMO</td>
-                            <td>49</td>
-                          </tr>
-                          <tr>
-                            <td>Chartio</td>
-                            <td>40</td>
-                          </tr>
-                          <tr>
-                            <td>Cubeware</td>
-                            <td>67</td>
-                          </tr>
-                          <tr>
-                            <td>cubus</td>
-                            <td>36</td>
-                          </tr>
-                          <tr>
-                            <td>CXO-Cockpit</td>
-                            <td>31</td>
-                          </tr>
-                          <tr>
-                            <td>Cyberscience</td>
-                            <td>41</td>
-                          </tr>
-                          <tr>
-                            <td>DigDash</td>
-                            <td>32</td>
-                          </tr>
-                          <tr>
-                            <td>Dimensional Insight</td>
-                            <td>38</td>
-                          </tr>
-                          <tr>
-                            <td>Domo</td>
-                            <td>30</td>
-                          </tr>
-                          <tr>
-                            <td>Dundas</td>
-                            <td>35</td>
-                          </tr>
-                          <tr>
-                            <td>Entrinsik</td>
-                            <td>58</td>
-                          </tr>
-                          <tr>
-                            <td>Carriots Analytics (Envision)</td>
-                            <td>32</td>
-                          </tr>
-                          <tr>
-                            <td>IBM Cog Analytics</td>
-                            <td>93</td>
-                          </tr>
-                          <tr>
-                            <td>IBM Plan Analytics</td>
-                            <td>32</td>
-                          </tr>
-                          <tr>
-                            <td>Infor</td>
-                            <td>45</td>
-                          </tr>
-                          <tr>
-                            <td>Information Builders</td>
-                            <td>33</td>
-                          </tr>
-                          <tr>
-                            <td>Jedox</td>
-                            <td>34</td>
-                          </tr>
-                          <tr>
-                            <td>Longview Analytics</td>
-                            <td>47</td>
-                          </tr>
-                          <tr>
-                            <td>MS Excel</td>
-                            <td>146</td>
-                          </tr>
-                          <tr>
-                            <td>MS Power BI</td>
-                            <td>109</td>
-                          </tr>
-                          <tr>
-                            <td>MS SSRS</td>
-                            <td>63</td>
-                          </tr>
-                          <tr>
-                            <td>MicroStrategy</td>
-                            <td>167</td>
-                          </tr>
-                          <tr>
-                            <td>Oracle BI</td>
-                            <td>35</td>
-                          </tr>
-                          <tr>
-                            <td>Phocas</td>
-                            <td>34</td>
-                          </tr>
-                          <tr>
-                            <td>MIK (prevero)</td>
-                            <td>37</td>
-                          </tr>
-                          <tr>
-                            <td>prevero (prevero)</td>
-                            <td>29</td>
-                          </tr>
-                          <tr>
-                            <td>Pyramid Analytics</td>
-                            <td>36</td>
-                          </tr>
-                          <tr>
-                            <td>Qlik Sense</td>
-                            <td>61</td>
-                          </tr>
-                          <tr>
-                            <td>QlikView</td>
-                            <td>236</td>
-                          </tr>
-                          <tr>
-                            <td>SAP BEx</td>
-                            <td>65</td>
-                          </tr>
-                          <tr>
-                            <td>SAP BO Analysis</td>
-                            <td>34</td>
-                          </tr>
-                          <tr>
-                            <td>SAP BO Design St.</td>
-                            <td>34</td>
-                          </tr>
-                          <tr>
-                            <td>SAP BO WebI</td>
-                            <td>76</td>
-                          </tr>
-                          <tr>
-                            <td>SAS Enterprise BI</td>
-                            <td>36</td>
-                          </tr>
-                          <tr>
-                            <td>Sisense</td>
-                            <td>38</td>
-                          </tr>
-                          <tr>
-                            <td>Tableau</td>
-                            <td>75</td>
-                          </tr>
-                          <tr>
-                            <td>TARGIT</td>
-                            <td>44</td>
-                          </tr>
-                          <tr>
-                            <td>TIBCO Spotfire</td>
-                            <td>27</td>
-                          </tr>
-                          <tr>
-                            <td>Yellowfin</td>
-                            <td>37</td>
-                          </tr>
-                          <tr>
-                            <td>Zoho Reports</td>
-                            <td>45</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header" id="headingFour">
-                    <h5 class="mb-0">
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                          <div class="card-body">
+                            <table class="table table-striped">
+                              <thead class="thead-light">
+                                <tr>
+                                  <th>Product</th>
+                                  <th>Number of answers</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Bissantz</td>
+                                  <td>84</td>
+                                </tr>
+                                <tr>
+                                  <td>BOARD</td>
+                                  <td>51</td>
+                                </tr>
+                                <tr>
+                                  <td>CALUMO</td>
+                                  <td>49</td>
+                                </tr>
+                                <tr>
+                                  <td>Chartio</td>
+                                  <td>40</td>
+                                </tr>
+                                <tr>
+                                  <td>Cubeware</td>
+                                  <td>67</td>
+                                </tr>
+                                <tr>
+                                  <td>cubus</td>
+                                  <td>36</td>
+                                </tr>
+                                <tr>
+                                  <td>CXO-Cockpit</td>
+                                  <td>31</td>
+                                </tr>
+                                <tr>
+                                  <td>Cyberscience</td>
+                                  <td>41</td>
+                                </tr>
+                                <tr>
+                                  <td>DigDash</td>
+                                  <td>32</td>
+                                </tr>
+                                <tr>
+                                  <td>Dimensional Insight</td>
+                                  <td>38</td>
+                                </tr>
+                                <tr>
+                                  <td>Domo</td>
+                                  <td>30</td>
+                                </tr>
+                                <tr>
+                                  <td>Dundas</td>
+                                  <td>35</td>
+                                </tr>
+                                <tr>
+                                  <td>Entrinsik</td>
+                                  <td>58</td>
+                                </tr>
+                                <tr>
+                                  <td>Carriots Analytics (Envision)</td>
+                                  <td>32</td>
+                                </tr>
+                                <tr>
+                                  <td>IBM Cog Analytics</td>
+                                  <td>93</td>
+                                </tr>
+                                <tr>
+                                  <td>IBM Plan Analytics</td>
+                                  <td>32</td>
+                                </tr>
+                                <tr>
+                                  <td>Infor</td>
+                                  <td>45</td>
+                                </tr>
+                                <tr>
+                                  <td>Information Builders</td>
+                                  <td>33</td>
+                                </tr>
+                                <tr>
+                                  <td>Jedox</td>
+                                  <td>34</td>
+                                </tr>
+                                <tr>
+                                  <td>Longview Analytics</td>
+                                  <td>47</td>
+                                </tr>
+                                <tr>
+                                  <td>MS Excel</td>
+                                  <td>146</td>
+                                </tr>
+                                <tr>
+                                  <td>MS Power BI</td>
+                                  <td>109</td>
+                                </tr>
+                                <tr>
+                                  <td>MS SSRS</td>
+                                  <td>63</td>
+                                </tr>
+                                <tr>
+                                  <td>MicroStrategy</td>
+                                  <td>167</td>
+                                </tr>
+                                <tr>
+                                  <td>Oracle BI</td>
+                                  <td>35</td>
+                                </tr>
+                                <tr>
+                                  <td>Phocas</td>
+                                  <td>34</td>
+                                </tr>
+                                <tr>
+                                  <td>MIK (prevero)</td>
+                                  <td>37</td>
+                                </tr>
+                                <tr>
+                                  <td>prevero (prevero)</td>
+                                  <td>29</td>
+                                </tr>
+                                <tr>
+                                  <td>Pyramid Analytics</td>
+                                  <td>36</td>
+                                </tr>
+                                <tr>
+                                  <td>Qlik Sense</td>
+                                  <td>61</td>
+                                </tr>
+                                <tr>
+                                  <td>QlikView</td>
+                                  <td>236</td>
+                                </tr>
+                                <tr>
+                                  <td>SAP BEx</td>
+                                  <td>65</td>
+                                </tr>
+                                <tr>
+                                  <td>SAP BO Analysis</td>
+                                  <td>34</td>
+                                </tr>
+                                <tr>
+                                  <td>SAP BO Design St.</td>
+                                  <td>34</td>
+                                </tr>
+                                <tr>
+                                  <td>SAP BO WebI</td>
+                                  <td>76</td>
+                                </tr>
+                                <tr>
+                                  <td>SAS Enterprise BI</td>
+                                  <td>36</td>
+                                </tr>
+                                <tr>
+                                  <td>Sisense</td>
+                                  <td>38</td>
+                                </tr>
+                                <tr>
+                                  <td>Tableau</td>
+                                  <td>75</td>
+                                </tr>
+                                <tr>
+                                  <td>TARGIT</td>
+                                  <td>44</td>
+                                </tr>
+                                <tr>
+                                  <td>TIBCO Spotfire</td>
+                                  <td>27</td>
+                                </tr>
+                                <tr>
+                                  <td>Yellowfin</td>
+                                  <td>37</td>
+                                </tr>
+                                <tr>
+                                  <td>Zoho Reports</td>
+                                  <td>45</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingFour">
+                          <h5 class="mb-0">
 		 <a class="collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
 								 KPI Grouping
 							 </a>
 							</h5>
-                  </div>
-                  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                    <div class="card-body">
-                      <table class="table table-striped">
-                        <thead class="thead-light">
-                          <tr>
-                            <th width="216">Aggregated KPIs</th>
-                            <th width="364">Root KPIs</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td rowspan="3" width="181"><strong>Business value</strong></td>
-                            <td>Business benefits</td>
-                          </tr>
-                          <tr>
-                            <td>Project success</td>
-                          </tr>
-                          <tr>
-                            <td>Project length</td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td rowspan="2" width="181"><strong>Competitiveness</strong></td>
-                            <td>Considered for purchase</td>
-                          </tr>
-                          <tr>
-                            <td>Competitive win rate</td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td rowspan="10"><strong>User experience</strong></td>
-                            <td>Planning functionality</td>
-                          </tr>
-                          <tr>
-                            <td>Integrated planning</td>
-                          </tr>
-                          <tr>
-                            <td>Reporting/analysis functionality</td>
-                          </tr>
-                          <tr>
-                            <td>Flexibility</td>
-                          </tr>
-                          <tr>
-                            <td>Ease of use</td>
-                          </tr>
-                          <tr>
-                            <td>Self-service</td>
-                          </tr>
-                          <tr>
-                            <td>Predefined data connections</td>
-                          </tr>
-                          <tr>
-                            <td>Performance satisfaction</td>
-                          </tr>
-                          <tr>
-                            <td>Simulation &amp; scenario analysis</td>
-                          </tr>
-                          <tr>
-                            <td>Driver-based planning</td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td rowspan="5" width="181"><strong>Customer satisfaction</strong></td>
-                            <td>Price-to-value</td>
-                          </tr>
-                          <tr>
-                            <td>Product satisfaction</td>
-                          </tr>
-                          <tr>
-                            <td>Vendor support</td>
-                          </tr>
-                          <tr>
-                            <td>Implementer support</td>
-                          </tr>
-                          <tr>
-                            <td>Recommendation</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                          <div class="card-body">
+                            <table class="table table-striped">
+                              <thead class="thead-light">
+                                <tr>
+                                  <th width="216">Aggregated KPIs</th>
+                                  <th width="364">Root KPIs</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td rowspan="3" width="181"><strong>Business value</strong></td>
+                                  <td>Business benefits</td>
+                                </tr>
+                                <tr>
+                                  <td>Project success</td>
+                                </tr>
+                                <tr>
+                                  <td>Project length</td>
+                                </tr>
+                                <tr>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td rowspan="2" width="181"><strong>Competitiveness</strong></td>
+                                  <td>Considered for purchase</td>
+                                </tr>
+                                <tr>
+                                  <td>Competitive win rate</td>
+                                </tr>
+                                <tr>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td rowspan="10"><strong>User experience</strong></td>
+                                  <td>Planning functionality</td>
+                                </tr>
+                                <tr>
+                                  <td>Integrated planning</td>
+                                </tr>
+                                <tr>
+                                  <td>Reporting/analysis functionality</td>
+                                </tr>
+                                <tr>
+                                  <td>Flexibility</td>
+                                </tr>
+                                <tr>
+                                  <td>Ease of use</td>
+                                </tr>
+                                <tr>
+                                  <td>Self-service</td>
+                                </tr>
+                                <tr>
+                                  <td>Predefined data connections</td>
+                                </tr>
+                                <tr>
+                                  <td>Performance satisfaction</td>
+                                </tr>
+                                <tr>
+                                  <td>Simulation &amp; scenario analysis</td>
+                                </tr>
+                                <tr>
+                                  <td>Driver-based planning</td>
+                                </tr>
+                                <tr>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td rowspan="5" width="181"><strong>Customer satisfaction</strong></td>
+                                  <td>Price-to-value</td>
+                                </tr>
+                                <tr>
+                                  <td>Product satisfaction</td>
+                                </tr>
+                                <tr>
+                                  <td>Vendor support</td>
+                                </tr>
+                                <tr>
+                                  <td>Implementer support</td>
+                                </tr>
+                                <tr>
+                                  <td>Recommendation</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
 
-                <div class="card">
-                  <div class="card-header" id="headingFive">
-                    <h5 class="mb-0">
+                      <div class="card">
+                        <div class="card-header" id="headingFive">
+                          <h5 class="mb-0">
 		 <a class="collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
 								 KPI Explanation
 							 </a>
 							</h5>
-                  </div>
-                  <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                    <div class="card-body">
-                      <table class="table table-striped">
-                        <thead class="thead-light">
-                          <tr>
-                            <th width="216">KPI</th>
-                            <th width="364">Short explanation</th>
-                          </tr>
-                        </thead>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                          <div class="card-body">
+                            <table class="table table-striped">
+                              <thead class="thead-light">
+                                <tr>
+                                  <th width="216">KPI</th>
+                                  <th width="364">Short explanation</th>
+                                </tr>
+                              </thead>
 
-                        <tbody>
-                          <tr>
-                            <td width="217">Business benefits</td>
-                            <td width="1027">This KPI is based on the achievement level of a variety of business benefits.</td>
-                          </tr>
-                          <tr>
-                            <td>Project success</td>
-                            <td>This KPI is based on the implementation satisfaction level and the frequency of projects completed on time and on budget.</td>
-                          </tr>
-                          <tr>
-                            <td>Project length</td>
-                            <td>This KPI is based on how quickly the product is implemented.</td>
-                          </tr>
-                          <tr>
-                            <td>Business value</td>
-                            <td>The KPI business value combines the ‘Business benefits’, ‘Project success’ and ‘Project length’ KPIs.</td>
-                          </tr>
-                          <tr>
-                            <td>Price-to-value</td>
-                            <td>This KPI is based on how users rate their BI tool in terms of price-to-value.</td>
-                          </tr>
-                          <tr>
-                            <td>Recommendation</td>
-                            <td>This KPI is based on how many users would recommend the product to others.</td>
-                          </tr>
-                          <tr>
-                            <td>Vendor support</td>
-                            <td>This KPI measures user satisfaction with the level of vendor support provided for the product.</td>
-                          </tr>
-                          <tr>
-                            <td>Implementer support</td>
-                            <td>This KPI measures user satisfaction with the level of the implementer’s support for the product.</td>
-                          </tr>
-                          <tr>
-                            <td>Product satisfaction</td>
-                            <td>This KPI is based on the frequency of problems encountered with the product.</td>
-                          </tr>
-                          <tr>
-                            <td>Customer satisfaction</td>
-                            <td>The KPI customer satisfaction combines the &#8216;Peice-to-value&#8217;, &#8216;Recommendation&#8217;, ‘Product satisfaction’, ‘Vendor support’ and ‘Implementer support’ KPIs.</td>
-                          </tr>
-                          <tr>
-                            <td>Self-service</td>
-                            <td>This KPI is based on how many sites currently use self-service features with their BI tool.</td>
-                          </tr>
-                          <tr>
-                            <td>Flexibility for the user</td>
-                            <td>This KPI is based on how often the product was chosen for its flexibility, and on the frequency of complaints about user flexibility post-implementation.</td>
-                          </tr>
-                          <tr>
-                            <td>Ease of use</td>
-                            <td>This KPI is based on how often the product was chosen for its ease of use, and on the level of complaints about ease of use post-implementation.</td>
-                          </tr>
-                          <tr>
-                            <td>Sales experience</td>
-                            <td>This KPI is based on how respondents rate the sales/purchasing experience with the vendor.</td>
-                          </tr>
-                          <tr>
-                            <td>Data volume</td>
-                            <td>This KPI is based on the median volume of data in databases used with the BI tool.</td>
-                          </tr>
-                          <tr>
-                            <td>Query performance</td>
-                            <td>This KPI is based on how quickly queries respond (adjusted by data volume).</td>
-                          </tr>
-                          <tr>
-                            <td>Performance satisfaction</td>
-                            <td>This KPI measures the frequency of complaints about the system’s performance.</td>
-                          </tr>
-                          <tr>
-                            <td>Customer experience</td>
-                            <td>The KPI customer satisfaction combines the ‘Ease of use’, ‘Self-service’, ‘Performance satisfaction’, ‘Flexibility for the user’, ‘Data volume’, ‘Query performance’ and ‘Sales experience‘ KPIs.</td>
-                          </tr>
-                          <tr>
-                            <td>Cloud BI</td>
-                            <td>This KPI is based on how many sites currently use the product in a cloud environment.</td>
-                          </tr>
-                          <tr>
-                            <td>Mobile BI</td>
-                            <td>This KPI is based on how many sites currently use mobile BI with their BI tool.</td>
-                          </tr>
-                          <tr>
-                            <td>Operational BI</td>
-                            <td>This KPI is based on how many sites currently use real-time data from transactional systems with their BI tool.</td>
-                          </tr>
-                          <tr>
-                            <td>Visual design standards</td>
-                            <td>This KPI is based on how many sites currently use visual design standards with their BI tool.</td>
-                          </tr>
-                          <tr>
-                            <td>Location intelligence</td>
-                            <td>This KPI is based on how many sites currently use spatial/location analysis with their BI tool.</td>
-                          </tr>
-                          <tr>
-                            <td>Visual analysis</td>
-                            <td>This KPI is based on how many sites currently use visual analysis with their BI tool.</td>
-                          </tr>
-                          <tr>
-                            <td>Embedded BI</td>
-                            <td>This KPI is based on how many survey respondents use embedded BI.</td>
-                          </tr>
-                          <tr>
-                            <td>Innovation</td>
-                            <td>The KPI innovation combines the ‘Embedded BI‘, ‘Cloud BI’, ‘Visual analysis‘, ‘Mobile BI’, ‘Operational BI‘, ‘Location intelligence‘ and ‘Visual design standards’ KPIs to measure the product’s level of innovation.</td>
-                          </tr>
-                          <tr>
-                            <td>Considered for purchase</td>
-                            <td>This KPI is based on whether respondents considered purchasing the product.</td>
-                          </tr>
-                          <tr>
-                            <td>Competitive win rate</td>
-                            <td>This KPI is based on the percentage of wins in competitive evaluations.</td>
-                          </tr>
-                          <tr>
-                            <td>Competitiveness</td>
-                            <td>The KPI competitiveness combines the ‘Considered for purchase’ and ‘Competitive win rate’ KPIs.</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                              <tbody>
+                                <tr>
+                                  <td width="217">Business benefits</td>
+                                  <td width="1027">This KPI is based on the achievement level of a variety of business benefits.</td>
+                                </tr>
+                                <tr>
+                                  <td>Project success</td>
+                                  <td>This KPI is based on the implementation satisfaction level and the frequency of projects completed on time and on budget.</td>
+                                </tr>
+                                <tr>
+                                  <td>Project length</td>
+                                  <td>This KPI is based on how quickly the product is implemented.</td>
+                                </tr>
+                                <tr>
+                                  <td>Business value</td>
+                                  <td>The KPI business value combines the ‘Business benefits’, ‘Project success’ and ‘Project length’ KPIs.</td>
+                                </tr>
+                                <tr>
+                                  <td>Price-to-value</td>
+                                  <td>This KPI is based on how users rate their BI tool in terms of price-to-value.</td>
+                                </tr>
+                                <tr>
+                                  <td>Recommendation</td>
+                                  <td>This KPI is based on how many users would recommend the product to others.</td>
+                                </tr>
+                                <tr>
+                                  <td>Vendor support</td>
+                                  <td>This KPI measures user satisfaction with the level of vendor support provided for the product.</td>
+                                </tr>
+                                <tr>
+                                  <td>Implementer support</td>
+                                  <td>This KPI measures user satisfaction with the level of the implementer’s support for the product.</td>
+                                </tr>
+                                <tr>
+                                  <td>Product satisfaction</td>
+                                  <td>This KPI is based on the frequency of problems encountered with the product.</td>
+                                </tr>
+                                <tr>
+                                  <td>Customer satisfaction</td>
+                                  <td>The KPI customer satisfaction combines the &#8216;Peice-to-value&#8217;, &#8216;Recommendation&#8217;, ‘Product satisfaction’, ‘Vendor support’ and ‘Implementer support’ KPIs.</td>
+                                </tr>
+                                <tr>
+                                  <td>Self-service</td>
+                                  <td>This KPI is based on how many sites currently use self-service features with their BI tool.</td>
+                                </tr>
+                                <tr>
+                                  <td>Flexibility for the user</td>
+                                  <td>This KPI is based on how often the product was chosen for its flexibility, and on the frequency of complaints about user flexibility post-implementation.</td>
+                                </tr>
+                                <tr>
+                                  <td>Ease of use</td>
+                                  <td>This KPI is based on how often the product was chosen for its ease of use, and on the level of complaints about ease of use post-implementation.</td>
+                                </tr>
+                                <tr>
+                                  <td>Sales experience</td>
+                                  <td>This KPI is based on how respondents rate the sales/purchasing experience with the vendor.</td>
+                                </tr>
+                                <tr>
+                                  <td>Data volume</td>
+                                  <td>This KPI is based on the median volume of data in databases used with the BI tool.</td>
+                                </tr>
+                                <tr>
+                                  <td>Query performance</td>
+                                  <td>This KPI is based on how quickly queries respond (adjusted by data volume).</td>
+                                </tr>
+                                <tr>
+                                  <td>Performance satisfaction</td>
+                                  <td>This KPI measures the frequency of complaints about the system’s performance.</td>
+                                </tr>
+                                <tr>
+                                  <td>Customer experience</td>
+                                  <td>The KPI customer satisfaction combines the ‘Ease of use’, ‘Self-service’, ‘Performance satisfaction’, ‘Flexibility for the user’, ‘Data volume’, ‘Query performance’ and ‘Sales experience‘ KPIs.</td>
+                                </tr>
+                                <tr>
+                                  <td>Cloud BI</td>
+                                  <td>This KPI is based on how many sites currently use the product in a cloud environment.</td>
+                                </tr>
+                                <tr>
+                                  <td>Mobile BI</td>
+                                  <td>This KPI is based on how many sites currently use mobile BI with their BI tool.</td>
+                                </tr>
+                                <tr>
+                                  <td>Operational BI</td>
+                                  <td>This KPI is based on how many sites currently use real-time data from transactional systems with their BI tool.</td>
+                                </tr>
+                                <tr>
+                                  <td>Visual design standards</td>
+                                  <td>This KPI is based on how many sites currently use visual design standards with their BI tool.</td>
+                                </tr>
+                                <tr>
+                                  <td>Location intelligence</td>
+                                  <td>This KPI is based on how many sites currently use spatial/location analysis with their BI tool.</td>
+                                </tr>
+                                <tr>
+                                  <td>Visual analysis</td>
+                                  <td>This KPI is based on how many sites currently use visual analysis with their BI tool.</td>
+                                </tr>
+                                <tr>
+                                  <td>Embedded BI</td>
+                                  <td>This KPI is based on how many survey respondents use embedded BI.</td>
+                                </tr>
+                                <tr>
+                                  <td>Innovation</td>
+                                  <td>The KPI innovation combines the ‘Embedded BI‘, ‘Cloud BI’, ‘Visual analysis‘, ‘Mobile BI’, ‘Operational BI‘, ‘Location intelligence‘ and ‘Visual design standards’ KPIs to measure the product’s level of innovation.</td>
+                                </tr>
+                                <tr>
+                                  <td>Considered for purchase</td>
+                                  <td>This KPI is based on whether respondents considered purchasing the product.</td>
+                                </tr>
+                                <tr>
+                                  <td>Competitive win rate</td>
+                                  <td>This KPI is based on the percentage of wins in competitive evaluations.</td>
+                                </tr>
+                                <tr>
+                                  <td>Competitiveness</td>
+                                  <td>The KPI competitiveness combines the ‘Considered for purchase’ and ‘Competitive win rate’ KPIs.</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <a id="back-to-top" href="#" class="btn btn-custom btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"> <span class="icon fa fa-angle-double-up"></span></a>
+
+
         </div>
-      </div>
-    </div>
-
-    <a id="back-to-top" href="#" class="btn btn-custom btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"> <span class="icon fa fa-angle-double-up"></span></a>
 
 
-  </div>
+        <footer class="d-flex flex-column">
+          <div class="navwide2">
+            <div class="disclaimer navwide">
+              © 2018 BARC. All rights reserved. This publication may not be reproduced or distributed in any form without BARC's prior permission. If you are authorized to access this publication, your use of it is subject to the BARC Usage Policy posted on
+              <a href="https://barc.de">barc.de</a>.
+            </div>
 
+          </div>
+          <div class="navwide">
 
-  <footer class="d-flex flex-column">
-    <div class="navwide2">
-      <div class="disclaimer navwide">
-        © 2018 BARC. All rights reserved. This publication may not be reproduced or distributed in any form without BARC's prior permission. If you are authorized to access this publication, your use of it is subject to the BARC Usage Policy posted on
-        <a href="https://barc.de">barc.de</a>.
-      </div>
+            <div class="footerdiv d-flex justify-content-between">
+              <div>© Copyright. – BARC – Business Application Research Center – a CXP Group Company – All Rights Reserved.
+              </div>
+              <div>
+                <a href="https://bi-survey.com/">Home</a>
+                <a href="https://bi-survey.com/imprint">Imprint</a>
+                <a href="https://bi-survey.com/privacy-policy">Privacy Policy</a>
+              </div>
+            </div>
+          </div>
 
-    </div>
-    <div class="navwide">
-
-      <div class="footerdiv d-flex justify-content-between">
-        <div>© Copyright. – BARC – Business Application Research Center – a CXP Group Company – All Rights Reserved.
-        </div>
-        <div>
-          <a href="https://bi-survey.com/">Home</a>
-          <a href="https://bi-survey.com/imprint">Imprint</a>
-          <a href="https://bi-survey.com/privacy-policy">Privacy Policy</a>
-        </div>
-      </div>
-    </div>
-
-  </footer>
+        </footer>
 </body>
 
 </html>
