@@ -1,8 +1,9 @@
 
 import { initAnaly } from '../chart.js';
 import { initKPIDash } from '../chart2.js';
+import { initProdKPI } from '../chart3.js';
 import { initProdComp } from '../chart4.js';
-var triggerOnce = 0, triggerKPIDash=1, triggerProdComp=1;
+var triggerOnce = 0, triggerKPIDash=1, triggerProdComp=1, triggerProdKPI=1;
 
 
 
@@ -163,6 +164,26 @@ var app = {
 
           document.getElementById("proddiv").remove();
           triggerProdComp =1;
+        }
+
+      };
+
+      if ( triggerId == "prodKPI" ) {
+        triggerProdKPI = 0;
+
+        setTimeout(function(){
+
+          initProdKPI()
+
+        },100);
+
+      };
+
+      if ( triggerId !== "prodKPI" ) {
+        if (triggerProdKPI == 0) {
+
+          document.getElementById("ProdKPI2").remove();
+          triggerProdKPI =1;
         }
 
       };

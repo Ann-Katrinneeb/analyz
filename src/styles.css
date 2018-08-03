@@ -19,6 +19,13 @@
   min-width: 0;
 }
 
+#chart2, #chart5, #chart3 {
+  max-width: 570px;
+  flex-grow: 1;
+  margin-top: 20px;
+  min-width: 0;
+}
+
 #chart5 {
   margin-bottom: 30px;
 }
@@ -1310,6 +1317,10 @@ h1 {
 }
 
 .containeranal {
+  margin: 0 3rem;
+}
+
+.containeranal2 {
   margin: 0 3rem;
 }
 
@@ -4313,9 +4324,32 @@ h1 {
   }
 }
 
+
+
+@media screen and (max-width:770px) {
+
+  .containeranal2 {
+    margin: 0 0.5rem
+  }
+
+   #Compdash {
+    padding: 0.5rem;
+  }
+}
+
+
+
 @media screen and (max-width:729px) {
   .legend {
     font-size: 0.7rem;
+  }
+
+  .containeranal2 {
+    margin: 0 0.5rem
+  }
+
+   #Compdash {
+    padding: 0.5rem;
   }
 }
 
@@ -4326,6 +4360,17 @@ h1 {
 }
 
 }
+
+@media screen and (max-width: 620px) {
+
+
+  #chart3 text {
+
+    font-size: 11px;
+  }
+
+}
+
 
 @media screen and (max-width: 599px) {
   h1 {
@@ -4557,4 +4602,15 @@ h1 {
 .filters {
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width:340px) {
+
+   #Compdash {
+    padding: 0.3rem;
+  }
+
+  #chart3 text {
+    font-size: 10px;
+  }
 }
