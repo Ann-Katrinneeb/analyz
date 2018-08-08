@@ -93,12 +93,66 @@
                     </div>
                     <div>
                       <select id="question" name="question" class="selectpicker">
-                  <option id="button1" value="10" class="single">Department</option>
-                  <option id="button5" value="101" class="multi">Department using BI</option>
-                  <option id="button2" value="24" class="single">Position</option>
-                  <option id="button3" value="26" class="single">Replaced BI systems</option>
-                  <option id="button4" value="102" class="multi">Reasons replacing</option>
+                  <option id="button1" value="10" class="single" data-sort="1">Department</option>
+                  <option id="button5" value="101" class="multi" data-sort="1">Department using BI</option>
+                  <option id="button2" value="24" class="single" data-sort="1">Position</option>
+                  <option id="button3" value="26" class="single" data-sort="1">Replaced BI systems</option>
+                  <option id="button4" value="102" class="multi" data-sort="1">Reasons replacing</option>
+                  <option id="button5" value="310" class="single" data-sort="2">Project length</option>
+                  <option id="button5" value="311" class="single" data-sort="2">Query response time</option>
                 </select>
+                    </div>
+                  </div>
+                  <div class="filter">
+                    <div>
+                      <h4>Products</h4>
+                    </div>
+                    <div>
+                      <select id="products" class="selectpicker" multiple data-actions-box="true" data-selected-text-format="count>5" data-count-selected-text="All selected">
+                        <option value="Bissantz">Bissantz</option>
+                        <option value="BOARD">BOARD</option>
+                        <option value="CALUMO">CALUMO</option>
+                        <option value="Chartio">Chartio</option>
+                        <option value="Cubeware">Cubeware</option>
+                        <option value="cubus">cubus</option>
+                        <option value="CXO-Cockpit">CXO-Cockpit</option>
+                        <option value="Cyberscience">Cyberscience</option>
+                        <option value="DigDash">DigDash</option>
+                        <option value="Dimensional Insight">Dimensional Insight</option>
+                        <option value="Domo">Domo</option>
+                        <option value="Dundas">Dundas</option>
+                        <option value="Entrinsik">Entrinsik</option>
+                        <option value="Carriots Analytics (Envision)">Carriots Analytics (Envision)</option>
+                        <option value="IBM Cog Analytics">IBM Cog Analytics</option>
+                        <option value="IBM Plan Analytics">IBM Plan Analytics</option>
+                        <option value="Infor">Infor</option>
+                        <option value="Information Builders">Information Builders</option>
+                        <option value="Jedox">Jedox</option>
+                        <option value="Longview Analytics">Longview Analytics</option>
+                        <option value="MS Excel">MS Excel</option>
+                        <option value="MS Power BI">MS Power BI</option>
+                        <option value="MS SSRS">MS SSRS</option>
+                        <option value="MicroStrategy">MicroStrategy</option>
+                        <option value="MIK (prevero)">MIK (prevero)</option>
+                        <option value="Oracle BI">Oracle BI</option>
+                        <option value="Phocas">Phocas</option>
+                        <option value="prevero (prevero)">prevero (prevero)</option>
+                        <option value="Pyramid Analytics">Pyramid Analytics</option>
+                        <option value="Qlik Sense">Qlik Sense</option>
+                        <option value="QlikView">QlikView</option>
+                        <option value="SAP BEx">SAP BEx</option>
+                        <option value="SAP BO Analysis">SAP BO Analysis</option>
+                        <option value="SAP BO Design St.">SAP BO Design St.</option>
+                        <option value="SAP BO WebI">SAP BO WebI</option>
+                        <option value="SAS Enterprise BI">SAS Enterprise BI</option>
+                        <option value="Sisense">Sisense</option>
+                        <option value="Tableau">Tableau</option>
+                        <option value="TARGIT">TARGIT</option>
+                        <option value="TIBCO Spotfire">TIBCO Spotfire</option>
+                        <option value="Yellowfin">Yellowfin</option>
+                        <option value="Zoho Reports">Zoho Reports</option>
+                <option value="Did not respond">Did not respond</option>
+              </select>
                     </div>
                   </div>
                   <div class="filter">
@@ -523,7 +577,11 @@
                 </div>
               </div>
                       <div id="chartHelpText"></div>
-                <div class="centerChart margintop">
+                      <div class="buttongroup" id="buttonComp">
+                        <button type="button" class="btn btn-custom" id="valSort">Sort by value</button>
+                        <button type="button" class="btn btn-custom" id="nameSort">Sorty by name</button>
+                      </div>
+                <div class="centerChart">
 
                   <div id="chart5"></div>
                 </div>
@@ -538,7 +596,7 @@
                   <h2>About The BI Survey Analyzer</h2>
                   <p class="fillerp">The BI Survey Analyzer web app is an interactive tool that enables you to perform your own custom analysis of The BI Survey 18 data. The app contains results from all the questions asked in The BI Survey 18. Product-related results based on
                     a series of important criteria (known here as KPIs – Key Performance Indicators) are also available to view.</p>
-                    <div class="row justify-content-md-center margintop3">
+                    <div id="centerButton" class="row justify-content-md-center margintop3">
                     <button type="button" class="btn btn-custom"> <a href="https://bi-survey.com/wp-content/uploads/2017/09/Helpfile-BI-Survey-Analyzer-17.pdf" role="button"><span class="icon fa fa-file-pdf-o"></span>Download PDF</a></button>
 
                     </div>

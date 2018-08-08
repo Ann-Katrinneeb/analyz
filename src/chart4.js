@@ -7,7 +7,7 @@ export function initProdComp() {
   var valueID, prodId = ["Bissantz", "BOARD", "CALUMO"],
     KPIID = ["Business benefits", "Project success"];
   var KPIComp = "Business benefits",
-    KPICompDataFil, peerSelect5, prodSelection5, KPISelection5, vendors, peerSelectHelper = 0;
+    KPICompDataFil, peerSelect5, prodSelection5, KPISelection5, svg5Up, vendors, peerSelectHelper = 0, sorting=0;
   var initDisable = 0;
 
   var chart5 = d3.select("#chart5");
@@ -27,6 +27,26 @@ export function initProdComp() {
   d3.select("#chartHelpText")
     .html("Select the peer group you want to compare")
     .style("display", "block");
+
+    d3.select("#buttonComp")
+      .style("display", "none");
+
+
+    var sortingVal = d3.select("#valSort")
+      .on("click", function() {
+
+        valueSort();
+        sorting=1;
+
+      });
+
+      var sortingName = d3.select("#nameSort")
+        .on("click", function() {
+
+          nameSort();
+          sorting=0;
+        });
+
 
   var widthHelper5 = parseInt(chart5.style("width"));
 
@@ -201,6 +221,16 @@ export function initProdComp() {
 
   $('#ProductID').change(function(e, i) {
 
+    var widthHelper5 = parseInt(d3.select("#chart5").style("width"));
+
+    var margin5 = {
+        top: 70,
+        right: widthHelper5 > 350 ? 65 : 35,
+        bottom: 30,
+        left: widthHelper5 > 350 ? 160 : 15
+      },
+      width5 = widthHelper5 - margin5.left - margin5.right;
+
 
     d3.select("#chart5").selectAll("svg")
       .each(function(d, i) {
@@ -218,6 +248,9 @@ export function initProdComp() {
       .html("")
       .style("display", "none");
 
+      d3.select("#buttonComp")
+        .style("display", "flex");
+
     var oldValue = prodId;
 
     prodId = $(e.target).val();
@@ -227,11 +260,38 @@ export function initProdComp() {
     });
 
 
-    var KPInest3Up = d3.nest()
+    KPInest3 = d3.nest()
       .key(function(d) {
         return d.KPI;
       })
       .entries(newProductData);
+
+    if (sorting==1) {
+
+      for (var j = 0; j < KPInest3.length; j++) {
+
+      KPInest3[j].values.sort(function(a, b) {
+          return b.value - a.value;
+          });
+
+        }
+
+    } else if (sorting==0) {
+
+      for (var j = 0; j < KPInest3.length; j++) {
+
+      KPInest3[j].values.sort(function(a, b) {
+        var nameA=a.vendor.toLowerCase(), nameB=b.vendor.toLowerCase();
+           if (nameA < nameB) //sort string ascending
+            return -1;
+           if (nameA > nameB)
+            return 1;
+           return 0;
+          });
+
+        }
+
+    }
 
     vendors = d3.set(newProductData.map(function(d) {
       return d.vendor;
@@ -258,8 +318,8 @@ export function initProdComp() {
       .remove();
 
 
-    var svg5Up = d3.select("#chart5").selectAll("svg")
-      .data(KPInest3Up)
+     svg5Up = d3.select("#chart5").selectAll("svg")
+      .data(KPInest3)
       .attr("height", height5 + margin5.top + margin5.bottom)
       .append("g")
       .attr("transform", "translate(" + margin5.left + "," + margin5.top + ")");
@@ -286,6 +346,9 @@ export function initProdComp() {
       .data(function(d) {
         return d.values
       });
+
+
+
 
     barsKPI5.enter()
       .append("rect")
@@ -414,6 +477,9 @@ export function initProdComp() {
       .html("Select the KPIs you want to compare")
       .style("display", "flex");;
 
+      d3.select("#buttonComp")
+        .style("display", "none");
+
   })
 
 
@@ -498,5 +564,158 @@ export function initProdComp() {
     resizeKPIComp();
 
   });
+
+  function valueSort() {
+
+      for (var j = 0; j < KPInest3.length; j++) {
+
+      KPInest3[j].values.sort(function(a, b) {
+          return b.value - a.value;
+          });
+
+        }
+
+    var svg5Up = d3.select("#chart5").selectAll("svg")
+     .data(KPInest3);
+
+
+    var barsKPI5 = svg5Up.selectAll("rect")
+      .data(function(d) {
+        return d.values
+      });
+
+    barsKPI5.attr("y", function(d, i) {
+        return barHeightKPIComp * i
+      })
+      .attr("width", function(d) {
+        return xScale5(d.value);
+      });
+
+
+      var vendorlabels5up = svg5Up.selectAll(".prodText")
+        .data(function(d,i) {
+          return d.values
+        });
+
+      vendorlabels5up.attr("y", function(d, i) {
+
+          if (widthHelper5 > 350) {
+            return barHeightKPIComp * i + barHeightKPIComp / 2.5 - 1;
+          } else {
+            return barHeightKPIComp * i + barHeightKPIComp / 2.5 - 16;
+          }
+        })
+        .text(function(d) {
+          return d.vendor
+        });
+
+        var values5up = svg5Up.selectAll(".values")
+          .data(function(d) {
+            return d.values
+          });
+
+        values5up
+          .attr("x", function(d) {
+            if (widthHelper5 > 350) {
+              return xScale5(d.value) + 8
+            } else {
+              return xScale5(d.value) + 4
+            }
+          })
+          .attr("y", function(d, i) {
+            if (widthHelper5 > 350) {
+                return (barHeightKPIComp * i) + barHeightKPIComp / 2.5 - 1
+            } else {
+                return (barHeightKPIComp * i) + barHeightKPIComp / 2.5 - 3
+            }
+          })
+          .text(function(d) {
+            return formKPI(d.value)
+          });
+
+          sorting=1;
+
+  }
+
+
+  function nameSort() {
+
+      for (var j = 0; j < KPInest3.length; j++) {
+
+      KPInest3[j].values.sort(function(a, b) {
+        var nameA=a.vendor.toLowerCase(), nameB=b.vendor.toLowerCase();
+           if (nameA < nameB) //sort string ascending
+            return -1;
+           if (nameA > nameB)
+            return 1;
+           return 0;
+          });
+
+        }
+
+
+
+    var svg5Up = d3.select("#chart5").selectAll("svg")
+     .data(KPInest3);
+
+
+    var barsKPI5 = svg5Up.selectAll("rect")
+      .data(function(d) {
+        return d.values
+      });
+
+    barsKPI5.attr("y", function(d, i) {
+        return barHeightKPIComp * i
+      })
+      .attr("width", function(d) {
+        return xScale5(d.value);
+      });
+
+
+      var vendorlabels5up = svg5Up.selectAll(".prodText")
+        .data(function(d,i) {
+          return d.values
+        });
+
+      vendorlabels5up.attr("y", function(d, i) {
+
+          if (widthHelper5 > 350) {
+            return barHeightKPIComp * i + barHeightKPIComp / 2.5 - 1;
+          } else {
+            return barHeightKPIComp * i + barHeightKPIComp / 2.5 - 16;
+          }
+        })
+        .text(function(d) {
+          return d.vendor
+        });
+
+        var values5up = svg5Up.selectAll(".values")
+          .data(function(d) {
+            return d.values
+          });
+
+        values5up
+          .attr("x", function(d) {
+            if (widthHelper5 > 350) {
+              return xScale5(d.value) + 8
+            } else {
+              return xScale5(d.value) + 4
+            }
+          })
+          .attr("y", function(d, i) {
+            if (widthHelper5 > 350) {
+                return (barHeightKPIComp * i) + barHeightKPIComp / 2.5 - 1
+            } else {
+                return (barHeightKPIComp * i) + barHeightKPIComp / 2.5 - 3
+            }
+          })
+          .text(function(d) {
+            return formKPI(d.value)
+          });
+
+      sorting=0;
+
+  }
+
 
 }

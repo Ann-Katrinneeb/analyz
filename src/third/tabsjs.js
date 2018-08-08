@@ -182,7 +182,18 @@ var app = {
       if ( triggerId !== "prodKPI" ) {
         if (triggerProdKPI == 0) {
 
+          var index, index2;
           document.getElementById("ProdKPI2").remove();
+
+          var element = document.getElementById("Productfilter").getElementsByTagName("*");
+          for (index = element.length - 1; index >= 0; index--) {
+    element[index].parentNode.removeChild(element[index]);
+  };
+
+  var element2 = document.getElementById("pgfilter").getElementsByTagName("*");
+  for (index2 = element2.length - 1; index2 >= 0; index2--) {
+element2[index2].parentNode.removeChild(element2[index2]);
+};
           triggerProdKPI =1;
         }
 

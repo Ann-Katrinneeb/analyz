@@ -9,7 +9,7 @@ export function initProdKPI() {
   var tranx2 = 92;
   var tranx3 = 112;
   var labely = 20;
-
+  var triggerHelperLeg = (respHelp > 580) ? 1 : 0;
 
 
   var xRankpeer = -50;
@@ -30,6 +30,8 @@ export function initProdKPI() {
   var formatValue = d3.format(".1f");
 
 
+
+
   var chart3 = d3.select("#chart3");
 
   var widthHelper3 = parseInt(chart3.style("width"));
@@ -39,12 +41,12 @@ export function initProdKPI() {
   var respHelp = parseInt(respHelp2.style("width"));
 
 
- var valueHead = (respHelp > 580) ? 165 : -130;
+  var valueHead = (respHelp > 580) ? 165 : -130;
 
   var xValueLabels = 150;
-  var xValueLabels2 = (respHelp>305) ? -110 : -130;
-  var xBar =70;
-  var xBar2 = (respHelp>305) ? -190 : -210;
+  var xValueLabels2 = (respHelp > 305) ? -110 : -130;
+  var xBar = 70;
+  var xBar2 = (respHelp > 305) ? -190 : -210;
 
   var margin = {
     top: 50,
@@ -88,6 +90,12 @@ export function initProdKPI() {
   prodSelectData = peerdata.filter(function(d) {
     return d.Peergroup == "All products"
   });
+
+  d3.select("#dropdownMenuButton")
+    .html(productSelecter);
+
+  d3.select("#dropdownMenuButton2")
+    .html(peerSelecter);
 
   var dropProd = d3.select("#Productfilter")
     .selectAll("a")
@@ -222,7 +230,7 @@ export function initProdKPI() {
   });
 
   var helpWithResp2 = (widthHelper3 + labelxSpac - 160);
-  var lineLenght2 = (respHelp > 580) ? 270 : helpWithResp2 ;
+  var lineLenght2 = (respHelp > 580) ? 270 : helpWithResp2;
 
   svg3.selectAll("line.table")
     .data(KPInest)
@@ -317,26 +325,25 @@ export function initProdKPI() {
       return "translate(" + tranx3 + "," + i * ySpace + ")"
     });
 
-  if (respHelp > 580) {
 
-    var blocksInd = KPIgroups2.selectAll("rect.blocksInd2")
-      .data(function(d) {
-        return d.placeHolder
-      })
-      .enter()
-      .append("rect")
-      .attr("class", "blocksInd2")
-      .attr("x", function(d, i) {
-        return (i + 1) * (-barWidth);
-      })
-      .attr("y", 10.5)
-      .attr("width", (prodCount < 18) ? barWidth - 3 : barWidth - 2)
-      .attr("height", barHeight5)
-      .attr("fill", function(d, i) {
-        return "#ffffff";
-      });
+  var blocksInd = KPIgroups2.selectAll("rect.blocksInd2")
+    .data(function(d) {
+      return d.placeHolder
+    })
+    .enter()
+    .append("rect")
+    .style("display", (respHelp > 580) ? "block" : "none")
+    .attr("class", "blocksInd2")
+    .attr("x", function(d, i) {
+      return (i + 1) * (-barWidth);
+    })
+    .attr("y", 10.5)
+    .attr("width", (prodCount < 18) ? barWidth - 3 : barWidth - 2)
+    .attr("height", barHeight5)
+    .attr("fill", function(d, i) {
+      return "#ffffff";
+    });
 
-  }
 
   var KPIgroups = svg3.selectAll("g.KPIs")
     .data(KPInest2)
@@ -347,54 +354,53 @@ export function initProdKPI() {
       return "translate(" + tranx3 + "," + i * ySpace + ")"
     });
 
-  if (respHelp > 580) {
 
-
-    var KPIind = KPIgroups.selectAll("rect.KPIind")
-      .data(function(d) {
-        return d.values
-      })
-      .enter()
-      .append("rect")
-      .attr("class", "KPIind")
-      .attr("x", function(d, i) {
-        if (d.Rank == "n/a") return 0;
-        else return d.Rank * (-barWidth);
-      })
-      .attr("y", 10.5)
-      .attr("width", (prodCount < 18) ? barWidth - 3 : barWidth - 2)
-      .attr("height", barHeight5)
-      .attr("display", function(d, i) {
-        if (d.Rank == "n/a") {
-          return "none";
-        }
-      })
-      .attr("fill", function(d, i) {
-        if (d.Product == product) {
-          if (d.Rank == 1) {
-            return "#42b648";
-          } else if (d.Rank / d.counter < 0.3) {
-            return "#adc537";
-          } else if (d.Rank / d.counter == 1) {
-            return "#f2686f";
-          } else if (d.Rank / d.counter > 0.7) {
-            return "#f79154";
-          } else {
-            return "#ffbf00";
-          }
+  var KPIind = KPIgroups.selectAll("rect.KPIind")
+    .data(function(d) {
+      return d.values
+    })
+    .enter()
+    .append("rect")
+    .style("display", (respHelp > 580) ? "block" : "none")
+    .attr("class", "KPIind")
+    .attr("x", function(d, i) {
+      if (d.Rank == "n/a") return 0;
+      else return d.Rank * (-barWidth);
+    })
+    .attr("y", 10.5)
+    .attr("width", (prodCount < 18) ? barWidth - 3 : barWidth - 2)
+    .attr("height", barHeight5)
+    .style("display", function(d, i) {
+      if (d.Rank == "n/a") {
+        return "none";
+      }
+    })
+    .attr("fill", function(d, i) {
+      if (d.Product == product) {
+        if (d.Rank == 1) {
+          return "#42b648";
+        } else if (d.Rank / d.counter < 0.3) {
+          return "#adc537";
+        } else if (d.Rank / d.counter == 1) {
+          return "#f2686f";
+        } else if (d.Rank / d.counter > 0.7) {
+          return "#f79154";
         } else {
-          return "#ffffff";
+          return "#ffbf00";
         }
-      })
-      .attr("visibility", function(d, i) {
-        if (d.Product != product) {
-          return "hidden";
-        } else {
-          return "visible"
-        }
-      });
+      } else {
+        return "#ffffff";
+      }
+    })
+    .attr("visibility", function(d, i) {
+      if (d.Product != product) {
+        return "hidden";
+      } else {
+        return "visible"
+      }
+    });
 
-  }
+
 
 
 
@@ -402,33 +408,34 @@ export function initProdKPI() {
     return element.Product == product
   });
 
-  if (respHelp > 580) {
 
-    var KPIrank = svg3.selectAll("text.KPItext")
-      .data(productRank)
-      .enter().append("text")
-      .attr("class", "KPItext")
-      .attr("x", tranx3 - 180)
-      .attr("y", function(d, i) {
-        return (barHeight5 / 2) + spacing + (ySpace * i)
-      })
-      .attr("text-anchor", "end")
-      .text(function(d) {
-        if (d.Rank == "n/a") {
-          return "n/a";
-        } else {
-          return d.Rank;
-        };
-      });
 
-  }
+  var KPIrank = svg3.selectAll("text.KPItext")
+    .data(productRank)
+    .enter().append("text")
+    .attr("class", "KPItext")
+    .attr("x", tranx3 - 180)
+    .attr("y", function(d, i) {
+      return (barHeight5 / 2) + spacing + (ySpace * i)
+    })
+    .attr("text-anchor", "end")
+    .style("display", (respHelp > 580) ? "inline" : "none")
+    .text(function(d) {
+      if (d.Rank == "n/a") {
+        return "n/a";
+      } else {
+        return d.Rank;
+      };
+    });
+
+
 
 
   var valuesproduct = svg3.selectAll("text.values")
     .data(productRank)
     .enter().append("text")
     .attr("class", "values")
-    .attr("x", (respHelp > 580) ? xValueLabels :xValueLabels2 )
+    .attr("x", (respHelp > 580) ? xValueLabels : xValueLabels2)
     .attr("y", function(d, i) {
       return (barHeight5 / 2) + spacing + (ySpace * i)
     })
@@ -444,8 +451,8 @@ export function initProdKPI() {
   // Values bar
 
   var xScaleBar = d3.scaleLinear()
-    .range([0, w - xBar2 - margin.right-20])
-    .domain([0,10]);
+    .range([0, w - xBar2 - margin.right - 20])
+    .domain([0, 10]);
 
 
   var bar = svg3.selectAll("rect.valu")
@@ -454,7 +461,7 @@ export function initProdKPI() {
     .append("rect")
     .attr("class", "valu rank")
     .attr("transform", "translate(" + tranx2 + ",-6.5)")
-    .attr("x", (respHelp > 580) ? xBar :xBar2)
+    .attr("x", (respHelp > 580) ? xBar : xBar2)
     .attr("y", function(d, i) {
       return (barHeight5 / 2) + 14.5 + (i * ySpace)
     })
@@ -486,7 +493,14 @@ export function initProdKPI() {
     })
     .attr("width", 2.5)
     .attr("height", 9)
-    .style("fill", "ffffff");
+    .style("fill", "ffffff")
+    .attr("visibility", function(d, i) {
+      if (d.value == null) {
+        return "hidden";
+      } else {
+        return "visible"
+      }
+    });;
 
   dropProd.on("click", function() {
     var selText = $(this).text();
@@ -498,9 +512,15 @@ export function initProdKPI() {
 
   function updateProd(updateProduct) {
 
-    if (respHelp > 580) {
+
 
     svg3.selectAll(".KPIind")
+      .style("display", (respHelp > 580) ? "block" : "none")
+      .style("display", function(d, i) {
+        if (d.Rank == "n/a") {
+          return "none";
+        }
+      })
       .transition()
       .duration(500)
       .attr("fill", function(d, i) {
@@ -532,7 +552,7 @@ export function initProdKPI() {
         }
       });
 
-    }
+
 
     // Values Update
 
@@ -641,6 +661,7 @@ export function initProdKPI() {
       })
       .entries(data);
 
+
     var barUP = svg3.selectAll("rect.average")
       .data(KPIaverageUp)
       .attr("x", function(d) {
@@ -659,6 +680,7 @@ export function initProdKPI() {
           return "visible"
         }
       });
+
 
 
 
@@ -715,80 +737,80 @@ export function initProdKPI() {
     var KPIgroupsUp2 = svg3.selectAll("g.KPIs2")
       .data(KPInest4);
 
-      if (respHelp > 580) {
+    if (respHelp > 580) {
 
-    KPIgroups2.selectAll("rect.blocksInd2").remove()
+      KPIgroups2.selectAll("rect.blocksInd2").remove()
 
-    var blocksIndUp = KPIgroups2.selectAll("rect.blocksInd2")
-      .data(function(d) {
-        return d.placeHolder;
-      })
-      .enter()
-      .append("rect")
-      .attr("class", "blocksInd2")
-      .attr("x", function(d, i) {
+      var blocksIndUp = KPIgroups2.selectAll("rect.blocksInd2")
+        .data(function(d) {
+          return d.placeHolder;
+        })
+        .enter()
+        .append("rect")
+        .attr("class", "blocksInd2")
+        .attr("x", function(d, i) {
 
-        return (i + 1) * (-barWidth);
-      })
-      .attr("y", 10.5)
-      .attr("width", (prodCount < 18) ? barWidth - 3 : barWidth - 2)
-      .attr("height", barHeight5)
-      .attr("fill", function(d, i) {
-        return "#ffffff";
-      });
+          return (i + 1) * (-barWidth);
+        })
+        .attr("y", 10.5)
+        .attr("width", (prodCount < 18) ? barWidth - 3 : barWidth - 2)
+        .attr("height", barHeight5)
+        .attr("fill", function(d, i) {
+          return "#ffffff";
+        });
 
     }
 
     var KPIgroupsUp = svg3.selectAll("g.KPIs")
       .data(KPInest2);
 
-      if (respHelp > 580) {
+    if (respHelp > 580) {
 
-    KPIgroupsUp.selectAll("rect.KPIind").remove();
+      KPIgroupsUp.selectAll("rect.KPIind").remove();
 
-    var KPIindUp = KPIgroupsUp.selectAll("rect.KPIind")
-      .data(function(d) {
-        return d.values
-      })
-      .enter()
-      .append("rect")
-      .attr("class", "KPIind")
-      .attr("x", function(d, i) {
-        if (d.Rank == "n/a") return 0;
-        else return d.Rank * (-barWidth);
-      })
-      .attr("y", 10.5)
-      .attr("width", (prodCount < 18) ? barWidth - 3 : barWidth - 2)
-      .attr("height", barHeight5)
-      .attr("display", function(d, i) {
-        if (d.Rank == "n/a") {
-          return "none";
-        }
-      })
-      .attr("fill", function(d, i) {
-        if (d.Product == productDummy) {
-          if (d.Rank == 1) {
-            return "#42b648";
-          } else if (d.Rank / d.counter < 0.3) {
-            return "#adc537";
-          } else if (d.Rank / d.counter == 1) {
-            return "#f2686f";
-          } else if (d.Rank / d.counter > 0.7) {
-            return "#f79154";
-          } else {
-            return "#ffbf00";
+      var KPIindUp = KPIgroupsUp.selectAll("rect.KPIind")
+        .data(function(d) {
+          return d.values
+        })
+        .enter()
+        .append("rect")
+        .attr("class", "KPIind")
+        .attr("x", function(d, i) {
+          if (d.Rank == "n/a") return 0;
+          else return d.Rank * (-barWidth);
+        })
+        .attr("y", 10.5)
+        .attr("width", (prodCount < 18) ? barWidth - 3 : barWidth - 2)
+        .attr("height", barHeight5)
+        .style("display", function(d, i) {
+          if (d.Rank == "n/a") {
+            return "none";
           }
-        } else {
-          return "#ffffff";
-        }
-      })
-      .attr("visibility", function(d, i) {
-        if (d.Product != productDummy) {
-          return "hidden";
-        } else {
-          return "visible"
-        }
-      });
+        })
+        .attr("fill", function(d, i) {
+          if (d.Product == productDummy) {
+            if (d.Rank == 1) {
+              return "#42b648";
+            } else if (d.Rank / d.counter < 0.3) {
+              return "#adc537";
+            } else if (d.Rank / d.counter == 1) {
+              return "#f2686f";
+            } else if (d.Rank / d.counter > 0.7) {
+              return "#f79154";
+            } else {
+              return "#ffbf00";
+            }
+          } else {
+            return "#ffffff";
+          }
+        })
+        .attr("visibility", function(d, i) {
+          if (d.Product != productDummy) {
+            return "hidden";
+          } else {
+            return "visible"
+          }
+        });
 
     }
   }
@@ -800,21 +822,24 @@ export function initProdKPI() {
     .text("KPI");
 
   svg3.append("text")
+    .attr("id", "valueHeadID")
     .attr("x", valueHead)
     .attr("y", -20)
     .text("Value");
 
-  if (respHelp > 580) {
 
-    svg3.append("text")
-      .attr("x", xRankpeer)
-      .attr("y", -20)
-      .text("Rank in peer group");
 
-  }
+  svg3.append("text")
+    .style("display", (respHelp > 580) ? "block" : "none")
+    .attr("x", xRankpeer)
+    .attr("id", "xRankpeerID")
+    .attr("y", -20)
+    .text("Rank in peer group");
 
-var helpWithResp = (widthHelper3 + labelxSpac - 160);
-var lineLenght = (respHelp > 580) ? 270 : helpWithResp ;
+
+
+  var helpWithResp = (widthHelper3 + labelxSpac - 160);
+  var lineLenght = (respHelp > 580) ? 270 : helpWithResp;
 
   svg3.append("line")
     .attr("class", "head")
@@ -960,11 +985,12 @@ var lineLenght = (respHelp > 580) ? 270 : helpWithResp ;
 
   // Legend
 
-  var LegTrans = svg3.append("g").attr("class", "legendText")
+  var LegTrans3 = svg3.append("g").attr("class", "legendText")
     .attr("transform", "translate(" + legend.left + "," + legend.top + ")");
 
+  var LegTrans = LegTrans3.append("g").attr("class", "legendText3")
+    .style("display", (respHelp > 580) ? "block" : "none");
 
-  if (respHelp > 580) {
 
   LegTrans.append("rect")
     .attr("x", -127)
@@ -1031,11 +1057,10 @@ var lineLenght = (respHelp > 580) ? 270 : helpWithResp ;
     .attr("height", 10)
     .style("fill", "#42b648");
 
-  }
 
   var legendleft2 = (respHelp > 580) ? 0 : -230;
 
-  var LegTrans2 = LegTrans.append("g").attr("class", "legendText2")
+  var LegTrans2 = LegTrans3.append("g").attr("class", "legendText2")
     .attr("transform", "translate(" + legendleft2 + "," + 0 + ")");
 
   LegTrans2.append("rect")
@@ -1075,34 +1100,152 @@ var lineLenght = (respHelp > 580) ? 270 : helpWithResp ;
     .attr("y", 511 + yLegend)
     .text("(Overall)");
 
-    LegTrans2.append("text")
-      .attr("x", 180)
-      .attr("y", 470 + yLegend)
-      .style("font-style", "italic")
-      .style("font-size", 10)
-      .text("= Average of peer group");
+  LegTrans2.append("text")
+    .attr("x", 180)
+    .attr("y", 470 + yLegend)
+    .style("font-style", "italic")
+    .style("font-size", 10)
+    .text("= Average of peer group");
 
-    LegTrans2.append("line")
-      .attr("x1", 177)
-      .attr("y1", 459 + yLegend)
-      .attr("x2", 177)
-      .attr("y2", 474 + yLegend)
-      .style("stroke", "#ffffff")
-      .style("stroke-width", 3)
-      .attr("width", 2.5);
+  LegTrans2.append("line")
+    .attr("x1", 177)
+    .attr("y1", 459 + yLegend)
+    .attr("x2", 177)
+    .attr("y2", 474 + yLegend)
+    .style("stroke", "#ffffff")
+    .style("stroke-width", 3)
+    .attr("width", 2.5);
 
-    LegTrans2.append("text")
-      .attr("x", 21)
-      .attr("y", 470 + yLegend)
-      .style("font-style", "italic")
-      .style("font-size", 10)
-      .text("1.0");
+  LegTrans2.append("text")
+    .attr("x", 21)
+    .attr("y", 470 + yLegend)
+    .style("font-style", "italic")
+    .style("font-size", 10)
+    .text("1.0");
 
-    LegTrans2.append("text")
-      .attr("x", 133)
-      .attr("y", 470 + yLegend)
-      .style("font-style", "italic")
-      .style("font-size", 10)
-      .text("10.0");
+  LegTrans2.append("text")
+    .attr("x", 133)
+    .attr("y", 470 + yLegend)
+    .style("font-style", "italic")
+    .style("font-size", 10)
+    .text("10.0");
+
+
+  function resizeProdKPIDash() {
+
+    widthHelper3 = parseInt(d3.select("#chart3").style("width"));
+
+
+    respHelp2 = d3.select("#Compdash");
+    respHelp = parseInt(respHelp2.style("width"));
+
+    valueHead = (respHelp > 580) ? 165 : -130;
+
+    xValueLabels2 = (respHelp > 305) ? -110 : -130;
+    xBar2 = (respHelp > 305) ? -190 : -210;
+
+    margin = {
+      top: 50,
+      right: 40,
+      bottom: 20,
+      left: (respHelp > 380) ? 300 : 290
+    };
+
+    w = widthHelper3 - margin.left - margin.right;
+    h = 850 - margin.top - margin.bottom;
+
+
+    d3.select("#chart3").select("svg")
+      .attr("width", w + margin.left + margin.right)
+
+    d3.select("#chart3").select("svg").select("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    helpWithResp2 = (widthHelper3 + labelxSpac - 160);
+    lineLenght2 = (respHelp > 580) ? 270 : helpWithResp2;
+
+    d3.select("#chart3").selectAll("line.table")
+      .attr("x2", lineLenght2);
+
+
+    d3.select("#chart3").selectAll("text.values")
+      .attr("x", (respHelp > 580) ? xValueLabels : xValueLabels2);
+
+    // Values bar
+
+    xScaleBar.range([0, w - xBar2 - margin.right - 20])
+
+
+    d3.select("#chart3").selectAll("rect.valu")
+      .attr("x", (respHelp > 580) ? xBar : xBar2)
+      .attr("width", function(d) {
+        if (d.Value == "n/a") {
+          return 0;
+        } else {
+          return (respHelp > 580) ? (d.Value * 10) : xScaleBar(d.Value);
+        }
+      });
+
+    // Average bar
+
+    svg3.selectAll("rect.average")
+      .attr("x", function(d) {
+        if (d.value ) {
+          var xVal = (respHelp > 580) ? xBar : xBar2;
+          var valueAvg = (respHelp > 580) ? (d.value * 10) : xScaleBar(d.value)
+          return xVal + valueAvg;
+        }
+      });
+
+    d3.select("#chart3").select("#valueHeadID")
+      .attr("x", valueHead);
+
+
+    var helpWithResp = (widthHelper3 + labelxSpac - 160);
+    var lineLenght = (respHelp > 580) ? 270 : helpWithResp;
+
+    svg3.select(".head")
+      .attr("x2", lineLenght);
+
+    var legendleft2 = (respHelp > 580) ? 0 : -230;
+
+    d3.select(".legendText2")
+      .attr("transform", "translate(" + legendleft2 + "," + 0 + ")");
+
+
+    var legendRes = d3.select("#chart3").select(".legendText3");
+
+
+
+    if (respHelp > 580 && triggerHelperLeg == 1) {
+
+      legendRes.style("display", "block");
+      d3.select("#chart3").select("#xRankpeerID").style("display", "block");
+      d3.select("#chart3").selectAll("rect.blocksInd2").style("display", "block");
+      d3.select("#chart3").selectAll("rect.KPIind").style("display", "block");
+      d3.select("#chart3").selectAll("text.KPItext").style("display", "block");
+
+
+
+      triggerHelperLeg = 0;
+
+    } else if (respHelp <= 580) {
+      legendRes.style("display", "none");
+      d3.select("#chart3").select("#xRankpeerID").style("display", "none");
+      d3.select("#chart3").selectAll("rect.blocksInd2").style("display", "none");
+      d3.select("#chart3").selectAll("rect.KPIind").style("display", "none");
+      d3.select("#chart3").selectAll("text.KPItext").style("display", "none");
+      triggerHelperLeg = 1;
+    }
+
+
+
+  }
+
+  window.addEventListener('resize', function() {
+    resizeProdKPIDash();
+
+  });
+
 
 }

@@ -4,3 +4,5 @@
 24,What position do you hold within the company?
 26,Did your organization replace or abolish BI systems in the last 12 months?
 102,What were the reasons for replacing/abolishing the BI system(s)?
+310,How long did it take to implement the BI software?
+311,What is the typical query response time that end users see?

@@ -28,6 +28,12 @@ function keys(d) {
   var KPIselect = KPI;
   var peerSelect = "All products"
 
+  $('#KPIfilter').selectpicker('val', 10);
+  $('#KPIfilter').selectpicker('refresh');
+
+  $('#PGfilter').selectpicker('val', 10);
+  $('#PGfilter').selectpicker('refresh');
+
   var popData2 = dataKPI.filter(function(element) {
     return element.Peer == peerSelect
   });
