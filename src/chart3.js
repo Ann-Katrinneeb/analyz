@@ -493,7 +493,7 @@ export function initProdKPI() {
     })
     .attr("width", 2.5)
     .attr("height", 9)
-    .style("fill", "ffffff")
+    .style("fill", "#ffffff")
     .attr("visibility", function(d, i) {
       if (d.value == null) {
         return "hidden";
