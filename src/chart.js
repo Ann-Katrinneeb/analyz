@@ -12,7 +12,7 @@ export function initAnaly() {
   $('#question').selectpicker('refresh');
 
   // var form = d3.format(",%");
-  var formUnder1 = d3.format(",.1%")
+  var formUnder1 = d3.format(",.2%")
 
   var form1 = d3.format(".0f");
   var id = 5,
@@ -150,7 +150,6 @@ export function initAnaly() {
   "Netherlands",
   "New Zealand",
   "Norway",
-  "Other",
   "Panama",
   "Peru",
   "Poland",
@@ -175,7 +174,38 @@ export function initAnaly() {
   "United States Virgin Islands",
   "Uruguay",
   "Viet Nam",
-  "Did not respond"
+  "New Caledonia",
+"Kenya",
+"Bulgaria",
+"Somalia",
+"Bolivia (Plurinational State of)",
+"Senegal",
+"Dominican Republic",
+"Lithuania",
+"Pakistan",
+"Latvia",
+"Iceland",
+"Costa Rica",
+"American Samoa",
+"Bahrain",
+"Nepal",
+"Kuwait",
+"Egypt",
+"Angola",
+"Isle of Man",
+"Chile",
+"Malta",
+"El Salvador",
+"Democratic Republic of the Congo",
+"Côte d'Ivoire",
+"Réunion",
+"Bermuda",
+"Paraguay",
+"Barbados",
+"Guatemala",
+"Croatia",
+"Venezuela (Bolivarian Republic of)",
+"Did not respond"
     ],
     templateReg = "Regionfilter",
     templateInd = "Industryfilter",
