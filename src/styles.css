@@ -2,6 +2,10 @@
   font-size: 0.9rem;
 }
 
+#colHeight {
+  height:100%;
+}
+
 .KPItext {
   font-size: 1.1rem;
   fill: #647f99;
