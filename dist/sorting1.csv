@@ -1,0 +1,269 @@
+﻿id,answer
+310,Less than 25
+310,25 - 75
+310,76 - 300
+310,More than 300
+309,Less than 25
+309,25 - 75
+309,76 - 300
+309,More than 300
+308,Less than 50
+308,51-100
+308,101 - 250
+308,251 - 500
+308,501 - 1000
+308,1001 – 2500
+308,2501 – 10000
+308,10001 -  100000
+308,More than 100000
+311,1 to less than 5%
+311,5 to less than 10%
+311,10 to less than 15%
+311,15 to less than 20%
+311,20 to less than 30%
+311,30 to less than 40%
+311,40 to less than 50%
+311,50 to less than 75%
+311,More than 75%
+20,Yes
+20,No
+241,Very good
+241,Good
+241,Average
+241,Poor
+241,Very Poor
+242,Very good
+242,Good
+242,Average
+242,Poor
+242,Very Poor
+240,Very good
+240,Good
+240,Average
+240,Poor
+240,Very Poor
+237,Very good
+237,Good
+237,Average
+237,Poor
+237,Very Poor
+239,Very good
+239,Good
+239,Average
+239,Poor
+239,Very Poor
+238,Very good
+238,Good
+238,Average
+238,Poor
+238,Very Poor
+245,Good
+245,Moderate
+245,Poor
+247,Good
+247,Moderate
+247,Poor
+246,Good
+246,Moderate
+246,Poor
+244,Good
+244,Moderate
+244,Poor
+243,Good
+243,Moderate
+243,Poor
+263,Less than 1 month
+263,1 to less than 3 months
+263,3 to less than 6 months
+263,6 to less than 12 months
+263,1 to less than 2 years
+263,2 to less than 3 years
+263,3 years or more
+265,Less than 50 MB
+265,50 to less than 500 MB
+265,500 MB to less than 1 GB
+265,1 to less than 5 GB
+265,5 to less than 10 GB
+265,10 to less than 50 GB
+265,50 to less than 100 GB
+265,100 to less than 250 GB
+265,250 to less than 500 GB
+265,500 GB to less than 1 TB
+265,1 to less than 5 TB
+265,5 to less than 10 TB
+265,10 to less than 100 TB
+265,100 to less than 500 TB
+265,More than 500 TB
+182,Before 2010
+182,2010
+182,2011
+182,2012
+182,2013
+182,2014
+182,2015
+182,2016
+182,2017
+182,2018
+262,Excellent
+262,Good
+262,Satisfactory
+262,Not very good
+262,Very poor
+264,Less than 1 second
+264,1 to less than 5 seconds
+264,5 to less than 10 seconds
+264,10 to less than 30 seconds
+264,30 to less than 60 seconds
+264,1 to less than 5 minutes
+264,5 to less than 10 minutes
+264,10 to less than 30 minutes
+264,30 minutes or more
+259,Definitely
+259,Probably
+259,Maybe
+259,Probably not
+259,Definitely not
+260,Excellent
+260,Good
+260,Satisfactory
+260,Not very good
+260,Very poor
+260,None used so far
+261,Excellent
+261,Good
+261,Satisfactory
+261,Not very good
+261,Very poor
+261,None used so far
+177,In use
+177,Planned to use within 12 months
+177,Planned in the long term
+177,Not required
+179,In use
+179,Planned to use within 12 months
+179,Planned in the long term
+179,Not required
+178,In use
+178,Planned to use within 12 months
+178,Planned in the long term
+178,Not required
+180,In use
+180,Planned to use within 12 months
+180,Planned in the long term
+180,Not required
+176,In use
+176,Planned to use within 12 months
+176,Planned in the long term
+176,Not required
+181,In use
+181,Planned to use within 12 months
+181,Planned in the long term
+181,Not required
+175,In use
+175,Planned to use within 12 months
+175,Planned in the long term
+175,Not required
+257,High
+257,Moderate
+257,Low
+257,Not achieved
+251,High
+251,Moderate
+251,Low
+251,Not achieved
+253,High
+253,Moderate
+253,Low
+253,Not achieved
+248,High
+248,Moderate
+248,Low
+248,Not achieved
+252,High
+252,Moderate
+252,Low
+252,Not achieved
+250,High
+250,Moderate
+250,Low
+250,Not achieved
+249,High
+249,Moderate
+249,Low
+249,Not achieved
+258,High
+258,Moderate
+258,Low
+258,Not achieved
+254,High
+254,Moderate
+254,Low
+254,Not achieved
+256,High
+256,Moderate
+256,Low
+256,Not achieved
+255,High
+255,Moderate
+255,Low
+255,Not achieved
+276,In use
+276,Planned within 12 months
+276,Planned in the long term
+276,Not required
+273,In use
+273,Planned within 12 months
+273,Planned in the long term
+273,Not required
+274,In use
+274,Planned within 12 months
+274,Planned in the long term
+274,Not required
+281,In use
+281,Planned within 12 months
+281,Planned in the long term
+281,Not required
+282,In use
+282,Planned within 12 months
+282,Planned in the long term
+282,Not required
+283,In use
+283,Planned within 12 months
+283,Planned in the long term
+283,Not required
+275,In use
+275,Planned within 12 months
+275,Planned in the long term
+275,Not required
+277,In use
+277,Planned within 12 months
+277,Planned in the long term
+277,Not required
+271,In use
+271,Planned within 12 months
+271,Planned in the long term
+271,Not required
+279,In use
+279,Planned within 12 months
+279,Planned in the long term
+279,Not required
+272,In use
+272,Planned within 12 months
+272,Planned in the long term
+272,Not required
+280,In use
+280,Planned within 12 months
+280,Planned in the long term
+280,Not required
+278,In use
+278,Planned within 12 months
+278,Planned in the long term
+278,Not required
+284,Very feasible
+284,Feasible
+284,Not very feasible
+284,Not feasible at all
+285,Very important
+285,Important
+285,Not very important
+285,Not important at all

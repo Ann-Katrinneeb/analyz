@@ -1,0 +1,80 @@
+﻿qValue,qlong
+,
+307,Country
+5,Which department do you work in?
+101,Which departments use BI applications?
+389,European regions
+313,Industry sector
+310,Number of BI product users
+309,Number of BI users
+308,Number of employees
+311,Percentage of BI users in company
+19,Position in company
+312,Region
+113,Which products has your organization acquired?
+314,With which product are you most familiar?
+112,Which products has your organization evaluated?
+102,What were the reasons for replacing/abolishing the BI system(s)?
+107,Why was the product chosen?
+20,Did your organization replace/abolish BI systems in the last 12 months?
+183,Did your organization conduct a formal product selection?
+242,How would you rate the vendor's general conduct during the purchasing process?
+241,How would you rate the vendor's understanding of your industry-specific requirements during the purchasing process?
+240,How flexible was the vendor in terms of pricing and contract?
+237,How would you rate your experience with the vendor when evaluating the product and during contract negotiation?
+239,How would you rate the vendor's ability to understand your organization's needs?
+238,How timely and thorough were the vendor's responses to product-related and technical questions you had?
+245,How do you rate the level of administrator satisfaction with the implementation of technical aspects of your project?
+263,How long did it take to implement the BI software?
+247,How do you rate the level of completion within the budget originally specified?
+246,How do you rate the level of completion within the timeframe originally specified?
+244,How do you rate the level of user satisfaction with the implementation of business aspects of your project?
+243,How do you rate the level of user satisfaction with the implementation of technical aspects of your project?
+182,When did your company start using the product?
+265,What is the amount of data in the databases used with the BI product?
+103,Please indicate the front-end products you use with IBM Cognos TM1?
+104,Please indicate the front-end products you use with Microsoft (SSAS)?
+105,Please indicate the front-end products you use with Oracle Essbase?
+106,Please indicate the front-end products you use with SAP BW?
+108,What are the most serious problems you have encountered during the implementation?
+262,How would you rate the price-to-value of your BI product?
+264,What is the typical query response time that end users see?
+259,Would you recommend others to buy your BI product?
+110,Which tasks are carried out by business users in your company with your BI tool? 
+109,What are the most serious problems you have encountered in using the product?
+261,How do you rate the support provided by the implementer?
+260,How do you rate the support provided by the vendor?
+177,Do you use or plan to use the application for ad hoc querying?
+179,Do you use or plan to use the application for advanced  analysis?
+178,Do you use or plan to use the application for basic data analysis?
+180,Do you use or plan to use the application for budgeting and planning?
+176,Do you use or plan to use the application for dashboards/scorecards?
+181,Do you use or plan to use the application for financial consolidation?
+175,Do you use or plan to use the application for reporting?
+257,"Do you benefit from more accurate reporting, analysis or planning?"
+251,Are you able to make better business decisions through better analysis?
+253,Did your competitive advantage increase?
+248,Have you reduced costs? (IT or non-IT)
+252,Do you benefit from improved customer satisfaction?
+250,Do you benefit from improved data quality?
+249,Do you benefit from improved employee satisfaction?
+258,"Do you benefit from faster reporting, analysis or planning?"
+254,Have you saved on headcount in business departments or IT?
+256,Did your revenues increase?
+255,Do you benefit from improved operational efficency?
+276,Does your company use your BI tool with real-time data?
+273,Does your company use Cloud BI/BIaaS with your BI tool?
+284,"Generally, how feasible do you think a cloud-based deployment of a BI solution would be for your organization?"
+274,Does your company use your BI tool for collaboration?
+281,Does your company use your BI tool for data preparation?
+282,Does your company use your BI tool for embedded BI?
+285,How important is it that your company's BI tool includes predictive analytics features?
+283,Does your company use a BI product with integration of BI and Performance Management?
+275,Does your company use a mobile BI product?
+277,Does your company use self-service BI with your BI tool?
+271,Does your company use your BI tool for sensor data analysis?
+279,Does your company use your BI tool for spatial/location analysis?
+272,Does your company use your BI tool for text data analysis?
+111,In which BI use cases is your company investing in?
+280,Does your company use your BI tool for visual analysis?
+278,Does your company use visual design standards with your BI tool?

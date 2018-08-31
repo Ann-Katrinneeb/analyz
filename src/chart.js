@@ -4,16 +4,18 @@ export function initAnaly() {
   $("#industry").selectpicker("selectAll");
   $("#itbus").selectpicker("selectAll");
   $("#employee").selectpicker("selectAll");
-  $("#revenue").selectpicker("selectAll");
+
   $("#country").selectpicker("selectAll");
   $("#products").selectpicker("selectAll");
 
-  $('#question').selectpicker('val', 10);
+  $('#question').selectpicker('val', 5);
   $('#question').selectpicker('refresh');
 
-  var form = d3.format(",%");
+  // var form = d3.format(",%");
+  var formUnder1 = d3.format(",.1%")
+
   var form1 = d3.format(".0f");
-  var id = 10,
+  var id = 5,
     classID = "single",
     sortID,
     valID,
@@ -37,55 +39,51 @@ export function initAnaly() {
     selectedConLength,
     helperIn = 0,
     selectedProd = [
-      'Bissantz',
-      'BOARD',
-      'CALUMO',
-      'Chartio',
-      'Cubeware',
-      'cubus',
-      'CXO-Cockpit',
-      'Cyberscience',
-      'DigDash',
-      'Dimensional Insight',
-      'Domo',
-      'Dundas',
-      'Entrinsik',
-      'Carriots Analytics (Envision)',
-      'IBM Cog Analytics',
-      'IBM Plan Analytics',
-      'Infor',
-      'Information Builders',
-      'Jedox',
-      'Longview Analytics',
-      'MS Excel',
-      'MS Power BI',
-      'MS SSRS',
-      'MicroStrategy',
-      'Oracle BI',
-      'Phocas',
-      'MIK (prevero)',
-      'prevero (prevero)',
-      'Pyramid Analytics',
-      'Qlik Sense',
-      'QlikView',
-      'SAP BEx',
-      'SAP BO Analysis',
-      'SAP BO Design St.',
-      'SAP BO WebI',
-      'SAS Enterprise BI',
-      'Sisense',
-      'Tableau',
-      'TARGIT',
-      'TIBCO Spotfire',
-      'Yellowfin',
-      'Zoho Reports'
+      "Bissantz",
+      "BOARD",
+      "CALUMO",
+      "Carriots Analytics",
+      "Cubeware",
+      "cubus",
+      "Cyberscience",
+      "Dimensional Insight",
+      "Domo",
+      "Dundas",
+      "IBM Cog Analytics",
+      "IBM Plan Analytics",
+      "Infor BI",
+      "Information Builders",
+      "Jedox",
+      "Longview Analytics",
+      "Looker",
+      "MS Excel",
+      "MS Power BI",
+      "MS SSRS",
+      "MicroStrategy",
+      "Oracle BI",
+      "Phocas",
+      "Pyramid Analytics",
+      "Qlik Sense",
+      "QlikView",
+      "sales-i",
+      "SAP Analytics Cloud",
+      "SAP BO Analysis",
+      "SAP BO WebI",
+      "SAS Enterprise BI",
+      "Sisense",
+      "Tableau",
+      "TARGIT",
+      "Yellowfin",
+      "Unit4 prevero",
+      "Other",
+      "Did not respond"
     ],
     selectedReg = [
       "Europe",
       "Asia and Pacific",
       "North America",
       "South America",
-      "ROW",
+      "Rest of the world",
       "Did not respond"
     ],
     selectedInd = [
@@ -118,99 +116,66 @@ export function initAnaly() {
     ],
     selectedITBU = ["IT", "Business", "Did not respond"],
     selectedCon = [
-      "Aland Islands",
       "Algeria",
-      "American Samoa",
-      "Andorra",
-      "Argentina",
-      "Australia",
-      "Austria",
-      "Belgium",
-      "Bolivia",
-      "Brazil",
-      "Bulgaria",
-      "Canada",
-      "Chile",
-      "China",
-      "Colombia",
-      "Cook Islands",
-      "Costa Rica",
-      "Czech Republic",
-      "Denmark",
-      "Ecuador",
-      "Egypt",
-      "El Salvador",
-      "Finland",
-      "France",
-      "French Guiana",
-      "French Polynesia",
-      "Germany",
-      "Gibraltar",
-      "Greece",
-      "Guatemala",
-      "Hong Kong",
-      "Hungary",
-      "Iceland",
-      "India",
-      "Indonesia",
-      "Ireland",
-      "Isle of Man",
-      "Israel",
-      "Italy",
-      "Japan",
-      "Jordan",
-      "Kenya",
-      "Kuwait",
-      "Latvia",
-      "Lebanon",
-      "Liechtenstein",
-      "Lithuania",
-      "Luxembourg",
-      "Malaysia",
-      "Malta",
-      "Martinique",
-      "Mexico",
-      "Monaco",
-      "Morocco",
-      "Netherlands",
-      "New Caledonia",
-      "New Zealand",
-      "Nigeria",
-      "Norway",
-      "Pakistan",
-      "Panama",
-      "Peru",
-      "Philippines",
-      "Poland",
-      "Portugal",
-      "Puerto Rico",
-      "Qatar",
-      "Republic of Korea",
-      "Reunion",
-      "Romania",
-      "Russian Federation",
-      "Saudi Arabia",
-      "Senegal",
-      "Serbia",
-      "Singapore",
-      "Slovakia",
-      "Slovenia",
-      "South Africa",
-      "Spain",
-      "Sweden",
-      "Switzerland",
-      "Thailand",
-      "Tunisia",
-      "Turkey",
-      "Ukraine",
-      "United Arab Emirates",
-      "United Kingdom",
-      "United States of America",
-      "United States Virgin Islands",
-      "Uruguay",
-      "Viet Nam",
-      "Zambia",
-      "Did not respond"
+    "Andorra",
+  "Argentina",
+  "Australia",
+  "Austria",
+  "Belarus",
+  "Belgium",
+  "Brazil",
+  "Canada",
+  "China",
+  "Colombia",
+  "Czech Republic",
+  "Denmark",
+  "Ecuador",
+  "Estonia",
+  "France",
+  "Germany",
+  "Greece",
+  "Hong Kong",
+  "Hungary",
+  "India",
+  "Indonesia",
+  "Ireland",
+  "Israel",
+  "Italy",
+  "Japan",
+  "Liechtenstein",
+  "Luxembourg",
+  "Malaysia",
+  "Mexico",
+  "Morocco",
+  "Netherlands",
+  "New Zealand",
+  "Norway",
+  "Other",
+  "Panama",
+  "Peru",
+  "Poland",
+  "Portugal",
+  "Republic of Korea",
+  "Romania",
+  "Russian Federation",
+  "Saudi Arabia",
+  "Serbia",
+  "Singapore",
+  "Slovenia",
+  "South Africa",
+  "Spain",
+  "Sweden",
+  "Switzerland",
+  "Thailand",
+  "Trinidad and Tobago",
+  "Turkey",
+  "United Arab Emirates",
+  "United Kingdom",
+  "United States of America",
+  "United States Virgin Islands",
+  "Uruguay",
+  "Viet Nam",
+  "Did not respond"
     ],
     templateReg = "Regionfilter",
     templateInd = "Industryfilter",
@@ -221,9 +186,9 @@ export function initAnaly() {
     templateProd = "Product filter",
     filterData3 = [];
 
-  d3.csv("src/data/analyzer7.csv").then(function(data) {
-    d3.csv("src/data/sorting.csv").then(function(dataSort) {
-      d3.csv("src/data/codebook.csv").then(function(data2) {
+  d3.csv("src/data/analyzer8.csv").then(function(data) {
+    d3.csv("src/data/sorting1.csv").then(function(dataSort) {
+      d3.csv("src/data/codebook1.csv").then(function(data2) {
         var filterData = data;
         var resultAryObj = [];
 
@@ -232,7 +197,7 @@ export function initAnaly() {
         });
 
 
-        calcul(10);
+        calcul(5);
 
         var chart = d3.select("#chart");
 
@@ -353,7 +318,7 @@ export function initAnaly() {
 
           })
           .text(function(d, i) {
-            return form(d.answerVal);
+            return (d.answerVal>=0.005) ? form(d.answerVal) : formUnder1(d.answerVal) ;
           })
           .attr("fill", "rgb(102, 102, 102)")
           .style("text-anchor", "start")
@@ -508,7 +473,7 @@ export function initAnaly() {
               var currentPer = currentVal.replace("%", "") / 100;
               var i = d3.interpolate(currentPer, d.answerVal);
               return function(t) {
-                node.textContent = form(i(t));
+                node.textContent =  (i(t)>=0.005) ? form(i(t)) : formUnder1(i(t));
               };
             });
 
@@ -553,7 +518,7 @@ export function initAnaly() {
               var currentPer = currentVal.replace("%", "") / 100;
               var i = d3.interpolate(currentPer, d.answerVal);
               return function(t) {
-                node.textContent = form(i(t));
+                node.textContent =  (i(t)>=0.005) ? form(i(t)) : formUnder1(i(t));
               };
             });
 
@@ -709,6 +674,8 @@ export function initAnaly() {
             resultAryObj.push(obj2);
           }
 
+
+
           d3.select("#ncount")
             .transition()
             .duration(500)
@@ -821,6 +788,7 @@ export function initAnaly() {
         }
 
         function filter(template) {
+
           if (selectedReg == null) {
             selectedRegLength = 0;
           } else {
@@ -862,47 +830,44 @@ export function initAnaly() {
             filterData7 = filterData7.concat(filterData6);
           }
 
-          if (selectedRev == null) {
-            selectedRevLength = 0;
-          } else {
-            selectedRevLength = selectedRev.length;
-          }
 
-          for (var i = 0; i < selectedRevLength; i++) {
-            var filterData8 = filterData7.filter(function(d) {
-              return d[templateRev] == selectedRev[i];
-            });
-
-            filterData9 = filterData9.concat(filterData8);
-          }
 
           if (selectedCon == null) {
             selectedConLength = 0;
+
           } else {
             selectedConLength = selectedCon.length;
+
           }
 
           for (var i = 0; i < selectedConLength; i++) {
-            var filterData10 = filterData9.filter(function(d) {
+            var filterData10 = filterData7.filter(function(d) {
               return d[templateCon] == selectedCon[i];
             });
 
             filterData11 = filterData11.concat(filterData10);
           }
 
+
           if (selectedProd == null) {
             selectedProdLength = 0;
+
           } else {
             selectedProdLength = selectedProd.length;
+
           }
 
           for (var i = 0; i < selectedProdLength; i++) {
             var filterData12 = filterData11.filter(function(d) {
+
+
               return d[templateProd] == selectedProd[i];
             });
 
+
             filterData13 = filterData13.concat(filterData12);
           }
+
 
           if (selectedInd == null) {
             selectedIndLength = 0;
@@ -916,6 +881,7 @@ export function initAnaly() {
             });
             filterData = filterData.concat(filterData2);
           }
+
 
           return filterData;
         }
@@ -994,23 +960,7 @@ export function initAnaly() {
           }
         });
 
-        $("#revenue").change(function(e) {
-          selectedRev = $(e.target).val();
 
-          filterData = [];
-          filterData3 = [];
-          filterData5 = [];
-          filterData7 = [];
-          filterData9 = [];
-          filterData11 = [];
-          filterData13 = [];
-          filter();
-          if (classID == "single") {
-            calcul(id);
-          } else if (classID == "multi") {
-            calculMul(id);
-          }
-        });
 
         $("#country").change(function(e) {
           selectedCon = $(e.target).val();

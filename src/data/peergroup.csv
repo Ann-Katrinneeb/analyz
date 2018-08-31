@@ -9,16 +9,16 @@ All products,Cyberscience
 All products,Dimensional Insight
 All products,Domo
 All products,Dundas
-All products,IBM Cog Analytics
-All products,IBM Plan Analytics
+All products,IBM Cognos Analytics
+All products,IBM Planning Analytics
 All products,Infor BI
 All products,Information Builders
 All products,Jedox
 All products,Longview Analytics
 All products,Looker
-All products,MS Excel
-All products,MS Power BI
-All products,MS SSRS
+All products,Microsoft Excel
+All products,Microsoft Power BI
+All products,Microsoft SSRS
 All products,MicroStrategy
 All products,Oracle BI
 All products,Phocas
@@ -28,6 +28,7 @@ All products,QlikView
 All products,sales-i
 All products,SAP Analytics Cloud
 All products,SAP BO Analysis
+All products,SAP BO BI
 All products,SAP BO WebI
 All products,SAS Enterprise BI
 All products,Sisense
@@ -35,10 +36,9 @@ All products,Tableau
 All products,TARGIT
 All products,Unit4 prevero
 All products,Yellowfin
-All products,SAP BO BI
-Large enterprise BI platforms,IBM Cog Analytics
+Large enterprise BI platforms,IBM Cognos Analytics
 Large enterprise BI platforms,Information Builders
-Large enterprise BI platforms,MS SSRS
+Large enterprise BI platforms,Microsoft SSRS
 Large enterprise BI platforms,MicroStrategy
 Large enterprise BI platforms,Oracle BI
 Large enterprise BI platforms,SAP BO BI
@@ -50,7 +50,7 @@ Dashboarding-focused products,Domo
 Dashboarding-focused products,Dundas
 Dashboarding-focused products,Longview Analytics
 Dashboarding-focused products,Looker
-Dashboarding-focused products,MS Power BI
+Dashboarding-focused products,Microsoft Power BI
 Dashboarding-focused products,Pyramid Analytics
 Dashboarding-focused products,QlikView
 Dashboarding-focused products,sales-i
@@ -64,7 +64,7 @@ Self-service reporting-focused products,Cyberscience
 Self-service reporting-focused products,Dimensional Insight
 Self-service reporting-focused products,Domo
 Self-service reporting-focused products,Looker
-Self-service reporting-focused products,MS Power BI
+Self-service reporting-focused products,Microsoft Power BI
 Self-service reporting-focused products,Phocas
 Self-service reporting-focused products,Pyramid Analytics
 Self-service reporting-focused products,Qlik Sense
@@ -77,17 +77,17 @@ OLAP analysis-focused products,BOARD
 OLAP analysis-focused products,CALUMO
 OLAP analysis-focused products,Cubeware
 OLAP analysis-focused products,cubus
-OLAP analysis-focused products,IBM Plan Analytics
+OLAP analysis-focused products,IBM Planning Analytics
 OLAP analysis-focused products,Infor BI
 OLAP analysis-focused products,Jedox
-OLAP analysis-focused products,MS Excel
+OLAP analysis-focused products,Microsoft Excel
 OLAP analysis-focused products,Pyramid Analytics
 OLAP analysis-focused products,SAP BO Analysis
 OLAP analysis-focused products,TARGIT
 OLAP analysis-focused products,Unit4 prevero
 Data discovery-focused products,Carriots Analytics
 Data discovery-focused products,Dundas
-Data discovery-focused products,MS Power BI
+Data discovery-focused products,Microsoft Power BI
 Data discovery-focused products,Phocas
 Data discovery-focused products,Qlik Sense
 Data discovery-focused products,QlikView
@@ -100,19 +100,19 @@ Integrated performance management products,BOARD
 Integrated performance management products,CALUMO
 Integrated performance management products,Cubeware
 Integrated performance management products,cubus
-Integrated performance management products,IBM Plan Analytics
+Integrated performance management products,IBM Planning Analytics
 Integrated performance management products,Infor BI
 Integrated performance management products,Jedox
 Integrated performance management products,Longview Analytics
 Integrated performance management products,SAP Analytics Cloud
 Integrated performance management products,Unit4 prevero
-Large international BI vendors,IBM Cog Analytics
-Large international BI vendors,IBM Plan Analytics
+Large international BI vendors,IBM Cognos Analytics
+Large international BI vendors,IBM Planning Analytics
 Large international BI vendors,Infor BI
 Large international BI vendors,Information Builders
-Large international BI vendors,MS Excel
-Large international BI vendors,MS Power BI
-Large international BI vendors,MS SSRS
+Large international BI vendors,Microsoft Excel
+Large international BI vendors,Microsoft Power BI
+Large international BI vendors,Microsoft SSRS
 Large international BI vendors,MicroStrategy
 Large international BI vendors,Oracle BI
 Large international BI vendors,Qlik Sense
@@ -149,7 +149,7 @@ Embedded analytics-focused products,Domo
 Embedded analytics-focused products,Dundas
 Embedded analytics-focused products,Information Builders
 Embedded analytics-focused products,Looker
-Embedded analytics-focused products,MS Power BI
+Embedded analytics-focused products,Microsoft Power BI
 Embedded analytics-focused products,MicroStrategy
 Embedded analytics-focused products,Pyramid Analytics
 Embedded analytics-focused products,Qlik Sense

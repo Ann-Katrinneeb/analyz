@@ -1,4 +1,4 @@
-import data11 from './data/kpis.csv';
+import data11 from './data/kpis2.csv';
 
 export function initProdComp() {
 

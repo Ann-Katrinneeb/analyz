@@ -1,4 +1,4 @@
-import dataKPI from './data/kpis.csv';
+import dataKPI from './data/kpis2.csv';
 
 export function initKPIDash() {
 
@@ -28,10 +28,10 @@ function keys(d) {
   var KPIselect = KPI;
   var peerSelect = "All products"
 
-  $('#KPIfilter').selectpicker('val', 10);
+  $('#KPIfilter').selectpicker('val', 402);
   $('#KPIfilter').selectpicker('refresh');
 
-  $('#PGfilter').selectpicker('val', 10);
+  $('#PGfilter').selectpicker('val', 501);
   $('#PGfilter').selectpicker('refresh');
 
   var popData2 = dataKPI.filter(function(element) {
