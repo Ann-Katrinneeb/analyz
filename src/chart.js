@@ -378,8 +378,9 @@ export function initAnaly() {
             })
 
              dataUpd = dataUpd.sort(function(a,b) {
-                return dataSortMap.indexOf( a.answerOpt ) > dataSortMap.indexOf( b.answerOpt );
+              return dataSortMap.indexOf( a.answerOpt ) - dataSortMap.indexOf( b.answerOpt );
               });
+
 
 
           }

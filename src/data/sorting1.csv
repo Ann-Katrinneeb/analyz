@@ -79,7 +79,7 @@
 263,1 to less than 2 years
 263,2 to less than 3 years
 263,3 years or more
-265,Less than 50 MB
+265,50 MB or less
 265,50 to less than 500 MB
 265,500 MB to less than 1 GB
 265,1 to less than 5 GB
@@ -93,7 +93,7 @@
 265,5 to less than 10 TB
 265,10 to less than 100 TB
 265,100 to less than 500 TB
-265,More than 500 TB
+265,500 TB or more
 182,Before 2010
 182,2010
 182,2011
