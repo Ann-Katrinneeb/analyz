@@ -10,19 +10,7 @@
 
 <body>
 
-  <div class="navwide1">
-    <div class="navwide">
-      <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
 
-        <a class="navbar-brand" href="https://bi-survey.com"><img src="./BI-Survey-Logo.png" /></a>
-
-
-
-
-      </nav>
-    </div>
-
-  </div>
 
 
   <div class="container2">
@@ -92,10 +80,10 @@
                       <h4 class="question">Question</h4>
                     </div>
                     <div>
-                      <select id="question" name="question" class="selectpicker" data-size="5">
+                      <select id="question" name="question" class="selectpicker" data-size="4">
                   <optgroup label="Demographics">
                   <option id="button4" value="307" class="single" data-sort="1">Country</option>
-                  <option id="button1" value="5" class="single" data-sort="1">Department</option>
+                  <option id="button1" value="901" class="single" data-sort="1">Department</option>
                   <option id="button2" value="101" class="multi" data-sort="1">Department using BI</option>
                   <option id="button2" value="389" class="single" data-sort="1">European regions</option>
                   <option id="button2" value="313" class="single" data-sort="1">Industry</option>
@@ -104,7 +92,7 @@
                   <option id="button3" value="308" class="single" data-sort="2">Number of employees</option>
                   <option id="button3" value="311" class="single" data-sort="2">Percentage of BI users</option>
                   <option id="button3" value="19" class="single" data-sort="1">Position</option>
-                  <option id="button3" value="312" class="single" data-sort="1">Region</option>
+                  <option id="button3" value="902" class="single" data-sort="1">Region</option>
 
                   <optgroup label="Selection">
                   <option id="button2" value="113" class="multi" data-sort="1">Acquired products</option>
@@ -204,7 +192,7 @@
                       <h4>Products</h4>
                     </div>
                     <div>
-                      <select id="products" class="selectpicker" multiple data-actions-box="true" data-selected-text-format="count>5" data-count-selected-text="All selected" data-size="5">
+                      <select id="products" class="selectpicker" multiple data-actions-box="true" data-selected-text-format="count>5" data-count-selected-text="All selected" data-size="3">
                         <option value="Bissantz">Bissantz</option>
                         <option value="BOARD">BOARD</option>
                         <option value="CALUMO">CALUMO</option>
@@ -251,7 +239,7 @@
                       <h4>Region</h4>
                     </div>
                     <div>
-                      <select id="region" class="selectpicker" multiple data-actions-box="true" data-selected-text-format="count>5" data-count-selected-text="All selected" >
+                      <select id="region" class="selectpicker" multiple data-actions-box="true" data-selected-text-format="count>5" data-count-selected-text="All selected" data-size="3" >
                 <option value="Europe">Europe</option>
                 <option value="Asia and Pacific">Asia and Pacific</option>
                 <option value="North America">North America</option>
@@ -266,7 +254,7 @@
                       <h4>Industry</h4>
                     </div>
                     <div>
-                      <select id="industry" class="selectpicker" multiple data-actions-box="true" data-selected-text-format="count>10" data-count-selected-text="All selected" data-size="5">
+                      <select id="industry" class="selectpicker" multiple data-actions-box="true" data-selected-text-format="count>10" data-count-selected-text="All selected" data-size="3">
                     <option value="Manufacturing">Manufacturing</option>
                     <option value="Services">Services</option>
                     <option value="Retail/Wholesale">Retail/Wholesale</option>
@@ -286,7 +274,7 @@
                       <h4>No. of employees</h4>
                     </div>
                     <div>
-                      <select id="employee" class="selectpicker" multiple data-actions-box="true" data-selected-text-format="count>4" data-count-selected-text="All selected" >
+                      <select id="employee" class="selectpicker" multiple data-actions-box="true" data-selected-text-format="count>4" data-count-selected-text="All selected" data-size="3">
                     <option value="Less than 150">Less than 150</option>
                     <option value="150 - 500">150 - 500</option>
                     <option value="500 - 1500">500 - 1500</option>
@@ -313,7 +301,7 @@
                       <h4>Country</h4>
                     </div>
                     <div>
-                      <select id="country" class="selectpicker" multiple data-actions-box="true" data-selected-text-format="count>88" data-count-selected-text="All selected" data-size="5">
+                      <select id="country" class="selectpicker" multiple data-actions-box="true" data-selected-text-format="count>88" data-count-selected-text="All selected" data-size="3">
                         <option value="Algeria">Algeria</option>
 <option value="American Samoa">American Samoa</option>
 <option value="Andorra">Andorra</option>
@@ -444,7 +432,7 @@
 
                     <h4 id="questionKPI">KPI filter</h4>
 
-                    <select id="KPIfilter" name="KPIfilter" class="selectpicker" data-size="5">
+                    <select id="KPIfilter" name="KPIfilter" class="selectpicker" data-size="4">
 							<option id="button10006" value="402">Business benefits</option>
 							<option id="button10007" value="403">Project success</option>
 							<option id="button10008" value="404">Project length</option>
@@ -481,7 +469,7 @@
                     <div>
                       <h4 id="questionPG">Peer group filter<h4>
 						</div>
-        						<select id="PGfilter" name="PGfilter" class="selectpicker" data-size="5">
+        						<select id="PGfilter" name="PGfilter" class="selectpicker" data-size="4">
         							<option id="button100034" value="501">All products</option>
         							<option id="button100035" value="502">Americas-focused vendors</option>
                       <option id="button100036" value="503">Dashboarding-focused products</option>
@@ -570,7 +558,7 @@
                   <div class=" filter">
                 <h4 id="questionKPI">Peer group<h4>
 
-                <select id="peergroupID" class="selectpicker" title="Select a peer group" data-size="5">
+                <select id="peergroupID" class="selectpicker" title="Select a peer group" data-size="4">
                   <option data-hidden="true" value="5"></option>
                   <option id="button434" value="10">All products</option>
                   <option id="button435" value="101">Americas-focused vendors</option>  <option id="button100036" value="503">Dashboarding-focused products</option>
@@ -588,7 +576,7 @@
                 <div class=" filter">
                   <h4 id="questionPG">KPI<h4>
 
-                <select id="KPIID" name="KPIID" class="selectpicker" multiple title="Select KPIs" disabled data-size="5">
+                <select id="KPIID" name="KPIID" class="selectpicker" multiple title="Select KPIs" disabled data-size="4">
                   <option id="button206" value="Business benefits">Business benefits</option>
                   <option id="button207" value="Project success">Project success</option>
                   <option id="button208" value="Project length">Project length</option>
@@ -624,7 +612,7 @@
 
                 <h4>Product</h4>
 
-                      <select id="ProductID" class="selectpicker" title="Select products" multiple disabled data-size="5">
+                      <select id="ProductID" class="selectpicker" title="Select products" multiple disabled data-size="4">
                   <option>Bissantz</option>
                   <option>BOARD</option>
                   <option>CALUMO</option>
@@ -687,7 +675,7 @@
               <p class="fillerp">The BI Survey Analyzer web app is an interactive tool that enables you to perform your own custom analysis of The BI Survey 18 data. The app contains results from all the questions asked in The BI Survey 18. Product-related results based
                 on a series of important criteria (known here as KPIs – Key Performance Indicators) are also available to view.</p>
               <div id="centerButton" class="row justify-content-md-center margintop3">
-                <button type="button" class="btn btn-custom"> <a href="https://bi-survey.com/wp-content/uploads/2018/08/Helpfile_BI-Survey-Analyzer-18.pdf" role="button"><span class="icon fa fa-file-pdf-o"></span>Download PDF</a></button>
+                <a href="//bi-survey.com/wp-content/uploads/2018/08/Helpfile_BI-Survey-Analyzer-18.pdf" role="button"><button type="button" class="btn btn-custom"> <span class="icon fa fa-file-pdf-o"></span>Download PDF</button></a>
 
               </div>
 
@@ -1736,8 +1724,7 @@
             </div>
           </div>
 
-          <a id="back-to-top" href="#" class="btn btn-custom btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"> <span class="icon fa fa-angle-double-up"></span></a>
-
+s
 
         </div>
 
@@ -1749,18 +1736,6 @@
               <a href="https://barc.de">barc.de</a>.
             </div>
 
-          </div>
-          <div class="navwide">
-
-            <div class="footerdiv d-flex justify-content-between">
-              <div>© Copyright. – BARC – Business Application Research Center – a CXP Group Company – All Rights Reserved.
-              </div>
-              <div>
-                <a href="https://bi-survey.com/">Home</a>
-                <a href="https://bi-survey.com/imprint">Imprint</a>
-                <a href="https://bi-survey.com/privacy-policy">Privacy Policy</a>
-              </div>
-            </div>
           </div>
 
         </footer>

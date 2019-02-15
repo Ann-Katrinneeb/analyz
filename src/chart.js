@@ -8,14 +8,14 @@ export function initAnaly() {
   $("#country").selectpicker("selectAll");
   $("#products").selectpicker("selectAll");
 
-  $('#question').selectpicker('val', 5);
+  $('#question').selectpicker('val', 901);
   $('#question').selectpicker('refresh');
 
   // var form = d3.format(",%");
   var formUnder1 = d3.format(",.2%")
-
+  var checkStartQuest = 0;
   var form1 = d3.format(".0f");
-  var id = 5,
+  var id = 901,
     classID = "single",
     sortID,
     valID,
@@ -117,95 +117,95 @@ export function initAnaly() {
     selectedITBU = ["IT", "Business", "Did not respond"],
     selectedCon = [
       "Algeria",
-    "Andorra",
-  "Argentina",
-  "Australia",
-  "Austria",
-  "Belarus",
-  "Belgium",
-  "Brazil",
-  "Canada",
-  "China",
-  "Colombia",
-  "Czech Republic",
-  "Denmark",
-  "Ecuador",
-  "Estonia",
-  "France",
-  "Germany",
-  "Greece",
-  "Hong Kong",
-  "Hungary",
-  "India",
-  "Indonesia",
-  "Ireland",
-  "Israel",
-  "Italy",
-  "Japan",
-  "Liechtenstein",
-  "Luxembourg",
-  "Malaysia",
-  "Mexico",
-  "Morocco",
-  "Netherlands",
-  "New Zealand",
-  "Norway",
-  "Panama",
-  "Peru",
-  "Poland",
-  "Portugal",
-  "Republic of Korea",
-  "Romania",
-  "Russian Federation",
-  "Saudi Arabia",
-  "Serbia",
-  "Singapore",
-  "Slovenia",
-  "South Africa",
-  "Spain",
-  "Sweden",
-  "Switzerland",
-  "Thailand",
-  "Trinidad and Tobago",
-  "Turkey",
-  "United Arab Emirates",
-  "United Kingdom",
-  "United States of America",
-  "United States Virgin Islands",
-  "Uruguay",
-  "Viet Nam",
-  "New Caledonia",
-"Kenya",
-"Bulgaria",
-"Somalia",
-"Bolivia (Plurinational State of)",
-"Senegal",
-"Dominican Republic",
-"Lithuania",
-"Pakistan",
-"Latvia",
-"Iceland",
-"Costa Rica",
-"American Samoa",
-"Bahrain",
-"Nepal",
-"Kuwait",
-"Egypt",
-"Angola",
-"Isle of Man",
-"Chile",
-"Malta",
-"El Salvador",
-"Democratic Republic of the Congo",
-"Côte d'Ivoire",
-"Réunion",
-"Bermuda",
-"Paraguay",
-"Barbados",
-"Guatemala",
-"Croatia",
-"Venezuela (Bolivarian Republic of)",
-"Did not respond"
+      "Andorra",
+      "Argentina",
+      "Australia",
+      "Austria",
+      "Belarus",
+      "Belgium",
+      "Brazil",
+      "Canada",
+      "China",
+      "Colombia",
+      "Czech Republic",
+      "Denmark",
+      "Ecuador",
+      "Estonia",
+      "France",
+      "Germany",
+      "Greece",
+      "Hong Kong",
+      "Hungary",
+      "India",
+      "Indonesia",
+      "Ireland",
+      "Israel",
+      "Italy",
+      "Japan",
+      "Liechtenstein",
+      "Luxembourg",
+      "Malaysia",
+      "Mexico",
+      "Morocco",
+      "Netherlands",
+      "New Zealand",
+      "Norway",
+      "Panama",
+      "Peru",
+      "Poland",
+      "Portugal",
+      "Republic of Korea",
+      "Romania",
+      "Russian Federation",
+      "Saudi Arabia",
+      "Serbia",
+      "Singapore",
+      "Slovenia",
+      "South Africa",
+      "Spain",
+      "Sweden",
+      "Switzerland",
+      "Thailand",
+      "Trinidad and Tobago",
+      "Turkey",
+      "United Arab Emirates",
+      "United Kingdom",
+      "United States of America",
+      "United States Virgin Islands",
+      "Uruguay",
+      "Viet Nam",
+      "New Caledonia",
+      "Kenya",
+      "Bulgaria",
+      "Somalia",
+      "Bolivia (Plurinational State of)",
+      "Senegal",
+      "Dominican Republic",
+      "Lithuania",
+      "Pakistan",
+      "Latvia",
+      "Iceland",
+      "Costa Rica",
+      "American Samoa",
+      "Bahrain",
+      "Nepal",
+      "Kuwait",
+      "Egypt",
+      "Angola",
+      "Isle of Man",
+      "Chile",
+      "Malta",
+      "El Salvador",
+      "Democratic Republic of the Congo",
+      "Côte d'Ivoire",
+      "Réunion",
+      "Bermuda",
+      "Paraguay",
+      "Barbados",
+      "Guatemala",
+      "Croatia",
+      "Venezuela (Bolivarian Republic of)",
+      "Did not respond"
     ],
     templateReg = "Regionfilter",
     templateInd = "Industryfilter",
@@ -226,8 +226,7 @@ export function initAnaly() {
           d.id = +d.id;
         });
 
-
-        calcul(5);
+        calcul(901);
 
         var chart = d3.select("#chart");
 
@@ -348,7 +347,7 @@ export function initAnaly() {
 
           })
           .text(function(d, i) {
-            return (d.answerVal>=0.005) ? form(d.answerVal) : formUnder1(d.answerVal) ;
+            return (d.answerVal >= 0.005) ? form(d.answerVal) : formUnder1(d.answerVal);
           })
           .attr("fill", "rgb(102, 102, 102)")
           .style("text-anchor", "start")
@@ -369,17 +368,17 @@ export function initAnaly() {
             });
 
           } else if (sortID == 2) {
-            var dataSortFil = dataSort.filter(function(d){
+            var dataSortFil = dataSort.filter(function(d) {
               return d.id == valID;
-                  })
+            })
 
-            var dataSortMap = dataSortFil.map(function(d,i) {
+            var dataSortMap = dataSortFil.map(function(d, i) {
               return d.answer
             })
 
-             dataUpd = dataUpd.sort(function(a,b) {
-              return dataSortMap.indexOf( a.answerOpt ) - dataSortMap.indexOf( b.answerOpt );
-              });
+            dataUpd = dataUpd.sort(function(a, b) {
+              return dataSortMap.indexOf(a.answerOpt) - dataSortMap.indexOf(b.answerOpt);
+            });
 
 
 
@@ -504,7 +503,7 @@ export function initAnaly() {
               var currentPer = currentVal.replace("%", "") / 100;
               var i = d3.interpolate(currentPer, d.answerVal);
               return function(t) {
-                node.textContent =  (i(t)>=0.005) ? form(i(t)) : formUnder1(i(t));
+                node.textContent = (i(t) >= 0.005) ? form(i(t)) : formUnder1(i(t));
               };
             });
 
@@ -549,7 +548,7 @@ export function initAnaly() {
               var currentPer = currentVal.replace("%", "") / 100;
               var i = d3.interpolate(currentPer, d.answerVal);
               return function(t) {
-                node.textContent =  (i(t)>=0.005) ? form(i(t)) : formUnder1(i(t));
+                node.textContent = (i(t) >= 0.005) ? form(i(t)) : formUnder1(i(t));
               };
             });
 
@@ -673,9 +672,16 @@ export function initAnaly() {
         function calcul(id) {
           var variables = d3.keys(filterData[0]);
 
+          // var variablesSel = variables[id];
 
-          var variablesSel = variables[id];
-
+          if (checkStartQuest == 0) {
+            var variablesSel = "Q20901";
+          } else {
+            var variablesSel = variables.filter(function(d, i) {
+              var singleVar = confirmEnding(d, id);
+              return singleVar;
+            });
+          }
 
           var results = count(filterData, function(item) {
             return item[variablesSel];
@@ -722,7 +728,7 @@ export function initAnaly() {
           if (helperIn == 1) {
             updateData(resultAryObj);
           }
-
+          checkStartQuest =1;
           return resultAryObj;
         }
 
@@ -737,7 +743,7 @@ export function initAnaly() {
             var multiVar = confirmEnding(d, id);
             return multiVar;
           });
-
+          console.log(keysHelper)
           var multiVarsL = multiVars.length;
           var FilterDataMulti;
           // var resultisMulti2 = {};

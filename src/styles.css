@@ -333,8 +333,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   overflow: hidden;
-  height: 65vh;
-  min-height:400px;
+  height:400px;
   margin-top: 0px;
   display: flex;
   flex-direction: column;
